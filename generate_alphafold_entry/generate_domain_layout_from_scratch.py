@@ -1,0 +1,1 @@
+../generate_protein_entry/generate_domain_layout_from_scratch.py

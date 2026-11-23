@@ -1,0 +1,37 @@
+FROM registry.fedoraproject.org/fedora-minimal:43
+
+COPY . .
+
+# Install required packages
+RUN dnf -y install \
+        mkdssp \
+        git-core \
+        dotnet-sdk-10.0 \
+        python3.10 \
+        python3-requests \
+        python3-numpy \
+        gcc \
+        gcc-c++ \
+        kernel-devel \
+        python3.10-devel \
+        glew-devel \
+        msgpack-devel \
+        freeglut-devel \
+        libpng-devel \
+        freetype-devel \
+        libxml2-devel \
+        glm-devel \
+        mmtf-cpp-devel \
+        netcdf-cxx-devel \
+        cjson-devel
+
+# Install OverProtCore
+RUN deploy/bootstrap_OverProtCore.sh
+
+# Install SecStrAnnotator
+RUN deploy/bootstrap_SecStrAnnot2.sh
+
+# Build C code
+RUN deploy/bootstrap_gcc.sh
+
+USER 1001

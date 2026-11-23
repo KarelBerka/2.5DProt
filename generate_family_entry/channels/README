@@ -1,0 +1,48 @@
+--------------------------
+- generate pymol diagram -
+--------------------------
+
+* download *annotated.sses.json and channel files:
+./generate_family_dcs_diagrams.py --new --family <number> --debug
+
+* transform annotated and channel files to gnuplot input:
+./transform_channels_to_gnuplot.py --dir generated-3.90.660.60-2024-03-08T10_11_08/annotation/  --all --name 3.90.660.60 --near --file_list  lists/list_all_3.90.550.60 --whole_list ch_all_3.90.660.60
+
+* do ch file like:
+$ cat ch_all_3.40.50.2 
+lists/list_all_<family_number>_near2.txt None 0,0.5,0
+
+* do gnuplot 3D image:
+./display_pymol_set_of_channels.py --directory ./ --file_list ch_all_3.40.50.2_near2  --protein_domain 3ouzA01
+env QT_QPA_PLATFORM=xcb ./display_set_of_channels.py  --directory ./ --file_list ch_all_1.10.630.10.chan3o
+env QT_QPA_PLATFORM=xcb  ./display_set_of_channels.py --directory ./ --file_list ch_1.10.630.10_s
+GDK_BACKEND=x11 QT_QPA_PLATFORM=xcb ./display_set_of_channels.py  --directory cif --file_list ch_P08684
+
+* do pymol gnuplot 3D image:
+./display_pymol_set_of_channels.py --directory ./ --file_list ch_1.10.630.10_ch2b --protein_domain 2nnjA00
+
+* sort channels to clusters (each channe go through the same gap between sses)
+./sort_channels_based_on_sses_positions.py --dir gnuplot-3.40.50.20-2024-0 --name 3.40.50.1820 --annotation_dir generated-3.40.50.1820-2024-02-26T20_53_47/annotation/
+- generate per cluster lists files (lists/<family>_cl<number>)
+
+* channel_sses_list
+- list of number of channels and sses and domains per family
+
+--------------------------------------------
+- howto generate channel of the same types -
+--------------------------------------------
+
+1. if we have source channel, generated-<family_name>/annotate and gnuplot files
+1a.
+
+./sort_channels_based_on_sses_positions.py --start_channel gnuplot-5uap00B.txt_23.13 --annotation_dir ./generated-1.10.630.10-2024-04-08T08_15_20/annotation/ --simple --dir ./gnuplots --name wat1
+
+
+1b. Howto find channels of the given type (defined in channeldbs), which are not in the given channel-type list (generated from ^).
+They can be used as a start for 1a. (just edit the name now - Water channel
+
+./cytochrom_tunnels_with_given_label_not_on_list.sh
+
+
+
+2. if we wnt to split all channels from scratch to several groups

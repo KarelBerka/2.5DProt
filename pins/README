@@ -1,0 +1,56 @@
+TOOLS FOR PIN PROTEINS:
+
+-------------------------------------------
+./charges_up_down_do_big_loop_diagram.py --directory <dir of layout directories> --charges <charges dir>
+./charges_up_down_do_big_loop_diagram.py --directory layouts/pins_dominik/ --charges charges/
+
+- generate 1D diagram of big loop charges sums per all sbdirs of --directory dir
+  see image images/charges_up_down_do_big_loop_diagram.svg
+
+-------------------------------------------
+./charges_sums_1d_diagrams_for_loops.py --directory <dir of layout directories> --charges <charges dir>
+./charges_sums_1d_diagrams_for_loops.py --directory layouts/pins_test/ --charges charges/
+
+- generate charges sums 1D diagram of big loop, upper loops, down loops without big loop
+  per all subdirs of --directory dir
+  see images:
+      diagram-big-loop-pins_dominik.svg
+      diagram-upper_loops-down_loops-pins_dominik.svg
+      diagram-up-small-loops-pins_dominik.svg
+
+-------------------------------------------
+./charges_difference_tables.py --directory ./layouts/pins_dominik/ --charges_dir charges
+
+- generate txt output 1/ avg charge per SSE per PIN
+                      2/ avg charge per SSE for all PINS cumulative
+                      3/ deviation values per SSE per PIN
+                      4/ deviation PINx vs PINy
+                      5,6/ avg difference for each SSE and PIN (two methodsof counting)
+
+-------------------------------------------
+./pymol_rmsd.py --pdb_dir1 pdb/PIN2d --pdb_dir2 pdb/PIN4d/
+
+- generate table with RMSDs for each PIN2d and PIN4d pair at first as a plane text and than as a html table
+
+-------------------------------------------
+./charges_sses_diagram.py --directory layouts/pins_test/ --charges_dir charges --name pin1s_test 
+
+- graph which shows for each PINx shows average SSEs
+  it is e.g. on:
+http://147.251.21.23/pub/2023_12_05_piny/big_dataset/sses_comparison/index.html
+
+-------------------------------------------
+./charges_sums_up_down.py --directory layouts/pins_test/ --charges ./charges
+
+- generate
+  * standart per pin diagrams (see http://147.251.21.23/pub/2023_12_05_piny/full2/index_full.html)
+  * generate hrml sses mapping for them
+  * generate sums for whole up/down parts of pins up /down parts of loops - and put them to the text output 
+
+
+-------------------------------------------
+draw a graph of amino acid stapility in PINx and PINy(green x red) and of amino acid differenci in PINx vs PINy(blue x yellow)
+see http://147.251.21.23/pub/2024_09_03_res_comparison_PIN1_vs_other/
+
+./res_aa_sses_diagrams.py --charges charges --dir ./layouts/pins_dominik/ --pin_set PIN1 --cmp_pin_set PIN2
+./res_aa_sses_diagrams.py --charges charges --dir ./layouts/pins_dominik/ --pin_set PIN1 --cmp_pin_set PIN2 --short

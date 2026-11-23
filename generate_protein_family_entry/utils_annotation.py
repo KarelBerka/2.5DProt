@@ -1,0 +1,1 @@
+../generate_protein_entry/utils_annotation.py

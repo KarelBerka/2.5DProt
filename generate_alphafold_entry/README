@@ -1,0 +1,26 @@
+These are two tools:
+
+    ./generate_alphafold_cath_family.py --family 1.10.10.1010 --pdb_dir /run/media/ivarekova/proteins/af/
+    ./generate_alphafold_cath_family.py --family 1.10.10.1010 --web
+
+========================================================================================
+creates per family af statistics/ diagrams
+
+----------------------------------------------------------------------------------------
+create per family comparison statistics in pdb relevant to af family
+for given af organism
+    ./generate_alphafold_stats.py --d_dir <output_dir> --name <organism>
+
+----------------------------------------------------------------------------------------
+create directory containing all best_structures files relevant to the given af organism:
+
+for all proteins in the given organism:
+    wget https://www.ebi.ac.uk/pdbe/api/mappings/best_structures/<protein>
+
+parse all best_structures files and generate relevant af and pdb file directories and create
+detection directories for both of them
+    ./do_annotation_dirs_from_best_matches.py --organism <best_structure_files_dir> --af_dir /run/media/ivarekova/proteins/af/ --output_dir <output_dir>
+
+from both af and pdb detection directories create statistics to stats-<name>-<time> filename
+    ./generate_alphafold_stats.py --d_dir <output_dir>/af --name <organism_af>
+    ./generate_alphafold_stats.py --d_dir <output_dir>/pdb --name <organism_pdb>

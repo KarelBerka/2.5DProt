@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tunnels>
+  <Input>XXXCIF</Input>
+  <WorkingDirectory>XXXWD</WorkingDirectory>
+  <Params>
+     <Cavity ProbeRadius="5" InteriorThreshold="0.6" />
+     <Tunnel SurfaceCoverRadius="5" OriginRadius="5" BottleneckRadius="1.0" BottleneckTolerance="1.0" MaxTunnelSimilarity="1"/>
+  </Params>
+  <Export>
+    <Formats PyMol="1" PDBProfile="1" PDBStructure="1" JSON="1" />
+    <Types Cavities="1" Tunnels="1" PoresUser="0" PoresMerged="1" PoresAuto="1" />
+    <Mesh Density="1.33" />
+    <PyMol PDBId="XXXID" SurfaceType="Surface" />
+  </Export>
+  <Paths>
+     <Path>
+      <Start>
+        <SPoint X="-27.435" Y="0.017" Z="-11.724" />
+      </Start>
+      <End>
+        <EPoint X="-27.435" Y="0.017" Z="-11.724" />
+      </End>
+      </Path>
+  </Paths>
+</Tunnels>

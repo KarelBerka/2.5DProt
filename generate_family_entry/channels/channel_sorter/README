@@ -1,0 +1,229 @@
+
+1/ How to download this channel_sorter generator
+2/ How to run this channel generator and channel sorter 
+   2a/ for cytochrome family (1.10.630.10)
+   2b/ for GPCR family (1.20.1070.10)
+   2c/ for AlphaFold family PIN2
+   2d/ for general family
+3/ MOLE config file setting
+4/ Other tools
+   4a/ create multi 1D diagram of radiuses of a set of tunnels: ./generate_multi_tunnels_per_radius.py
+   4b/ create multi 1D diagram of BRadiuses of a set of tunnels: ./generate_multi_tunnels_per_bradius.py
+   4c/ create multi 1D diagram of FreeRadiuses of a set of tunnels: ./generate_multi_tunnels_per_freeradius.py
+
+--------------------------------------------------------------
+1/ How to download this channel generator:
+--------------------------------------------------------------
+
+1/ git clone git@gitlab.com:jhutar/2dprot.git
+2/ put to 2dprot directory (the main directory MOLE and overprot tools - from github)
+3/ go to directory 
+     2dprot/generate_family_entry/channels/channel_sorter
+4/ there is a command:
+     generate_annotated_channels_for_protein.py
+which generates for a given family all channels based on the mole config setting.
+
+------------------------------------------------------------
+2/ How to run this channel generator and channel_sorter 
+   2a/ for cytochrome family (1.10.630.10):
+--------------------------------------------------------------
+example:
+./generate_annotated_channels_for_protein.py --protein_list list_examples/1.10.630.10/list_P08684  --type pdb --family 1.10.630.10
+
+comments:
+--protein_list           - is a set of proteins like 1tqnA00 (if you want a domain form chain) or 1tqnA (if you want the whole chain)
+--type pdb               - has to be set on pdb (af is for AlphaFold protein list)
+--family 1.10.630.10     - if this tag is set to 1.10.630.10 the tool will do sorting based on CYPs tunnel name convention
+no need to specify mole config file - for this family, there is already a tuned set of config files in mole_config/1.10.630.10 which is used as default
+
+Then you get a directory like:
+generated-tunnels-list_P08684-2026-01-06T09_06_28
+with subdirectories:
+* cifs             - rotated cifs for all domains - you can display them in pymol, they are rotated in the same way
+* tunnels          - all found tunnels in all MOLE rounds in domain subdirectories (standard MOLE output directories) 
+* 2a, 2b, 2c, s .. - all tunnels from tunnels directory, sorted to standard cytochrome tunnel groups (1, 2a, 2b,2c, s=solvent, w=water,...).
+                     There is one extra file - tunnel_<tunnel_name>.pdb - contains all tunnel pdbs in one file.
+                     They are rotated the same way (like domains in cifs directory)
+* NO               - there are found tunnels that don't belong to any known tunnel group
+                     There is the multi tunnel_None.pdb file as well.
+* the other directories are auxiliary 
+
+------------------------------------------------------------
+2/ How to run this channel generator and channel_sorter
+   2b/ for GPCR family (1.20.1070.10):
+--------------------------------------------------------------
+example:
+- show tunnels from one side to another
+./generate_annotated_channels_for_protein.py --protein_list list_examples/1.20.1070.10/list_P31356  --type pdb --family 1.20.1070.10
+- show tunnels from RET ligand (this ligand is only in part of domains (e.g. P02945)
+./generate_annotated_channels_for_protein.py --protein_list list_examples/1.20.1070.10/list_P02945  --type pdb --family 1.20.1070.10 --mole_config mole_config/1.20.1070.10/from_retinol.xml --part_only tunnel
+- show tunnels for extracellular binding place
+./generate_annotated_channels_for_protein.py --protein_list list_examples/1.20.1070.10/list_P07700  --type pdb --family 1.20.1070.10 --mole_config mole_config/1.20.1070.10/extracellular.xml --part_only tunnel
+
+
+comments:
+--protein_list           - is a set of proteins like 1tqnA00 (if you want a domain form chain) or 1tqnA (if you want the whole chain)
+--type pdb               - has to be set on pdb (af is for AlphaFold protein list)
+--family 1.20.1070.10    - if this tag is set to 1.20.1070.10 the tool will use 
+                            mole_config/1.20.1070.10/whole_path.xml
+                            config file which is looking directly for tunel through whole domein from one part to another
+--mole_config mole_config/1.20.1070.10/from_retinol.xml
+                         - compute only tunnels from RET (retinol)
+--part_only tunnel       - only tunnels not pores are returned
+
+Then you get a directory like:
+generated-tunnels-list_P08684-2026-01-06T09_06_28
+with subdirectories:
+* cifs             - rotated cifs for all domains - you can display them in pymol, they are rotated in the same way
+* tunnels          - all found tunnels in all MOLE rounds in domain subdirectories (standard MOLE output directories) 
+* s                - tunnels which cross "start" polygon, There is the multi tunnel_s.pdb file
+* e                - tunnels which crosses "end" polygon, There is the multi tunnel_e.pdb file
+* b                - tunnels which crosses both "start" and "end" polygon, There is the multi tunnel_b.pdb file
+* NO               - tunnels don't cross "start" and "end" polygons, There is the multi tunnel_NO.pdb file
+* the other directories are auxiliary 
+
+------------------------------------------------------------
+2/ How to run this channel generator and channel_sorter
+   2c/ for AlphaFold family PIN2:
+--------------------------------------------------------------
+example:
+- show tunnels from one side to another
+./generate_annotated_channels_for_protein.py --protein_list list_PIN2  --type af --family PIN
+./generate_annotated_channels_for_protein.py --protein_list list_PIN2  --type af --family PIN_from_ligand
+
+comments:
+--protein_list           - is a set of proteins like 1tqnA00 (if you want a domain form chain) or 1tqnA (if you want the whole chain)
+--type af                - has PIN proteins are mainly in af (AlphaFold dataset)
+--family PIN             - can be used for arbitrary PINx group
+
+Then you get a directory like:
+generated-tunnels-list_P08684-2026-01-06T09_06_28
+with subdirectories:
+* cifs             - rotated cifs for all domains - you can display them in pymol, they are rotated in the same way
+* tunnels          - all found tunnels in all MOLE rounds in domain subdirectories (standard MOLE output directories) 
+* all_tunnels      - set of all paths through PIN protein
+* the other directories are auxiliary
+
+------------------------------------------------------------
+2/ How to run this channel generator and channel_sorter
+   2d/ wersion for minor families - SLC
+------------------------------------------------------------
+
+example:
+./generate_annotated_channels_for_protein.py --protein_list list_examples/1.20.1250.20/list_P11169  --type pdb --family SLC2A3
+# beware 4zwbA00 does not belong here for annotation purpose only
+./generate_annotated_channels_for_protein.py --protein_list list_examples/1.20.1250.20/list_P11169  --type pdb --family SLC2A3
+# beware 4zwbA00 does not belong here for annotation purpose only
+./generate_annotated_channels_for_protein.py --protein_list list_examples/1.20.1250.20/list_Q8EHE6  --type pdb --family SLC2A3
+# beware 4zwbA00 does not belong here for annotation purpose only
+./generate_annotated_channels_for_protein.py --protein_list list_examples/1.20.1250.20/list_Q5M4H8  --type pdb --family SLC2A3
+# P02920 needs different nomenclature
+./generate_annotated_channels_for_protein.py --protein_list list_examples/1.20.1250.20/list_P02920  --type pdb --family P02920
+1D graph:
+./generate_multi_tunnels_per_radius.py  --tunnel path --dir generated-tunnels-list_P0AGF4-2026-04-19T10_58_12/ --color_spectrum SLC --ommit_end 10 --ligands
+
+------------------------------------------------------------
+2/ How to run this channel generator and channel_sorter
+   2e/ for general family:
+------------------------------------------------------------
+example:
+./generate_annotated_channels_for_protein.py --protein_list list_of domains  --type pdb --family <family_name/number/...> --mole_config_file mole_config/orig.xml
+
+comments:
+--protein_list           - is a set of proteins like 1tqnA00 (if you want a domain form chain) or 1tqnA (if you want the whole chain)
+--type pdb               - has to be set on pdb (af is for AlphaFold protein list)
+--family <family_name>   - if this tag is set to family_name 
+--mole_config_file       - specify mole config file - some default example for families with tunnels from 1A to 4A is mole_config/orig.xml
+
+Then you get a directory like:
+generated-tunnels-list_A0A1C9CIU0-2026-01-06T09_06_28
+in which are subdirectories:
+* cifs             - rotated cifs for all domains - you can display them in pymol and they are rotated in the same way
+* tunnels          - there are all tunnels which was found in all MOLE rounds in domain subdirectories (standart MOLE output) 
+* all_tunnels      - there are all tunnels which was found.
+                   - they are rotated to have comparable position (like domains in cifs directory)
+* other directories are auxiliary
+
+
+
+--------------------------------------------------------------
+3/ MOLE config file setting:
+--------------------------------------------------------------
+Example of MOLE config file is in:
+generate_family_entry/channels/channel_sorter/mole_config/orig.xml
+
+ * leave XXX tags - will be set automatically
+ * edit all other tags
+ * coords tags (start, end for path and start for pores now) can't be set,
+   starts and ends can be defined by ligand positions 
+   (see generate_family_entry/channels/channel_sorter/mole_config/1.10.630.10/orig1.xml)
+
+---
+<?xml version="1.0" encoding="utf-8"?>
+<Tunnels>
+  <Input>XXXCIF</Input>
+  <WorkingDirectory>XXXWD</WorkingDirectory>
+  <Params>
+     <Cavity ProbeRadius="5" InteriorThreshold="1" />
+     <Tunnel SurfaceCoverRadius="5" OriginRadius="5" BottleneckRadius="1.00" BottleneckTolerance="1.0" MaxTunnelSimilarity="0.7"/>
+  </Params>
+  <Export>
+    <Formats PyMol="1" PDBProfile="1" PDBStructure="1" JSON="1" />
+    <Types Cavities="1" Tunnels="1" PoresUser="0" PoresMerged="1" PoresAuto="1" />
+    <Mesh Density="1.33" />
+    <PyMol PDBId="XXXID" SurfaceType="Surface" />
+  </Export>
+  <Origins Auto="0">
+     <Origin>
+      </Origin>
+  </Origins>
+---
+
+--------------------------------------------------------------
+4/ Other tools
+--------------------------------------------------------------
+   4a/ create multi 1D diagram of raduises of set of tunnels: ./generate_multi_tunnels_per_radius.py
+
+example:
+./generate_multi_tunnels_per_radius.py --tunnel s --dir generated-tunnels-list_P02945-2026-01-25T10_41_19/ --color_spectrum 1.20.1070.10 --ommit_start  5 --ommit_end 5 --ligands
+./generate_multi_tunnels_per_radius.py --tunnel s --dir 1.10.630.10/PR6SC4/generated-tunnels-list_P08684-2025-12-12T16_03_10/
+./generate_multi_tunnels_per_radius.py  --tunnel path --dir generated-tunnels-list_P0AGF4-2026-04-19T10_58_12/ --color_spectrum SLC --ommit_end 10 --ligands
+
+--tunnnel s          - set generated directory subdir (or tunnel type) to be shown
+--dir                - define directory containing generated data
+--tunnel_uniq        - show only one tunnel of given tunnel type for each domain
+--tunnel_name TUNNEL_NAME
+                     - highlight tunnel with "TUNNEL_NAME" in domain name (full string or substring) in 1D graph 
+--ommit_start 5      - mole usually starts with narrow tunnel even if there is no reason - thus ommit start part 
+                       can be ommited when tool compute what is tunnel bottleneck 
+--ommit_end 5        - mole usually ends with narrow tunnel even if there is no reason - thus ommit start part 
+                       can be ommited when tool compute what is tunnel bottleneck 
+--color_spectrum COLOR_SPECTRUM
+                     - use color based on expected tunnel diameters (0.8-1.5, 0.8-3) 
+                       possibilities: 1.20.1070.10 - fine, 1.10.630.10 - rough
+--ligands            - parts of tunnels which contains ligand will highlight black 
+                       needs cifs subdirectory of dir with _rot.cif  files
+
+result is file like: radius-generated-tunnels-list_P08684-2025-12-12T16_03_10-s-2026-01-11T17_07_47.svg
+which in one diagram contains shape of tunnel radius - color is done based on bottleneck
+
+--------------------------------------------------------------
+   4b/ create multi 1D diagram of raduises of set of tunnels: ./generate_multi_tunnels_per_bradius.py
+
+example:
+./generate_multi_tunnels_per_bradius.py --tunnel s --dir generated-tunnels-list_P02945-2026-01-25T10_41_19/ --color_spectrum 1.20.1070.10 --ommit_start  5 --ommit_end 5 --ligands
+./generate_multi_tunnels_per_bradius.py --tunnel s --dir 1.10.630.10/PR6SC4/generated-tunnels-list_P08684-2025-12-12T16_03_10/
+
+options and results - see 4a
+
+--------------------------------------------------------------
+   4c/ create multi 1D diagram of raduises of set of tunnels: ./generate_multi_tunnels_per_freeradius.py
+
+example:
+./generate_multi_tunnels_per_freeradius.py --tunnel s --dir generated-tunnels-list_P02945-2026-01-25T10_41_19/ --color_spectrum 1.20.1070.10 --ommit_start  5 --ommit_end 5 --ligands
+./generate_multi_tunnels_per_freeradius.py --tunnel s --dir 1.10.630.10/PR6SC4/generated-tunnels-list_P08684-2025-12-12T16_03_10/
+
+options and results - see 4a
+
+
+_______

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tunnels>
+  <Input>XXXCIF</Input>
+  <WorkingDirectory>XXXWD</WorkingDirectory>
+  <Params>
+     <Cavity ProbeRadius="5" InteriorThreshold="0.6" IgnoreHETAtoms="1" />
+     <Tunnel SurfaceCoverRadius="3" OriginRadius="3" BottleneckRadius="0.8" BottleneckTolerance="1.5" MaxTunnelSimilarity="1"/>
+  </Params>
+  <Export>
+    <Formats PyMol="1" PDBProfile="1" PDBStructure="1" JSON="1" />
+    <Types Cavities="1" Tunnels="1" PoresUser="0" PoresMerged="1" PoresAuto="1" />
+    <Mesh Density="1.33" />
+    <PyMol PDBId="XXXID" SurfaceType="Surface" />
+  </Export>
+  <Origins>
+     <Origin>
+        <Query>Residues("RET")</Query>
+        <Query>Residues("VAL")</Query>
+        <Query>Residues("C10")</Query>
+        <Query>Residues("CBA")</Query>
+      </Origin>
+  </Origins>
+</Tunnels>

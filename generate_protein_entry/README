@@ -1,0 +1,21 @@
+HOW TO UPDATE PROTEIN DBS TO ACTUAL ONE
+
+* list of all proteins in pdbe dbs
+
+* list of all proteins which are nissing in the given input directory
+./update_protein_database.py --dir ../proteins/
+
+* list of all proteins which are missing in 2dprots web
+./update_protein_database.py --twodprots
+
+
+1/ list of all proteins which are missing in 2dprots web and update local pdb mirror:
+./update_protein_database.py --dir ../proteins/ --download_pdb_cif ../pdb_protein_dbs/
+# check wheather the structure is ok
+
+2/ update local ligand dbs:
+python overprot_multifamily.py --download_family_list_by_size  --config overprot-config-ivarekova.ini --extras  --collect  --only_get_lists  - ../../ligands_input_files --out stdout.txt --err stderr.txt
+#takes 12 hours
+
+3/ for each missing protein run:
+./generate_protein_diagram.py --protein $i --ligands_json_dir ../ligands_input_files/residue_summaries/
