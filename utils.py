@@ -3,7 +3,10 @@
 
 import math
 import numpy as np
-import tabulate
+try:
+    import tabulate
+except ImportError:
+    tabulate = None
 
 const = 4
 

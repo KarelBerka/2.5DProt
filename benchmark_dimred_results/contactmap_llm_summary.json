@@ -1,0 +1,2658 @@
+{
+  "aggregate": {
+    "cm_binary": {
+      "mean_lerr": 3.55,
+      "mean_lerr_dom": 3.14,
+      "mean_lerr_cmp": 4.38,
+      "mean_stress": 0.305,
+      "mean_knn": 70.6,
+      "mean_conflicts": 0.48,
+      "mean_time_ms": 805.0
+    },
+    "cm_distogram": {
+      "mean_lerr": 2.66,
+      "mean_lerr_dom": 2.23,
+      "mean_lerr_cmp": 3.54,
+      "mean_stress": 0.257,
+      "mean_knn": 72.0,
+      "mean_conflicts": 0.5,
+      "mean_time_ms": 1312.8
+    },
+    "llm_cm2prot": {
+      "mean_lerr": 2.76,
+      "mean_lerr_dom": 2.28,
+      "mean_lerr_cmp": 3.71,
+      "mean_stress": 0.259,
+      "mean_knn": 70.4,
+      "mean_conflicts": 0.74,
+      "mean_time_ms": 219.7
+    },
+    "ref_sammon": {
+      "mean_lerr": 2.48,
+      "mean_lerr_dom": 2.02,
+      "mean_lerr_cmp": 3.39,
+      "mean_stress": 0.237,
+      "mean_knn": 71.0,
+      "mean_conflicts": 0.5,
+      "mean_time_ms": 145.8
+    },
+    "inverse": {
+      "mean_sse_roc_auc": 93.6,
+      "mean_sse_prec_at_L": 92.9,
+      "mean_sse_f1": 75.8,
+      "mean_res_roc_auc": 88.7,
+      "mean_res_prec_at_L": 61.3,
+      "mean_dist_mae_local": 2.48
+    },
+    "mean_cm_tokens": 307.3,
+    "mean_2dp_tokens": 36.5,
+    "mean_matrix_cells": 528897.5,
+    "mean_compression_ratio": 822.8
+  },
+  "targets": {
+    "1tqnA00": {
+      "id": "1tqnA00",
+      "name": "CYP3A4 (Cytochrom P450 3A4)",
+      "category": "1. Globulární enzymy – Cytochromy P450",
+      "kind": "domain",
+      "pdb": "1tqn",
+      "desc": "Lidský mikrosomální cytochrom P450 3A4 (EC 1.14.14.1) – 17 α-helixů (I-helix nad hemem) a 4 β-listy.",
+      "n_sses": 37,
+      "n_res_sampled": 460,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 4.3,
+          "stress_1": 0.248,
+          "knn_pres": 54.1,
+          "conflicts": 0,
+          "n_sses": 37,
+          "time_ms": 119.3
+        },
+        "cm_binary": {
+          "local_err": 4.99,
+          "stress_1": 0.291,
+          "knn_pres": 52.7,
+          "conflicts": 1,
+          "n_sses": 37,
+          "time_ms": 290.8,
+          "angle_mae_deg": 30.3
+        },
+        "cm_distogram": {
+          "local_err": 4.56,
+          "stress_1": 0.26,
+          "knn_pres": 58.1,
+          "conflicts": 0,
+          "n_sses": 37,
+          "time_ms": 313.7,
+          "angle_mae_deg": 29.7
+        },
+        "llm_cm2prot": {
+          "local_err": 4.53,
+          "stress_1": 0.313,
+          "knn_pres": 56.8,
+          "conflicts": 1,
+          "n_sses": 37,
+          "time_ms": 174.1
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 94.1,
+        "sse_prec_at_L": 91.9,
+        "sse_f1": 66.0,
+        "res_roc_auc": 92.9,
+        "res_prec_at_L": 62.2,
+        "dist_mae_local": 3.09,
+        "time_ms": 112.9
+      },
+      "dsl": {
+        "n_cm_tokens": 355,
+        "n_2dp_tokens": 44,
+        "compression_ratio": 596.1,
+        "cm_dsl_sample": "<BOS_CM> NODE:H3:H:L12:CA LOOP:H3~E4:G2 NODE:E4:E:L3:CA LOOP:E4~E5:G2 NODE:E5:E:L3:CA LOOP:E5~H9:G1 NODE:H9:H:L7:CA LOOP:H9~H13:G1 NODE:H13:H:L17:CA LOOP:H13~E15:G1 NODE:E15:E:L18:CA LOOP:E15~E20:G1 NODE:E20:E:L18:CA LOOP:E20~H22:G1 NODE:H22:H:L14:CA LOOP:H22~E24:G3 NODE:E24:E:L3:CA LOOP:E24~H30:G6 NODE:H30:H:L8:CA LOOP:H30~H36:G3 NODE:H36:H:L21:CA LOOP:H36~H41:G1 NODE:H41:H:L24:CA LOOP:H41~E44:G1 NODE:E44:E:L5:CA LOOP:E44~H46:G1 NODE:H46:H:L24:CA LOOP:H46~H47:G1 NODE:H47:H:L5:CA LOOP:H47~H49:G2 NODE:H49:H:L14:CA LOOP:H49~H54:G2 NODE:H54:H:L12:CA LOOP:H54~H56:G1 NODE:H56:H:L16:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E4:E5:E15:E20:E81:E78:E24 CLUST:E44:E107 CLUST:E79:E80 CLUST:E97:E108 CLUST:E100:E105 SSE2D:H3:L12:X-000.8:Y-035.9:A160 SSE2D:E4:L2:X+007.7:Y-034.6:A220 SSE2D:E5:L2:X+004.4:Y-033.4:A040 SSE2D:H9:L7:X+006.6:Y-028.1:A040 SSE2D:H13:L17:X+006.0:Y-021.5:A160 SSE2D:E15:L18:X+001.8:Y-029.9:A220 SSE2D:E20:L18:X+000.1:Y-026.2:A040 SSE2D:H22:L14:X-008.4:Y-024.5:A280 SSE2D:E24:L2:X-010.9:Y-018.9:A040 SSE2D:H30:L8:X-015.7:Y-011.9:A070 SSE2D:H36:L21:X-010.5:Y-006.4:A010 SSE2D:H41:L40:X-008.2:Y+001.2:A040 SSE2D:E44:L5:X-003.0:Y+008.1:A190 SSE2D:H46:L25:X-006.6:Y+005.4:A280 SSE2D:H47:L5:X-011.9:Y+011.1:A280 SSE2D:H49:L14:X-015.1:Y-008.3:A160 SSE2D:H54:L12:X-011.2:Y-022.9:A190 SSE2D:H56:L16:X-014.7:Y-022.2:A310 SSE2D:H59:L31:X-020.3:Y-001.5:A310 SSE2D:H63:L14:X-012.7:Y+006.1:A250 SSE2D:H68:L48:X-001.2:Y-003.1:A070 SSE2D:H70:L21:X+008.3:Y-001.8:A310 ..."
+      }
+    },
+    "2hi4A00": {
+      "id": "2hi4A00",
+      "name": "CYP1A2 (Cytochrom P450 1A2)",
+      "category": "1. Globulární enzymy – Cytochromy P450",
+      "kind": "domain",
+      "pdb": "2hi4",
+      "desc": "Lidský cytochrom P450 1A2 (EC 1.14.14.1) – kompaktní P450 fold s úzkou aktivní dutinou.",
+      "n_sses": 42,
+      "n_res_sampled": 471,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 3.76,
+          "stress_1": 0.29,
+          "knn_pres": 56.5,
+          "conflicts": 0,
+          "n_sses": 42,
+          "time_ms": 183.5
+        },
+        "cm_binary": {
+          "local_err": 4.55,
+          "stress_1": 0.306,
+          "knn_pres": 64.3,
+          "conflicts": 0,
+          "n_sses": 42,
+          "time_ms": 515.4,
+          "angle_mae_deg": 30.9
+        },
+        "cm_distogram": {
+          "local_err": 4.19,
+          "stress_1": 0.291,
+          "knn_pres": 59.5,
+          "conflicts": 0,
+          "n_sses": 42,
+          "time_ms": 467.6,
+          "angle_mae_deg": 30.2
+        },
+        "llm_cm2prot": {
+          "local_err": 3.97,
+          "stress_1": 0.307,
+          "knn_pres": 60.7,
+          "conflicts": 0,
+          "n_sses": 42,
+          "time_ms": 171.8
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 96.4,
+        "sse_prec_at_L": 95.5,
+        "sse_f1": 68.6,
+        "res_roc_auc": 91.8,
+        "res_prec_at_L": 56.9,
+        "dist_mae_local": 2.88,
+        "time_ms": 155.4
+      },
+      "dsl": {
+        "n_cm_tokens": 462,
+        "n_2dp_tokens": 53,
+        "compression_ratio": 480.2,
+        "cm_dsl_sample": "<BOS_CM> NODE:_E0:E:L3:CA LOOP:_E0~E4:G6 NODE:E4:E:L3:CA LOOP:E4~E5:G2 NODE:E5:E:L3:CA LOOP:E5~H9:G1 NODE:H9:H:L7:CA LOOP:H9~H13:G1 NODE:H13:H:L17:CA LOOP:H13~E15:G1 NODE:E15:E:L18:CA LOOP:E15~E20:G1 NODE:E20:E:L18:CA LOOP:E20~H22:G1 NODE:H22:H:L14:CA LOOP:H22~H23:G1 NODE:H23:H:L6:CA LOOP:H23~E24:G1 NODE:E24:E:L3:CA LOOP:E24~H28:G3 NODE:H28:H:L8:CA LOOP:H28~H36:G11 NODE:H36:H:L24:CA LOOP:H36~H41:G2 NODE:H41:H:L24:CA LOOP:H41~E44:G1 NODE:E44:E:L3:CA LOOP:E44~H46:G1 NODE:H46:H:L24:CA LOOP:H46~H47:G1 NODE:H47:H:L4:CA LOOP:H47~H49:G4 NODE:H49:H:L13:CA LOOP:H49~_H19:G1 NODE:_H19:H:L12:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E4:E5:E15:E20:E81:E78:E24:_E30 CLUST:E44:E107 CLUST:E65:E66 CLUST:E79:E80:_E0 CLUST:E86:E87 CLUST:E97:E108 CLUST:E100:E105 SSE2D:_E0:L2:X+011.4:Y-031.0:A356 SSE2D:E4:L2:X-000.1:Y-036.9:A116 SSE2D:E5:L2:X+001.5:Y-033.7:A296 SSE2D:H9:L7:X-004.9:Y-028.2:A356 SSE2D:H13:L17:X-001.5:Y-021.5:A116 SSE2D:E15:L18:X+002.2:Y-029.1:A116 SSE2D:E20:L18:X+002.6:Y-025.1:A296 SSE2D:H22:L14:X+010.2:Y-020.7:A236 SSE2D:H23:L6:X+010.9:Y-017.9:A266 SSE2D:E24:L2:X+010.6:Y-014.5:A296 SSE2D:H28:L8:X-009.8:Y-018.5:A326 SSE2D:H36:L27:X-006.1:Y+004.2:A026 SSE2D:H41:L35:X-007.4:Y+010.4:A356 SSE2D:E44:L2:X-005.4:Y+010.2:A176 SSE2D:H46:L26:X-010.8:Y+002.7:A236 SSE2D:H47:L4:X-018.8:Y+001.8:A326 SSE2D:H49:L13:X-013.9:Y-006.3:A116 SSE2D:_H19:L12:X-010.3:Y-012.8:A146 SSE2D:H54:L7:X-008.5:Y-023.2:A206 SSE2D:H56:L9:X-013.7:Y-024.1:A296 ..."
+      }
+    },
+    "1adsA00": {
+      "id": "1adsA00",
+      "name": "EC 1: Aldózareduktáza (TIM barel)",
+      "category": "2. Globulární enzymy – Zástupci EC 1–7",
+      "kind": "domain",
+      "pdb": "1ads",
+      "desc": "EC 1.1.1.21 (Oxidoreduktázy) – kanonický (β/α)8 TIM barel s 8 vnitřními β-vlákny a 8 vnějšími α-helixy.",
+      "n_sses": 35,
+      "n_res_sampled": 343,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.29,
+          "stress_1": 0.197,
+          "knn_pres": 62.9,
+          "conflicts": 2,
+          "n_sses": 35,
+          "time_ms": 107.4
+        },
+        "cm_binary": {
+          "local_err": 3.44,
+          "stress_1": 0.27,
+          "knn_pres": 55.7,
+          "conflicts": 0,
+          "n_sses": 35,
+          "time_ms": 229.1,
+          "angle_mae_deg": 30.7
+        },
+        "cm_distogram": {
+          "local_err": 2.55,
+          "stress_1": 0.211,
+          "knn_pres": 62.9,
+          "conflicts": 0,
+          "n_sses": 35,
+          "time_ms": 234.0,
+          "angle_mae_deg": 29.8
+        },
+        "llm_cm2prot": {
+          "local_err": 2.64,
+          "stress_1": 0.201,
+          "knn_pres": 59.3,
+          "conflicts": 0,
+          "n_sses": 35,
+          "time_ms": 100.2
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 95.4,
+        "sse_prec_at_L": 94.3,
+        "sse_f1": 72.2,
+        "res_roc_auc": 92.7,
+        "res_prec_at_L": 87.5,
+        "dist_mae_local": 2.46,
+        "time_ms": 72.6
+      },
+      "dsl": {
+        "n_cm_tokens": 427,
+        "n_2dp_tokens": 43,
+        "compression_ratio": 275.5,
+        "cm_dsl_sample": "<BOS_CM> NODE:E2:E:L8:CA LOOP:E2~E3:G1 NODE:E3:E:L8:CA LOOP:E3~E4:G1 NODE:E4:E:L3:CA LOOP:E4~E6:G1 NODE:E6:E:L5:CA LOOP:E6~H11:G2 NODE:H11:H:L21:CA LOOP:H11~E13:G1 NODE:E13:E:L9:CA LOOP:E13~H15:G1 NODE:H15:H:L5:CA LOOP:H15~H17:G1 NODE:H17:H:L21:CA LOOP:H17~H21:G1 NODE:H21:H:L5:CA LOOP:H21~E22:G1 NODE:E22:E:L19:CA LOOP:E22~H24:G1 NODE:H24:H:L5:CA LOOP:H24~H26:G1 NODE:H26:H:L23:CA LOOP:H26~E27:G1 NODE:E27:E:L3:CA LOOP:E27~E28:G1 NODE:E28:E:L11:CA LOOP:E28~E29:G1 NODE:E29:E:L3:CA LOOP:E29~E33:G7 NODE:E33:E:L3:CA LOOP:E33~E34:G4 NODE:E34:E:L3:CA LOOP:E34~E36:G1 NODE:E36:E:L3:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E2:E3 CLUST:E4:E6:E13:E22:E28:E39:E43:E51:E67:E68 CLUST:E27:E38 CLUST:E29:E36 CLUST:E33:E34 CLUST:E45:E47 SSE2D:E2:L8:X+010.2:Y-013.5:A089 SSE2D:E3:L8:X+010.1:Y-009.6:A269 SSE2D:E4:L2:X+012.2:Y-007.5:A239 SSE2D:E6:L5:X+010.4:Y-008.7:A239 SSE2D:H11:L21:X+021.0:Y-002.3:A149 SSE2D:E13:L9:X+009.3:Y-003.4:A239 SSE2D:H15:L5:X+009.9:Y+002.2:A059 SSE2D:H17:L21:X+015.0:Y+005.9:A089 SSE2D:H21:L5:X+014.7:Y-001.7:A239 SSE2D:E22:L19:X+005.8:Y-000.1:A239 SSE2D:H24:L5:X+000.6:Y+006.5:A299 SSE2D:H26:L23:X+006.3:Y+008.0:A089 SSE2D:E27:L2:X+004.4:Y+002.1:A359 SSE2D:E28:L11:X+000.6:Y+000.2:A239 SSE2D:E29:L2:X-005.4:Y+008.0:A029 SSE2D:E33:L2:X-012.5:Y+010.3:A269 SSE2D:E34:L2:X-012.4:Y+006.3:A089 SSE2D:E36:L2:X-008.9:Y+009.9:A209 SSE2D:H37:L22:X-005.5:Y+002.6:A059 SSE2D:E38:L2:X+000.4:Y+002.0:A359 SSE2D:E39:L12:X-002.8:Y-003.1:A239 ..."
+      }
+    },
+    "1ldmA01": {
+      "id": "1ldmA01",
+      "name": "EC 1: Laktátdehydrogenáza (Rossmannova doména)",
+      "category": "2. Globulární enzymy – Zástupci EC 1–7",
+      "kind": "domain",
+      "pdb": "1ldm",
+      "desc": "EC 1.1.1.27 (Oxidoreduktázy) – NAD-vazebná Rossmannova doména (3-vrstvý α/β/α sendvič).",
+      "n_sses": 15,
+      "n_res_sampled": 188,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 1.25,
+          "stress_1": 0.155,
+          "knn_pres": 93.3,
+          "conflicts": 0,
+          "n_sses": 15,
+          "time_ms": 47.1
+        },
+        "cm_binary": {
+          "local_err": 2.78,
+          "stress_1": 0.362,
+          "knn_pres": 76.7,
+          "conflicts": 0,
+          "n_sses": 15,
+          "time_ms": 80.9,
+          "angle_mae_deg": 42.3
+        },
+        "cm_distogram": {
+          "local_err": 1.71,
+          "stress_1": 0.276,
+          "knn_pres": 90.0,
+          "conflicts": 0,
+          "n_sses": 15,
+          "time_ms": 58.7,
+          "angle_mae_deg": 43.4
+        },
+        "llm_cm2prot": {
+          "local_err": 2.08,
+          "stress_1": 0.262,
+          "knn_pres": 71.7,
+          "conflicts": 0,
+          "n_sses": 15,
+          "time_ms": 40.4
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 97.7,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 88.2,
+        "res_roc_auc": 89.7,
+        "res_prec_at_L": 78.2,
+        "dist_mae_local": 1.9,
+        "time_ms": 31.8
+      },
+      "dsl": {
+        "n_cm_tokens": 103,
+        "n_2dp_tokens": 18,
+        "compression_ratio": 343.1,
+        "cm_dsl_sample": "<BOS_CM> NODE:_H0:H:L8:CA LOOP:_H0~E45:G11 NODE:E45:E:L15:CA LOOP:E45~H72:G1 NODE:H72:H:L19:CA LOOP:H72~E78:G1 NODE:E78:E:L15:CA LOOP:E78~H93:G1 NODE:H93:H:L21:CA LOOP:H93~H98:G1 NODE:H98:H:L4:CA LOOP:H98~E103:G3 NODE:E103:E:L12:CA LOOP:E103~H114:G1 NODE:H114:H:L7:CA LOOP:H114~E118:G1 NODE:E118:E:L12:CA LOOP:E118~H133:G3 NODE:H133:H:L7:CA LOOP:H133~H137:G1 NODE:H137:H:L24:CA LOOP:H137~E141:G1 NODE:E141:E:L11:CA LOOP:E141~H150:G1 NODE:H150:H:L17:CA LOOP:H150~H165:G1 NODE:H165:H:L7:CA LOOP:H165~E175:G1 NODE:E175:E:L9:CA SHEET:E45:E78:E118:E103:E141:E175 CONT:H93~H98:D2.0:CROSS:081 CONT:H165~E175:D2.0:CROSS:080 CONT:H133~H137:D3.5:CROSS:081 CONT:E45~E78:D4.5:CROSS:069 CONT:E45~E118:D4.5:CROSS:073 ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E45:E78:E118:E103:E141:E175 SSE2D:_H0:L8:X+024.9:Y-027.7:A099 SSE2D:E45:L15:X+011.3:Y+000.7:A069 SSE2D:H72:L19:X+016.7:Y+005.6:A069 SSE2D:E78:L15:X+012.7:Y-003.8:A069 SSE2D:H93:L21:X+019.5:Y-006.4:A069 SSE2D:H98:L4:X+023.0:Y-006.0:A009 SSE2D:E103:L12:X+012.9:Y-008.6:A069 SSE2D:H114:L7:X+006.7:Y-004.8:A039 SSE2D:E118:L12:X+008.7:Y+004.7:A069 SSE2D:H133:L7:X-004.6:Y-001.3:A189 SSE2D:H137:L25:X+000.5:Y-000.7:A189 SSE2D:E141:L11:X+006.4:Y+008.7:A069 SSE2D:H150:L17:X-003.8:Y+007.0:A009 SSE2D:H165:L7:X+001.5:Y+013.1:A099 SSE2D:E175:L9:X+004.5:Y+012.9:A069 <EOS_2DP>"
+      }
+    },
+    "1atpE01": {
+      "id": "1atpE01",
+      "name": "EC 2: Proteinkináza A – N-terminální lalok (doména)",
+      "category": "2. Globulární enzymy – Zástupci EC 1–7",
+      "kind": "domain",
+      "pdb": "1atp",
+      "desc": "EC 2.7.11.11 (Transferázy) – malý N-terminální antiparalelní β-lalok cAMP-dependentní proteinkinázy.",
+      "n_sses": 18,
+      "n_res_sampled": 187,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.01,
+          "stress_1": 0.261,
+          "knn_pres": 72.2,
+          "conflicts": 0,
+          "n_sses": 18,
+          "time_ms": 54.9
+        },
+        "cm_binary": {
+          "local_err": 4.12,
+          "stress_1": 0.345,
+          "knn_pres": 66.7,
+          "conflicts": 0,
+          "n_sses": 18,
+          "time_ms": 88.4,
+          "angle_mae_deg": 29.6
+        },
+        "cm_distogram": {
+          "local_err": 2.25,
+          "stress_1": 0.267,
+          "knn_pres": 77.8,
+          "conflicts": 0,
+          "n_sses": 18,
+          "time_ms": 93.7,
+          "angle_mae_deg": 28.0
+        },
+        "llm_cm2prot": {
+          "local_err": 2.17,
+          "stress_1": 0.247,
+          "knn_pres": 70.8,
+          "conflicts": 0,
+          "n_sses": 18,
+          "time_ms": 39.1
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 89.7,
+        "sse_prec_at_L": 72.2,
+        "sse_f1": 65.9,
+        "res_roc_auc": 89.7,
+        "res_prec_at_L": 55.1,
+        "dist_mae_local": 2.75,
+        "time_ms": 20.6
+      },
+      "dsl": {
+        "n_cm_tokens": 141,
+        "n_2dp_tokens": 23,
+        "compression_ratio": 248.0,
+        "cm_dsl_sample": "<BOS_CM> NODE:H15:H:L24:CE LOOP:H15~H24:G88 NODE:H24:H:L12:CE LOOP:H24~H35:G1 NODE:H35:H:L24:CE LOOP:H35~E40:G1 NODE:E40:E:L5:CE LOOP:E40~H41:G2 NODE:H41:H:L4:CE LOOP:H41~E43:G1 NODE:E43:E:L9:CE LOOP:E43~E49:G1 NODE:E49:E:L8:CE LOOP:E49~E56:G1 NODE:E56:E:L5:CE LOOP:E56~E60:G1 NODE:E60:E:L3:CE LOOP:E60~H65:G5 NODE:H65:H:L4:CE LOOP:H65~H69:G1 NODE:H69:H:L7:CE LOOP:H69~E73:G1 NODE:E73:E:L3:CE LOOP:E73~H76:G1 NODE:H76:H:L24:CE LOOP:H76~H84:G1 NODE:H84:H:L16:CE LOOP:H84~H101:G4 NODE:H101:H:L16:CE LOOP:H101~H107:G8 NODE:H107:H:L10:CE LOOP:H107~H112:G1 NODE:H112:H:L4:CE LOOP:H112~H120:G3 NODE:H120:H:L9:CE ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E40:E56 CLUST:E43:E49 CLUST:E60:E73 SSE2D:H15:L24:X+001.9:Y+018.3:A254 SSE2D:H24:L12:X-009.1:Y-004.2:A194 SSE2D:H35:L31:X-000.2:Y+007.7:A074 SSE2D:E40:L5:X-001.3:Y+004.4:A194 SSE2D:H41:L4:X-008.4:Y-001.0:A314 SSE2D:E43:L9:X-011.1:Y+000.9:A284 SSE2D:E49:L8:X-010.2:Y+004.8:A104 SSE2D:E56:L5:X-005.2:Y+005.3:A014 SSE2D:E60:L2:X-002.6:Y-007.9:A344 SSE2D:H65:L4:X+001.1:Y-011.0:A074 SSE2D:H69:L7:X+005.6:Y-009.3:A194 SSE2D:E73:L2:X+001.1:Y-006.8:A164 SSE2D:H76:L26:X+001.8:Y-001.9:A254 SSE2D:H84:L16:X+011.4:Y-012.9:A044 SSE2D:H101:L16:X+010.6:Y-001.4:A164 SSE2D:H107:L10:X+010.4:Y+008.7:A314 SSE2D:H112:L4:X+012.2:Y+007.2:A314 SSE2D:H120:L9:X-005.8:Y+015.6:A254 <EOS_2DP>"
+      }
+    },
+    "1atpE02": {
+      "id": "1atpE02",
+      "name": "EC 2: Proteinkináza A – C-terminální lalok (doména)",
+      "category": "2. Globulární enzymy – Zástupci EC 1–7",
+      "kind": "domain",
+      "pdb": "1atp",
+      "desc": "EC 2.7.11.11 (Transferázy) – velký C-terminální helikální katalytický lalok proteinkinázy A.",
+      "n_sses": 9,
+      "n_res_sampled": 141,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 1.32,
+          "stress_1": 0.22,
+          "knn_pres": 86.1,
+          "conflicts": 1,
+          "n_sses": 9,
+          "time_ms": 22.6
+        },
+        "cm_binary": {
+          "local_err": 2.06,
+          "stress_1": 0.242,
+          "knn_pres": 86.1,
+          "conflicts": 1,
+          "n_sses": 9,
+          "time_ms": 39.4,
+          "angle_mae_deg": 26.6
+        },
+        "cm_distogram": {
+          "local_err": 1.56,
+          "stress_1": 0.25,
+          "knn_pres": 86.1,
+          "conflicts": 1,
+          "n_sses": 9,
+          "time_ms": 26.7,
+          "angle_mae_deg": 26.4
+        },
+        "llm_cm2prot": {
+          "local_err": 1.19,
+          "stress_1": 0.171,
+          "knn_pres": 86.1,
+          "conflicts": 0,
+          "n_sses": 9,
+          "time_ms": 26.3
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 90.0,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 81.0,
+        "res_roc_auc": 84.5,
+        "res_prec_at_L": 100.0,
+        "dist_mae_local": 1.71,
+        "time_ms": 12.4
+      },
+      "dsl": {
+        "n_cm_tokens": 54,
+        "n_2dp_tokens": 12,
+        "compression_ratio": 368.2,
+        "cm_dsl_sample": "<BOS_CM> NODE:H21:H:L5:CE LOOP:H21~E26:G1 NODE:E26:E:L21:CE LOOP:E26~E32:G1 NODE:E32:E:L19:CE LOOP:E32~E38:G1 NODE:E38:E:L24:CE LOOP:E38~H42:G1 NODE:H42:H:L11:CE LOOP:H42~H48:G1 NODE:H48:H:L20:CE LOOP:H48~E56:G1 NODE:E56:E:L17:CE LOOP:E56~E64:G1 NODE:E64:E:L18:CE LOOP:E64~H71:G99 NODE:H71:H:L6:CE SHEET:E26:E32:E38:E64:E56 CONT:E26~E32:D3.0:CROSS:126 CONT:E32~E38:D3.5:CROSS:124 CONT:E38~H42:D3.5:CROSS:077 CONT:E56~E64:D3.5:CROSS:119 CONT:E38~E64:D4.0:CROSS:122 CONT:H21~E26:D5.0:CROSS:086 CONT:H42~E64:D5.5:CROSS:095 CONT:H42~H48:D6.0:CROSS:093 CONT:E26~E38:D6.5:CROSS:071 CONT:H21~E32:D7.0:CROSS:090 CONT:H21~E56:D7.5:CROSS:092 CONT:H48~E56:D8.0:CROSS:105 CONT:E32~E64:D8.0:CROSS:080 CONT:E38~E56:D8.0:CROSS:072 CONT:E64~H71:D9.5:CROSS:084 CONT:E38~H48:D9.5:CROSS:113 CONT:H48~H71:D9.5:CROSS:080 ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E26:E32:E38:E64:E56 SSE2D:H21:L5:X-007.8:Y-016.8:A234 SSE2D:E26:L21:X-007.6:Y-017.5:A264 SSE2D:E32:L19:X-005.1:Y-014.6:A084 SSE2D:E38:L26:X-005.3:Y-010.6:A264 SSE2D:H42:L11:X+000.5:Y-004.2:A024 SSE2D:H48:L20:X-001.3:Y+001.4:A264 SSE2D:E56:L17:X-009.0:Y-003.4:A264 SSE2D:E64:L18:X-006.3:Y-006.2:A084 SSE2D:H71:L6:X+008.5:Y-002.9:A324 <EOS_2DP>"
+      }
+    },
+    "1atp_complex": {
+      "id": "1atp_complex",
+      "name": "EC 2: Proteinkináza A – Celý dvoudoménový komplex",
+      "category": "2. Globulární enzymy – Zástupci EC 1–7",
+      "kind": "complex",
+      "pdb": "1atp",
+      "desc": "EC 2.7.11.11 – kompletní katalytická podjednotka cAMP-dependentní proteinkinázy (N-lalok + C-lalok).",
+      "n_sses": 27,
+      "n_res_sampled": 328,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.5,
+          "stress_1": 0.23,
+          "knn_pres": 63.9,
+          "conflicts": 1,
+          "n_sses": 27,
+          "time_ms": 59.6
+        },
+        "cm_binary": {
+          "local_err": 4.0,
+          "stress_1": 0.294,
+          "knn_pres": 63.9,
+          "conflicts": 0,
+          "n_sses": 27,
+          "time_ms": 197.8,
+          "angle_mae_deg": 33.1
+        },
+        "cm_distogram": {
+          "local_err": 2.77,
+          "stress_1": 0.239,
+          "knn_pres": 64.8,
+          "conflicts": 1,
+          "n_sses": 27,
+          "time_ms": 181.3,
+          "angle_mae_deg": 32.0
+        },
+        "llm_cm2prot": {
+          "local_err": 2.92,
+          "stress_1": 0.232,
+          "knn_pres": 63.0,
+          "conflicts": 0,
+          "n_sses": 27,
+          "time_ms": 105.2
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 92.9,
+        "sse_prec_at_L": 81.5,
+        "sse_f1": 67.2,
+        "res_roc_auc": 93.8,
+        "res_prec_at_L": 100.0,
+        "dist_mae_local": 2.54,
+        "time_ms": 56.0
+      },
+      "dsl": {
+        "n_cm_tokens": 243,
+        "n_2dp_tokens": 33,
+        "compression_ratio": 442.7,
+        "cm_dsl_sample": "<BOS_CM> NODE:H1_15:H:L24:CE LOOP:H1_15~H1_24:G88 NODE:H1_24:H:L12:CE LOOP:H1_24~H1_35:G1 NODE:H1_35:H:L24:CE LOOP:H1_35~E1_40:G1 NODE:E1_40:E:L5:CE LOOP:E1_40~H1_41:G2 NODE:H1_41:H:L4:CE LOOP:H1_41~E1_43:G1 NODE:E1_43:E:L9:CE LOOP:E1_43~E1_49:G1 NODE:E1_49:E:L8:CE LOOP:E1_49~E1_56:G1 NODE:E1_56:E:L5:CE LOOP:E1_56~E1_60:G1 NODE:E1_60:E:L3:CE LOOP:E1_60~H1_65:G5 NODE:H1_65:H:L4:CE LOOP:H1_65~H1_69:G1 NODE:H1_69:H:L7:CE LOOP:H1_69~E1_73:G1 NODE:E1_73:E:L3:CE LOOP:E1_73~H1_76:G1 NODE:H1_76:H:L24:CE LOOP:H1_76~H1_84:G1 NODE:H1_84:H:L16:CE LOOP:H1_84~H1_101:G4 NODE:H1_101:H:L16:CE LOOP:H1_101~H1_107:G8 NODE:H1_107:H:L10:CE LOOP:H1_107~H1_112:G1 NODE:H1_112:H:L4:CE LOOP:H1_112~H1_120:G3 NODE:H1_120:H:L9:CE ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E1_40:E1_56 CLUST:E1_43:E1_49 CLUST:E1_60:E1_73 CLUST:E2_26:E2_32:E2_38:E2_64:E2_56 SSE2D:H1_15:L24:X-001.1:Y-015.6:A078 SSE2D:H1_24:L12:X+001.3:Y+006.9:A348 SSE2D:H1_35:L31:X-006.7:Y-006.9:A168 SSE2D:E1_40:L5:X-004.5:Y-003.7:A048 SSE2D:H1_41:L4:X+002.4:Y+003.5:A138 SSE2D:E1_43:L9:X+002.4:Y+000.9:A078 SSE2D:E1_49:L8:X+003.2:Y-003.0:A258 SSE2D:E1_56:L5:X-001.8:Y-006.7:A228 SSE2D:E1_60:L2:X-008.8:Y+007.6:A138 SSE2D:H1_65:L4:X-006.2:Y+010.0:A198 SSE2D:H1_69:L7:X-013.6:Y+010.5:A048 SSE2D:E1_73:L2:X-011.7:Y+005.0:A318 SSE2D:H1_76:L26:X-009.5:Y+002.0:A018 SSE2D:H1_84:L16:X-009.5:Y+016.4:A258 SSE2D:H1_101:L16:X-017.5:Y+003.8:A048 SSE2D:H1_107:L10:X-017.5:Y-007.1:A258 SSE2D:H1_112:L4:X-018.7:Y-005.3:A108 SSE2D:H1_120:L9:X-010.8:Y-015.1:A108 SSE2D:H2_21:L5:X+022.8:Y-003.2:A138 SSE2D:E2_26:L21:X+012.2:Y+005.7:A078 SSE2D:E2_32:L19:X+015.2:Y+003.5:A258 SSE2D:E2_38:L26:X+016.0:Y-000.1:A078 SSE2D:H2_42:L11:X+011.3:Y+006.0:A288 ..."
+      }
+    },
+    "1lz1A00": {
+      "id": "1lz1A00",
+      "name": "EC 3: Lidský lysozym (doména)",
+      "category": "2. Globulární enzymy – Zástupci EC 1–7",
+      "kind": "domain",
+      "pdb": "1lz1",
+      "desc": "EC 3.2.1.17 (Hydrolázy) – klasický globulární α+β enzym štěpící peptidoglykan.",
+      "n_sses": 16,
+      "n_res_sampled": 134,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.33,
+          "stress_1": 0.213,
+          "knn_pres": 57.8,
+          "conflicts": 0,
+          "n_sses": 16,
+          "time_ms": 19.3
+        },
+        "cm_binary": {
+          "local_err": 3.04,
+          "stress_1": 0.247,
+          "knn_pres": 67.2,
+          "conflicts": 0,
+          "n_sses": 16,
+          "time_ms": 70.1,
+          "angle_mae_deg": 28.0
+        },
+        "cm_distogram": {
+          "local_err": 2.33,
+          "stress_1": 0.214,
+          "knn_pres": 57.8,
+          "conflicts": 0,
+          "n_sses": 16,
+          "time_ms": 48.6,
+          "angle_mae_deg": 27.6
+        },
+        "llm_cm2prot": {
+          "local_err": 2.62,
+          "stress_1": 0.199,
+          "knn_pres": 68.8,
+          "conflicts": 0,
+          "n_sses": 16,
+          "time_ms": 28.5
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 92.8,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 71.4,
+        "res_roc_auc": 87.5,
+        "res_prec_at_L": 98.5,
+        "dist_mae_local": 2.3,
+        "time_ms": 38.2
+      },
+      "dsl": {
+        "n_cm_tokens": 138,
+        "n_2dp_tokens": 22,
+        "compression_ratio": 130.1,
+        "cm_dsl_sample": "<BOS_CM> NODE:E7:E:L3:CA LOOP:E7~H9:G1 NODE:H9:H:L16:CA LOOP:H9~E11:G1 NODE:E11:E:L3:CA LOOP:E11~E12:G1 NODE:E12:E:L3:CA LOOP:E12~H14:G1 NODE:H14:H:L17:CA LOOP:H14~E16:G1 NODE:E16:E:L3:CA LOOP:E16~E17:G2 NODE:E17:E:L12:CA LOOP:E17~E21:G1 NODE:E21:E:L12:CA LOOP:E21~E24:G1 NODE:E24:E:L5:CA LOOP:E24~E28:G2 NODE:E28:E:L3:CA LOOP:E28~E32:G12 NODE:E32:E:L3:CA LOOP:E32~H33:G1 NODE:H33:H:L8:CA LOOP:H33~H37:G1 NODE:H37:H:L21:CA LOOP:H37~H43:G1 NODE:H43:H:L8:CA LOOP:H43~H53:G1 NODE:H53:H:L10:CA LOOP:H53~H58:G2 NODE:H58:H:L7:CA SHEET:E7:E16 SHEET:E11:E12 SHEET:E17:E21:E24 SHEET:E28:E32 ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E7:E16 CLUST:E11:E12 CLUST:E17:E21:E24 CLUST:E28:E32 SSE2D:E7:L2:X-010.5:Y-000.6:A297 SSE2D:H9:L16:X-005.4:Y-006.7:A057 SSE2D:E11:L2:X+004.4:Y-005.2:A297 SSE2D:E12:L2:X+006.0:Y-001.9:A117 SSE2D:H14:L17:X+001.3:Y-000.1:A327 SSE2D:E16:L2:X-008.7:Y+003.0:A117 SSE2D:E17:L12:X-005.4:Y+014.2:A027 SSE2D:E21:L12:X-002.0:Y+010.9:A207 SSE2D:E24:L5:X+001.8:Y+010.6:A027 SSE2D:E28:L2:X-010.5:Y+015.2:A117 SSE2D:E32:L2:X-012.3:Y+011.6:A117 SSE2D:H33:L8:X-009.4:Y+009.5:A177 SSE2D:H37:L21:X-003.7:Y+005.2:A087 SSE2D:H43:L8:X+006.3:Y+006.3:A327 SSE2D:H53:L10:X+008.6:Y+005.3:A147 SSE2D:H58:L7:X+003.2:Y-009.3:A237 <EOS_2DP>"
+      }
+    },
+    "2ca2A00": {
+      "id": "2ca2A00",
+      "name": "EC 4: Karbonanhydráza II (doména)",
+      "category": "2. Globulární enzymy – Zástupci EC 1–7",
+      "kind": "domain",
+      "pdb": "2ca2",
+      "desc": "EC 4.2.1.1 (Lyázy) – lidská karbonanhydráza II s rozsáhlým centrálním 10-vláknovým zkrouceným β-listem.",
+      "n_sses": 27,
+      "n_res_sampled": 284,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.84,
+          "stress_1": 0.272,
+          "knn_pres": 59.3,
+          "conflicts": 0,
+          "n_sses": 27,
+          "time_ms": 67.6
+        },
+        "cm_binary": {
+          "local_err": 3.99,
+          "stress_1": 0.356,
+          "knn_pres": 63.9,
+          "conflicts": 1,
+          "n_sses": 27,
+          "time_ms": 163.0,
+          "angle_mae_deg": 24.6
+        },
+        "cm_distogram": {
+          "local_err": 3.12,
+          "stress_1": 0.306,
+          "knn_pres": 63.9,
+          "conflicts": 0,
+          "n_sses": 27,
+          "time_ms": 140.8,
+          "angle_mae_deg": 24.0
+        },
+        "llm_cm2prot": {
+          "local_err": 2.75,
+          "stress_1": 0.267,
+          "knn_pres": 65.7,
+          "conflicts": 0,
+          "n_sses": 27,
+          "time_ms": 107.3
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 91.4,
+        "sse_prec_at_L": 96.3,
+        "sse_f1": 69.7,
+        "res_roc_auc": 88.9,
+        "res_prec_at_L": 71.5,
+        "dist_mae_local": 3.17,
+        "time_ms": 49.6
+      },
+      "dsl": {
+        "n_cm_tokens": 263,
+        "n_2dp_tokens": 33,
+        "compression_ratio": 306.7,
+        "cm_dsl_sample": "<BOS_CM> NODE:H3:H:L11:CA LOOP:H3~H8:G1 NODE:H8:H:L7:CA LOOP:H8~E9:G4 NODE:E9:E:L5:CA LOOP:E9~E11:G2 NODE:E11:E:L5:CA LOOP:E11~E14:G3 NODE:E14:E:L11:CA LOOP:E14~E17:G1 NODE:E17:E:L17:CA LOOP:E17~E18:G1 NODE:E18:E:L15:CA LOOP:E18~E20:G1 NODE:E20:E:L11:CA LOOP:E20~E23:G1 NODE:E23:E:L24:CA LOOP:E23~E26:G1 NODE:E26:E:L5:CA LOOP:E26~E27:G1 NODE:E27:E:L3:CA LOOP:E27~E28:G2 NODE:E28:E:L24:CA LOOP:E28~H29:G1 NODE:H29:H:L5:CA LOOP:H29~H30:G1 NODE:H30:H:L9:CA LOOP:H30~E32:G1 NODE:E32:E:L24:CA LOOP:E32~H34:G1 NODE:H34:H:L20:CA LOOP:H34~E36:G1 NODE:E36:E:L3:CA LOOP:E36~E37:G1 NODE:E37:E:L8:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E9:E26:E27 CLUST:E11:E51:E14:E41:E20:E43:E44:E32:E28:E23:E18:E17:E37 CLUST:E36:E48 CLUST:E47:E49 SSE2D:H3:L11:X+015.5:Y-007.1:A163 SSE2D:H8:L7:X+015.4:Y-010.8:A133 SSE2D:E9:L5:X+010.2:Y-002.2:A193 SSE2D:E11:L5:X+005.6:Y-026.3:A043 SSE2D:E14:L11:X-006.7:Y-017.5:A043 SSE2D:E17:L17:X-017.5:Y-005.1:A043 SSE2D:E18:L15:X-013.0:Y-005.4:A223 SSE2D:E20:L11:X-007.2:Y-013.5:A223 SSE2D:E23:L27:X-007.3:Y-007.3:A043 SSE2D:E26:L5:X+005.6:Y-002.6:A193 SSE2D:E27:L2:X+002.5:Y-000.4:A013 SSE2D:E28:L28:X-003.2:Y-006.9:A223 SSE2D:H29:L5:X-003.6:Y-021.5:A253 SSE2D:H30:L9:X+002.4:Y-019.2:A103 SSE2D:E32:L31:X+001.4:Y-008.3:A043 SSE2D:H34:L20:X-014.0:Y-004.6:A343 SSE2D:E36:L2:X-013.2:Y+005.2:A283 SSE2D:E37:L8:X-021.1:Y-001.3:A223 SSE2D:H39:L7:X-009.7:Y-011.2:A073 SSE2D:E41:L17:X+003.7:Y-017.7:A223 SSE2D:E43:L17:X+003.3:Y-013.1:A043 SSE2D:E44:L8:X+004.5:Y-004.8:A043 SSE2D:H45:L14:X-007.6:Y+001.5:A343 ..."
+      }
+    },
+    "1timA00": {
+      "id": "1timA00",
+      "name": "EC 5: Triózafosfátizomeráza – Monomer (doména)",
+      "category": "2. Globulární enzymy – Zástupci EC 1–7",
+      "kind": "domain",
+      "pdb": "1tim",
+      "desc": "EC 5.3.1.1 (Izomerázy) – samostatná podjednotka triózafosfátizomerázy (TIM barel).",
+      "n_sses": 21,
+      "n_res_sampled": 308,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 1.56,
+          "stress_1": 0.157,
+          "knn_pres": 79.8,
+          "conflicts": 0,
+          "n_sses": 21,
+          "time_ms": 55.8
+        },
+        "cm_binary": {
+          "local_err": 3.01,
+          "stress_1": 0.234,
+          "knn_pres": 69.0,
+          "conflicts": 0,
+          "n_sses": 21,
+          "time_ms": 151.2,
+          "angle_mae_deg": 32.6
+        },
+        "cm_distogram": {
+          "local_err": 1.85,
+          "stress_1": 0.172,
+          "knn_pres": 73.8,
+          "conflicts": 0,
+          "n_sses": 21,
+          "time_ms": 131.2,
+          "angle_mae_deg": 31.7
+        },
+        "llm_cm2prot": {
+          "local_err": 1.62,
+          "stress_1": 0.157,
+          "knn_pres": 73.8,
+          "conflicts": 0,
+          "n_sses": 21,
+          "time_ms": 47.5
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 95.3,
+        "sse_prec_at_L": 95.2,
+        "sse_f1": 83.3,
+        "res_roc_auc": 88.0,
+        "res_prec_at_L": 48.1,
+        "dist_mae_local": 1.99,
+        "time_ms": 32.3
+      },
+      "dsl": {
+        "n_cm_tokens": 200,
+        "n_2dp_tokens": 24,
+        "compression_ratio": 474.3,
+        "cm_dsl_sample": "<BOS_CM> NODE:E47:E:L15:CA LOOP:E47~H71:G1 NODE:H71:H:L21:CA LOOP:H71~E76:G1 NODE:E76:E:L15:CA LOOP:E76~H99:G1 NODE:H99:H:L14:CA LOOP:H99~E123:G1 NODE:E123:E:L17:CA LOOP:E123~H143:G4 NODE:H143:H:L11:CA LOOP:H143~E148:G1 NODE:E148:E:L12:CA LOOP:E148~H155:G1 NODE:H155:H:L10:CA LOOP:H155~H166:G1 NODE:H166:H:L20:CA LOOP:H166~E171:G1 NODE:E171:E:L22:CA LOOP:E171~H178:G1 NODE:H178:H:L9:CA LOOP:H178~H187:G1 NODE:H187:H:L22:CA LOOP:H187~E192:G1 NODE:E192:E:L22:CA LOOP:E192~H206:G1 NODE:H206:H:L4:CA LOOP:H206~H211:G7 NODE:H211:H:L24:CA LOOP:H211~H215:G1 NODE:H215:H:L9:CA LOOP:H215~E218:G1 NODE:E218:E:L12:CA LOOP:E218~H229:G1 NODE:H229:H:L16:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E47:E233:E76:E218:E123:E192:E148:E171 SSE2D:E47:L15:X+003.6:Y+001.1:A099 SSE2D:H71:L21:X+011.9:Y-008.3:A039 SSE2D:E76:L15:X+000.4:Y-002.9:A099 SSE2D:H99:L14:X+000.3:Y-011.8:A129 SSE2D:E123:L17:X-003.5:Y-003.2:A099 SSE2D:H143:L11:X-010.5:Y-007.7:A129 SSE2D:E148:L12:X-006.6:Y+000.7:A099 SSE2D:H155:L10:X-008.1:Y+002.0:A279 SSE2D:H166:L20:X-014.4:Y+004.0:A189 SSE2D:E171:L22:X-006.3:Y+005.9:A099 SSE2D:H178:L9:X-012.3:Y+017.3:A009 SSE2D:H187:L22:X-011.9:Y+012.5:A219 SSE2D:E192:L22:X-002.9:Y+009.2:A099 SSE2D:H206:L4:X-006.0:Y+015.3:A129 SSE2D:H211:L27:X-000.2:Y+018.1:A279 SSE2D:H215:L9:X+003.3:Y+015.0:A129 SSE2D:E218:L12:X+002.3:Y+009.6:A099 SSE2D:H229:L16:X+011.5:Y+012.3:A339 SSE2D:E233:L12:X+004.8:Y+006.0:A099 SSE2D:H238:L8:X+009.3:Y+002.2:A129 SSE2D:H260:L13:X+013.2:Y+002.6:A009 <EOS_2DP>"
+      }
+    },
+    "1tim_dimer": {
+      "id": "1tim_dimer",
+      "name": "EC 5: Triózafosfátizomeráza – Homodimer (komplex)",
+      "category": "2. Globulární enzymy – Zástupci EC 1–7",
+      "kind": "complex",
+      "pdb": "1tim",
+      "desc": "EC 5.3.1.1 (Izomerázy) – kompletní biologický homodimer dvou interagujících TIM barelů (řetězce A + B).",
+      "n_sses": 42,
+      "n_res_sampled": 616,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.24,
+          "stress_1": 0.127,
+          "knn_pres": 70.2,
+          "conflicts": 0,
+          "n_sses": 42,
+          "time_ms": 100.2
+        },
+        "cm_binary": {
+          "local_err": 4.04,
+          "stress_1": 0.209,
+          "knn_pres": 68.5,
+          "conflicts": 1,
+          "n_sses": 42,
+          "time_ms": 551.2,
+          "angle_mae_deg": 35.0
+        },
+        "cm_distogram": {
+          "local_err": 2.66,
+          "stress_1": 0.144,
+          "knn_pres": 70.2,
+          "conflicts": 0,
+          "n_sses": 42,
+          "time_ms": 424.7,
+          "angle_mae_deg": 34.3
+        },
+        "llm_cm2prot": {
+          "local_err": 2.61,
+          "stress_1": 0.145,
+          "knn_pres": 70.2,
+          "conflicts": 0,
+          "n_sses": 42,
+          "time_ms": 134.8
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 97.3,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 76.6,
+        "res_roc_auc": 94.2,
+        "res_prec_at_L": 43.5,
+        "dist_mae_local": 2.11,
+        "time_ms": 96.9
+      },
+      "dsl": {
+        "n_cm_tokens": 445,
+        "n_2dp_tokens": 46,
+        "compression_ratio": 852.7,
+        "cm_dsl_sample": "<BOS_CM> NODE:E1_47:E:L15:CA LOOP:E1_47~H1_71:G1 NODE:H1_71:H:L21:CA LOOP:H1_71~E1_76:G1 NODE:E1_76:E:L15:CA LOOP:E1_76~H1_99:G1 NODE:H1_99:H:L14:CA LOOP:H1_99~E1_123:G1 NODE:E1_123:E:L17:CA LOOP:E1_123~H1_143:G4 NODE:H1_143:H:L11:CA LOOP:H1_143~E1_148:G1 NODE:E1_148:E:L12:CA LOOP:E1_148~H1_155:G1 NODE:H1_155:H:L10:CA LOOP:H1_155~H1_166:G1 NODE:H1_166:H:L20:CA LOOP:H1_166~E1_171:G1 NODE:E1_171:E:L22:CA LOOP:E1_171~H1_178:G1 NODE:H1_178:H:L9:CA LOOP:H1_178~H1_187:G1 NODE:H1_187:H:L22:CA LOOP:H1_187~E1_192:G1 NODE:E1_192:E:L22:CA LOOP:E1_192~H1_206:G1 NODE:H1_206:H:L4:CA LOOP:H1_206~H1_211:G7 NODE:H1_211:H:L24:CA LOOP:H1_211~H1_215:G1 NODE:H1_215:H:L9:CA LOOP:H1_215~E1_218:G1 NODE:E1_218:E:L12:CA LOOP:E1_218~H1_229:G1 NODE:H1_229:H:L16:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E1_47:E1_233:E1_76:E1_218:E1_123:E1_192:E1_148:E1_171 CLUST:E2_47:E2_76:E2_233:E2_123:E2_218:E2_148:E2_192:E2_171 SSE2D:E1_47:L15:X+016.3:Y+005.5:A200 SSE2D:H1_71:L21:X+005.0:Y+013.4:A080 SSE2D:E1_76:L15:X+011.2:Y+004.7:A200 SSE2D:H1_99:L14:X+001.9:Y+002.3:A080 SSE2D:E1_123:L17:X+008.8:Y+001.2:A200 SSE2D:H1_143:L11:X+003.1:Y-009.0:A080 SSE2D:E1_148:L12:X+011.0:Y-003.1:A200 SSE2D:H1_155:L10:X+008.6:Y-001.6:A260 SSE2D:H1_166:L20:X+011.1:Y-011.6:A140 SSE2D:E1_171:L22:X+015.5:Y-005.6:A200 SSE2D:H1_178:L9:X+018.4:Y-014.1:A140 SSE2D:H1_187:L22:X+021.2:Y-012.2:A200 SSE2D:E1_192:L22:X+020.0:Y-004.1:A200 SSE2D:H1_206:L4:X+022.2:Y-007.5:A230 SSE2D:H1_211:L27:X+030.0:Y-001.8:A170 SSE2D:H1_215:L9:X+030.8:Y-005.6:A350 SSE2D:E1_218:L12:X+023.0:Y+000.5:A200 SSE2D:H1_229:L16:X+026.6:Y+010.7:A140 SSE2D:E1_233:L12:X+020.8:Y+003.7:A200 SSE2D:H1_238:L8:X+017.1:Y+008.5:A350 SSE2D:H1_260:L13:X+017.5:Y+014.1:A110 SSE2D:E2_47:L15:X-016.1:Y-005.0:A050 SSE2D:H2_71:L21:X-005.2:Y-014.1:A260 SSE2D:E2_76:L15:X-011.3:Y-004.8:A050 SSE2D:H2_99:L14:X-002.0:Y-002.9:A260 ..."
+      }
+    },
+    "1aszA01": {
+      "id": "1aszA01",
+      "name": "EC 6: Aspartyl-tRNA syntetáza – Antikodonová doména",
+      "category": "2. Globulární enzymy – Zástupci EC 1–7",
+      "kind": "domain",
+      "pdb": "1asz",
+      "desc": "EC 6.1.1.12 (Ligázy) – N-terminální OB-fold β-barel doména rozpoznávající antikodon tRNA.",
+      "n_sses": 8,
+      "n_res_sampled": 146,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 1.49,
+          "stress_1": 0.282,
+          "knn_pres": 78.1,
+          "conflicts": 0,
+          "n_sses": 8,
+          "time_ms": 11.1
+        },
+        "cm_binary": {
+          "local_err": 2.14,
+          "stress_1": 0.529,
+          "knn_pres": 84.4,
+          "conflicts": 1,
+          "n_sses": 8,
+          "time_ms": 22.8,
+          "angle_mae_deg": 21.6
+        },
+        "cm_distogram": {
+          "local_err": 1.15,
+          "stress_1": 0.368,
+          "knn_pres": 84.4,
+          "conflicts": 0,
+          "n_sses": 8,
+          "time_ms": 15.9,
+          "angle_mae_deg": 21.8
+        },
+        "llm_cm2prot": {
+          "local_err": 1.62,
+          "stress_1": 0.318,
+          "knn_pres": 75.0,
+          "conflicts": 0,
+          "n_sses": 8,
+          "time_ms": 8.1
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 85.0,
+        "sse_prec_at_L": 87.5,
+        "sse_f1": 87.8,
+        "res_roc_auc": 72.0,
+        "res_prec_at_L": 98.6,
+        "dist_mae_local": 2.22,
+        "time_ms": 5.3
+      },
+      "dsl": {
+        "n_cm_tokens": 44,
+        "n_2dp_tokens": 11,
+        "compression_ratio": 484.5,
+        "cm_dsl_sample": "<BOS_CM> NODE:_E0:E:L8:CA LOOP:_E0~H10:G13 NODE:H10:H:L5:CA LOOP:H10~E25:G7 NODE:E25:E:L24:CA LOOP:E25~E35:G1 NODE:E35:E:L24:CA LOOP:E35~E44:G1 NODE:E44:E:L24:CA LOOP:E44~H49:G1 NODE:H49:H:L13:CA LOOP:H49~E63:G1 NODE:E63:E:L24:CA LOOP:E63~E77:G1 NODE:E77:E:L24:CA SHEET:E25:E35:E63:E44:E77:_E0 CONT:_E0~E77:D2.0:CROSS:077 CONT:E25~E35:D3.0:CROSS:121 CONT:E63~E77:D3.0:CROSS:134 CONT:E35~E44:D3.5:CROSS:134 CONT:E25~E63:D3.5:CROSS:095 CONT:E25~H49:D4.0:CROSS:091 CONT:E25~E44:D4.5:CROSS:071 CONT:E44~E77:D5.5:CROSS:085 CONT:H10~E25:D6.0:CROSS:095 CONT:E25~E77:D6.0:CROSS:086 CONT:_E0~E63:D6.5:CROSS:102 CONT:E44~E63:D7.0:CROSS:084 CONT:E35~H49:D8.0:CROSS:075 CONT:_E0~H49:D8.5:CROSS:086 CONT:H10~E35:D8.5:CROSS:089 CONT:H10~E44:D8.5:CROSS:091 CONT:E35~E77:D8.5:CROSS:089 CONT:E44~H49:D8.5:CROSS:106 CONT:E35~E63:D9.0:CROSS:100 ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E25:E35:E63:E44:E77:_E0 SSE2D:_E0:L8:X-042.8:Y-029.6:A145 SSE2D:H10:L5:X-052.5:Y-043.2:A235 SSE2D:E25:L25:X-049.9:Y-037.3:A145 SSE2D:E35:L24:X-053.2:Y-036.9:A325 SSE2D:E44:L24:X-052.5:Y-033.4:A145 SSE2D:H49:L13:X-044.9:Y-027.0:A235 SSE2D:E63:L24:X-045.2:Y-035.1:A325 SSE2D:E77:L24:X-045.4:Y-031.8:A145 <EOS_2DP>"
+      }
+    },
+    "1aszA02": {
+      "id": "1aszA02",
+      "name": "EC 6: Aspartyl-tRNA syntetáza – Katalytická doména",
+      "category": "2. Globulární enzymy – Zástupci EC 1–7",
+      "kind": "domain",
+      "pdb": "1asz",
+      "desc": "EC 6.1.1.12 (Ligázy) – C-terminální katalytická doména třídy II aminoacyl-tRNA syntetázy.",
+      "n_sses": 28,
+      "n_res_sampled": 374,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.91,
+          "stress_1": 0.239,
+          "knn_pres": 69.6,
+          "conflicts": 1,
+          "n_sses": 28,
+          "time_ms": 74.5
+        },
+        "cm_binary": {
+          "local_err": 3.79,
+          "stress_1": 0.301,
+          "knn_pres": 68.8,
+          "conflicts": 0,
+          "n_sses": 28,
+          "time_ms": 212.0,
+          "angle_mae_deg": 26.6
+        },
+        "cm_distogram": {
+          "local_err": 2.96,
+          "stress_1": 0.253,
+          "knn_pres": 69.6,
+          "conflicts": 1,
+          "n_sses": 28,
+          "time_ms": 219.3,
+          "angle_mae_deg": 24.9
+        },
+        "llm_cm2prot": {
+          "local_err": 3.07,
+          "stress_1": 0.253,
+          "knn_pres": 71.4,
+          "conflicts": 0,
+          "n_sses": 28,
+          "time_ms": 81.5
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 96.4,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 77.9,
+        "res_roc_auc": 90.1,
+        "res_prec_at_L": 97.1,
+        "dist_mae_local": 2.36,
+        "time_ms": 73.0
+      },
+      "dsl": {
+        "n_cm_tokens": 268,
+        "n_2dp_tokens": 34,
+        "compression_ratio": 521.9,
+        "cm_dsl_sample": "<BOS_CM> NODE:_H0:H:L7:CA LOOP:_H0~_H1:G1 NODE:_H1:H:L10:CA LOOP:_H1~H8:G3 NODE:H8:H:L10:CA LOOP:H8~H12:G1 NODE:H12:H:L9:CA LOOP:H12~H15:G1 NODE:H15:H:L24:CA LOOP:H15~E18:G1 NODE:E18:E:L5:CA LOOP:E18~E19:G2 NODE:E19:E:L5:CA LOOP:E19~E29:G8 NODE:E29:E:L3:CA LOOP:E29~E37:G7 NODE:E37:E:L5:CA LOOP:E37~H38:G1 NODE:H38:H:L15:CA LOOP:H38~E43:G1 NODE:E43:E:L24:CA LOOP:E43~E54:G1 NODE:E54:E:L24:CA LOOP:E54~H64:G1 NODE:H64:H:L24:CA LOOP:H64~_H15:G1 NODE:_H15:H:L14:CA LOOP:_H15~E73:G10 NODE:E73:E:L11:CA LOOP:E73~H74:G1 NODE:H74:H:L17:CA LOOP:H74~H80:G5 NODE:H80:H:L21:CA LOOP:H80~E82:G1 NODE:E82:E:L15:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E18:E43:E54:E129:E119:E111:E82:E73:E104 CLUST:E19:E37:E29 CLUST:E106:E109:_E20 SSE2D:_H0:L7:X+016.5:Y-000.2:A241 SSE2D:_H1:L10:X+014.8:Y-006.3:A121 SSE2D:H8:L10:X+017.4:Y+008.8:A001 SSE2D:H12:L9:X+013.7:Y+006.5:A181 SSE2D:H15:L36:X+006.0:Y+004.7:A121 SSE2D:E18:L5:X+006.2:Y+016.7:A121 SSE2D:E19:L5:X-004.7:Y+024.9:A001 SSE2D:E29:L2:X-014.3:Y+025.0:A001 SSE2D:E37:L5:X-008.9:Y+024.9:A181 SSE2D:H38:L15:X-008.1:Y+016.1:A091 SSE2D:E43:L24:X+003.4:Y+014.6:A121 SSE2D:E54:L29:X+000.5:Y+012.0:A301 SSE2D:H64:L34:X-001.9:Y-000.1:A091 SSE2D:_H15:L14:X+005.8:Y-003.5:A151 SSE2D:E73:L11:X-008.0:Y-006.8:A301 SSE2D:H74:L17:X-017.3:Y-006.9:A181 SSE2D:H80:L21:X-009.5:Y-010.4:A151 SSE2D:E82:L15:X-009.1:Y-002.6:A301 SSE2D:_E20:L2:X-016.4:Y-003.1:A271 SSE2D:E104:L2:X-014.1:Y+008.2:A121 SSE2D:E106:L2:X-016.2:Y+005.6:A271 SSE2D:E109:L5:X-016.3:Y+001.5:A091 SSE2D:E111:L15:X-008.3:Y+002.0:A121 SSE2D:E119:L26:X-006.9:Y+005.4:A301 ..."
+      }
+    },
+    "1asz_dimer": {
+      "id": "1asz_dimer",
+      "name": "EC 6: Aspartyl-tRNA syntetáza – Homodimer (4-doménový komplex)",
+      "category": "2. Globulární enzymy – Zástupci EC 1–7",
+      "kind": "complex",
+      "pdb": "1asz",
+      "desc": "EC 6.1.1.12 (Ligázy) – kompletní homodimerní komplex (2× antikodonová + 2× katalytická doména).",
+      "n_sses": 72,
+      "n_res_sampled": 1034,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 4.89,
+          "stress_1": 0.154,
+          "knn_pres": 52.4,
+          "conflicts": 1,
+          "n_sses": 72,
+          "time_ms": 300.6
+        },
+        "cm_binary": {
+          "local_err": 5.49,
+          "stress_1": 0.238,
+          "knn_pres": 56.2,
+          "conflicts": 0,
+          "n_sses": 72,
+          "time_ms": 1598.7,
+          "angle_mae_deg": 28.0
+        },
+        "cm_distogram": {
+          "local_err": 4.93,
+          "stress_1": 0.215,
+          "knn_pres": 55.9,
+          "conflicts": 0,
+          "n_sses": 72,
+          "time_ms": 2547.0,
+          "angle_mae_deg": 26.6
+        },
+        "llm_cm2prot": {
+          "local_err": 5.58,
+          "stress_1": 0.262,
+          "knn_pres": 50.0,
+          "conflicts": 9,
+          "n_sses": 72,
+          "time_ms": 343.6
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 95.4,
+        "sse_prec_at_L": 73.6,
+        "sse_f1": 56.4,
+        "res_roc_auc": 94.0,
+        "res_prec_at_L": 87.4,
+        "dist_mae_local": 4.74,
+        "time_ms": 433.3
+      },
+      "dsl": {
+        "n_cm_tokens": 692,
+        "n_2dp_tokens": 82,
+        "compression_ratio": 1545.0,
+        "cm_dsl_sample": "<BOS_CM> NODE:_E1_0:E:L8:CA LOOP:_E1_0~H1_10:G13 NODE:H1_10:H:L5:CA LOOP:H1_10~E1_25:G7 NODE:E1_25:E:L24:CA LOOP:E1_25~E1_35:G1 NODE:E1_35:E:L24:CA LOOP:E1_35~E1_44:G1 NODE:E1_44:E:L24:CA LOOP:E1_44~H1_49:G1 NODE:H1_49:H:L13:CA LOOP:H1_49~E1_63:G1 NODE:E1_63:E:L24:CA LOOP:E1_63~E1_77:G1 NODE:E1_77:E:L24:CA LOOP:E1_77~_H2_0:G99 NODE:_H2_0:H:L7:CA LOOP:_H2_0~_H2_1:G1 NODE:_H2_1:H:L10:CA LOOP:_H2_1~H2_8:G3 NODE:H2_8:H:L10:CA LOOP:H2_8~H2_12:G1 NODE:H2_12:H:L9:CA LOOP:H2_12~H2_15:G1 NODE:H2_15:H:L24:CA LOOP:H2_15~E2_18:G1 NODE:E2_18:E:L5:CA LOOP:E2_18~E2_19:G2 NODE:E2_19:E:L5:CA LOOP:E2_19~E2_29:G8 NODE:E2_29:E:L3:CA LOOP:E2_29~E2_37:G7 NODE:E2_37:E:L5:CA LOOP:E2_37~H2_38:G1 NODE:H2_38:H:L15:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E1_25:E1_35:E1_63:E1_44:E1_77:_E1_0 CLUST:E2_18:E2_82:E2_43:E2_54:E2_129:E2_119:E2_111:E2_104:E2_73 CLUST:E2_19:E2_37:E2_29 CLUST:E2_109:E2_106 CLUST:E3_25:E3_35:E3_63:E3_44:E3_77:_E3_0 CLUST:E4_18:E4_82:E4_43:E4_54:E4_129:E4_119:E4_111:E4_104:E4_73 CLUST:E4_19:E4_37:E4_29 CLUST:E4_109:E4_106 SSE2D:_E1_0:L8:X-025.6:Y+001.9:A328 SSE2D:H1_10:L5:X-040.6:Y-008.4:A298 SSE2D:E1_25:L25:X-037.6:Y-001.2:A328 SSE2D:E1_35:L24:X-040.3:Y-002.7:A148 SSE2D:E1_44:L24:X-046.1:Y+000.4:A328 SSE2D:H1_49:L13:X-026.4:Y+011.9:A178 SSE2D:E1_63:L24:X-027.9:Y+012.0:A148 SSE2D:E1_77:L24:X-034.9:Y-006.1:A328 SSE2D:_H2_0:L7:X-042.5:Y-002.9:A298 SSE2D:_H2_1:L10:X-045.9:Y+001.7:A148 SSE2D:H2_8:L10:X-028.3:Y-000.8:A358 SSE2D:H2_12:L9:X-035.8:Y+002.7:A208 SSE2D:H2_15:L36:X-034.0:Y+001.5:A358 SSE2D:E2_18:L5:X-031.9:Y+002.5:A028 SSE2D:E2_19:L5:X-026.5:Y-012.9:A058 SSE2D:E2_29:L2:X-017.3:Y-027.4:A238 SSE2D:E2_37:L5:X-016.4:Y-011.5:A058 SSE2D:H2_38:L15:X-017.8:Y-009.3:A148 SSE2D:E2_43:L24:X-003.7:Y-006.3:A208 ..."
+      }
+    },
+    "1f88A00": {
+      "id": "1f88A00",
+      "name": "GPCR: Bovinní rodopsin – 7TM monomer (doména)",
+      "category": "3. GPCR (Receptory spřažené s G-proteiny)",
+      "kind": "domain",
+      "pdb": "1f88",
+      "desc": "Klasický GPCR třídy A – 7 transmembránových α-helixů (TM1–TM7) + cytoplazmatický helix H8.",
+      "n_sses": 13,
+      "n_res_sampled": 223,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 1.46,
+          "stress_1": 0.53,
+          "knn_pres": 69.2,
+          "conflicts": 0,
+          "n_sses": 13,
+          "time_ms": 40.6
+        },
+        "cm_binary": {
+          "local_err": 2.54,
+          "stress_1": 0.542,
+          "knn_pres": 71.2,
+          "conflicts": 0,
+          "n_sses": 13,
+          "time_ms": 60.8,
+          "angle_mae_deg": 20.0
+        },
+        "cm_distogram": {
+          "local_err": 1.58,
+          "stress_1": 0.524,
+          "knn_pres": 69.2,
+          "conflicts": 0,
+          "n_sses": 13,
+          "time_ms": 54.6,
+          "angle_mae_deg": 18.4
+        },
+        "llm_cm2prot": {
+          "local_err": 1.6,
+          "stress_1": 0.513,
+          "knn_pres": 71.2,
+          "conflicts": 0,
+          "n_sses": 13,
+          "time_ms": 21.3
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 88.8,
+        "sse_prec_at_L": 92.3,
+        "sse_f1": 72.5,
+        "res_roc_auc": 84.6,
+        "res_prec_at_L": 52.5,
+        "dist_mae_local": 2.13,
+        "time_ms": 16.9
+      },
+      "dsl": {
+        "n_cm_tokens": 97,
+        "n_2dp_tokens": 17,
+        "compression_ratio": 512.7,
+        "cm_dsl_sample": "<BOS_CM> NODE:E0:E:L5:CA LOOP:E0~E2:G1 NODE:E2:E:L5:CA LOOP:E2~H3:G14 NODE:H3:H:L5:CA LOOP:H3~H5:G1 NODE:H5:H:L24:CA LOOP:H5~H7:G1 NODE:H7:H:L24:CA LOOP:H7~H19:G1 NODE:H19:H:L24:CA LOOP:H19~H23:G1 NODE:H23:H:L24:CA LOOP:H23~E27:G1 NODE:E27:E:L11:CA LOOP:E27~E30:G1 NODE:E30:E:L11:CA LOOP:E30~H34:G3 NODE:H34:H:L24:CA LOOP:H34~H44:G2 NODE:H44:H:L24:CA LOOP:H44~H48:G1 NODE:H48:H:L24:CA LOOP:H48~H50:G1 NODE:H50:H:L18:CA SHEET:E0:E2 SHEET:E27:E30 CONT:H48~H50:D2.0:CROSS:086 CONT:E27~E30:D3.5:CROSS:100 CONT:E0~E2:D4.5:CROSS:092 CONT:E27~H48:D4.5:CROSS:091 CONT:E2~H48:D5.5:CROSS:087 CONT:H7~H23:D5.5:CROSS:057 CONT:H23~E27:D6.0:CROSS:083 CONT:E2~E27:D7.0:CROSS:085 ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E0:E2 CLUST:E27:E30 SSE2D:E0:L5:X+005.0:Y-007.1:A177 SSE2D:E2:L5:X+001.0:Y-007.3:A357 SSE2D:H3:L5:X-008.6:Y-014.3:A147 SSE2D:H5:L48:X-014.5:Y-010.4:A327 SSE2D:H7:L43:X-013.5:Y-001.6:A207 SSE2D:H19:L49:X-006.1:Y+004.6:A057 SSE2D:H23:L35:X-013.4:Y+006.0:A177 SSE2D:E27:L11:X-005.2:Y-000.8:A177 SSE2D:E30:L11:X-008.5:Y-001.0:A357 SSE2D:H34:L42:X-002.9:Y+011.9:A087 SSE2D:H44:L52:X+002.9:Y+000.2:A297 SSE2D:H48:L41:X-003.8:Y-008.5:A147 SSE2D:H50:L18:X-002.1:Y-009.9:A207 <EOS_2DP>"
+      }
+    },
+    "1f88_dimer": {
+      "id": "1f88_dimer",
+      "name": "GPCR: Bovinní rodopsin – Dimer (komplex A+B)",
+      "category": "3. GPCR (Receptory spřažené s G-proteiny)",
+      "kind": "complex",
+      "pdb": "1f88",
+      "desc": "Dvojice 7TM podjednotek bovinního rodopsinu v asymetrické jednotce (řetězce A + B).",
+      "n_sses": 26,
+      "n_res_sampled": 446,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.73,
+          "stress_1": 0.297,
+          "knn_pres": 65.4,
+          "conflicts": 0,
+          "n_sses": 26,
+          "time_ms": 80.3
+        },
+        "cm_binary": {
+          "local_err": 3.54,
+          "stress_1": 0.281,
+          "knn_pres": 58.7,
+          "conflicts": 0,
+          "n_sses": 26,
+          "time_ms": 258.8,
+          "angle_mae_deg": 21.6
+        },
+        "cm_distogram": {
+          "local_err": 3.12,
+          "stress_1": 0.294,
+          "knn_pres": 58.7,
+          "conflicts": 0,
+          "n_sses": 26,
+          "time_ms": 219.6,
+          "angle_mae_deg": 19.5
+        },
+        "llm_cm2prot": {
+          "local_err": 2.71,
+          "stress_1": 0.312,
+          "knn_pres": 62.5,
+          "conflicts": 0,
+          "n_sses": 26,
+          "time_ms": 82.5
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 94.2,
+        "sse_prec_at_L": 96.2,
+        "sse_f1": 73.3,
+        "res_roc_auc": 93.2,
+        "res_prec_at_L": 49.1,
+        "dist_mae_local": 2.75,
+        "time_ms": 68.8
+      },
+      "dsl": {
+        "n_cm_tokens": 210,
+        "n_2dp_tokens": 32,
+        "compression_ratio": 947.2,
+        "cm_dsl_sample": "<BOS_CM> NODE:E1_0:E:L5:CA LOOP:E1_0~E1_2:G1 NODE:E1_2:E:L5:CA LOOP:E1_2~H1_3:G14 NODE:H1_3:H:L5:CA LOOP:H1_3~H1_5:G1 NODE:H1_5:H:L24:CA LOOP:H1_5~H1_7:G1 NODE:H1_7:H:L24:CA LOOP:H1_7~H1_19:G1 NODE:H1_19:H:L24:CA LOOP:H1_19~H1_23:G1 NODE:H1_23:H:L24:CA LOOP:H1_23~E1_27:G1 NODE:E1_27:E:L11:CA LOOP:E1_27~E1_30:G1 NODE:E1_30:E:L11:CA LOOP:E1_30~H1_34:G3 NODE:H1_34:H:L24:CA LOOP:H1_34~H1_44:G2 NODE:H1_44:H:L24:CA LOOP:H1_44~H1_48:G1 NODE:H1_48:H:L24:CA LOOP:H1_48~H1_50:G1 NODE:H1_50:H:L18:CA NODE:E2_0:E:L5:CB LOOP:E2_0~E2_2:G1 NODE:E2_2:E:L5:CB LOOP:E2_2~H2_3:G14 NODE:H2_3:H:L5:CB LOOP:H2_3~H2_5:G1 NODE:H2_5:H:L24:CB LOOP:H2_5~H2_7:G1 NODE:H2_7:H:L24:CB LOOP:H2_7~H2_19:G1 ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E1_0:E1_2 CLUST:E1_27:E1_30 CLUST:E2_0:E2_2 CLUST:E2_27:E2_30 SSE2D:E1_0:L5:X-022.2:Y-001.7:A196 SSE2D:E1_2:L5:X-018.3:Y-002.8:A016 SSE2D:H1_3:L5:X-011.5:Y-008.3:A316 SSE2D:H1_5:L48:X-005.3:Y-005.2:A316 SSE2D:H1_7:L43:X-013.3:Y-001.6:A136 SSE2D:H1_19:L49:X-017.3:Y+007.2:A346 SSE2D:H1_23:L35:X-022.0:Y+001.9:A106 SSE2D:E1_27:L11:X-018.0:Y+003.6:A166 SSE2D:E1_30:L11:X-014.4:Y+004.5:A346 SSE2D:H1_34:L42:X-019.7:Y+014.6:A346 SSE2D:H1_44:L52:X-007.9:Y+013.9:A196 SSE2D:H1_48:L41:X-005.1:Y+005.5:A016 SSE2D:H1_50:L18:X-003.8:Y+008.3:A166 SSE2D:E2_0:L5:X+016.6:Y-015.5:A106 SSE2D:E2_2:L5:X+017.7:Y-011.6:A286 SSE2D:H2_3:L5:X+009.5:Y+008.8:A166 SSE2D:H2_5:L48:X+003.2:Y+005.3:A166 SSE2D:H2_7:L43:X+010.7:Y+004.9:A316 SSE2D:H2_19:L49:X+018.2:Y-001.3:A136 SSE2D:H2_23:L35:X+020.9:Y+005.4:A286 SSE2D:E2_27:L11:X+016.0:Y-004.0:A076 SSE2D:E2_30:L11:X+015.1:Y-000.4:A256 SSE2D:H2_34:L42:X+025.5:Y-005.0:A166 ..."
+      }
+    },
+    "2rh1A02": {
+      "id": "2rh1A02",
+      "name": "GPCR: β2-adrenergní receptor – 7TM doména",
+      "category": "3. GPCR (Receptory spřažené s G-proteiny)",
+      "kind": "domain",
+      "pdb": "2rh1",
+      "desc": "Lidský β2-adrenergní receptor – transmembránové 7TM jádro receptoru.",
+      "n_sses": 14,
+      "n_res_sampled": 189,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.35,
+          "stress_1": 0.214,
+          "knn_pres": 85.7,
+          "conflicts": 0,
+          "n_sses": 14,
+          "time_ms": 19.1
+        },
+        "cm_binary": {
+          "local_err": 3.06,
+          "stress_1": 0.276,
+          "knn_pres": 83.9,
+          "conflicts": 0,
+          "n_sses": 14,
+          "time_ms": 54.7,
+          "angle_mae_deg": 33.5
+        },
+        "cm_distogram": {
+          "local_err": 2.38,
+          "stress_1": 0.232,
+          "knn_pres": 82.1,
+          "conflicts": 0,
+          "n_sses": 14,
+          "time_ms": 34.8,
+          "angle_mae_deg": 33.9
+        },
+        "llm_cm2prot": {
+          "local_err": 2.32,
+          "stress_1": 0.216,
+          "knn_pres": 82.1,
+          "conflicts": 0,
+          "n_sses": 14,
+          "time_ms": 31.9
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 96.1,
+        "sse_prec_at_L": 92.9,
+        "sse_f1": 84.1,
+        "res_roc_auc": 90.9,
+        "res_prec_at_L": 83.1,
+        "dist_mae_local": 1.65,
+        "time_ms": 32.9
+      },
+      "dsl": {
+        "n_cm_tokens": 91,
+        "n_2dp_tokens": 17,
+        "compression_ratio": 392.5,
+        "cm_dsl_sample": "<BOS_CM> NODE:H6:H:L12:CA LOOP:H6~E10:G1 NODE:E10:E:L11:CA LOOP:E10~E13:G1 NODE:E13:E:L11:CA LOOP:E13~E14:G1 NODE:E14:E:L10:CA LOOP:E14~H19:G1 NODE:H19:H:L18:CA LOOP:H19~E20:G1 NODE:E20:E:L3:CA LOOP:E20~H21:G1 NODE:H21:H:L24:CA LOOP:H21~H22:G1 NODE:H22:H:L14:CA LOOP:H22~H23:G1 NODE:H23:H:L20:CA LOOP:H23~H25:G1 NODE:H25:H:L11:CA LOOP:H25~H29:G1 NODE:H29:H:L13:CA LOOP:H29~H30:G1 NODE:H30:H:L15:CA LOOP:H30~H31:G1 NODE:H31:H:L8:CA LOOP:H31~H34:G1 NODE:H34:H:L19:CA SHEET:E10:E13:E20:E14 CONT:H25~H29:D2.0:CROSS:087 CONT:H31~H34:D3.5:CROSS:094 CONT:E13~E14:D4.0:CROSS:102 CONT:H30~H31:D4.0:CROSS:083 CONT:E10~E13:D4.5:CROSS:102 CONT:H21~H22:D5.0:CROSS:095 CONT:H23~H25:D6.0:CROSS:094 ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E10:E13:E20:E14 SSE2D:H6:L12:X+012.0:Y-001.8:A139 SSE2D:E10:L11:X+004.9:Y-008.3:A259 SSE2D:E13:L11:X+002.2:Y-004.7:A079 SSE2D:E14:L10:X-000.4:Y-001.5:A259 SSE2D:H19:L18:X-004.0:Y-012.1:A349 SSE2D:E20:L2:X+002.1:Y-014.4:A079 SSE2D:H21:L33:X-000.6:Y+000.5:A349 SSE2D:H22:L14:X-000.2:Y+008.2:A079 SSE2D:H23:L20:X+007.1:Y+006.1:A199 SSE2D:H25:L11:X+003.9:Y+012.5:A019 SSE2D:H29:L13:X+004.9:Y+016.1:A319 SSE2D:H30:L15:X+013.3:Y+017.8:A169 SSE2D:H31:L8:X+015.2:Y+013.1:A139 SSE2D:H34:L19:X+014.7:Y+009.0:A349 <EOS_2DP>"
+      }
+    },
+    "2rh1_complex": {
+      "id": "2rh1_complex",
+      "name": "GPCR: β2-adrenergní receptor + T4-lysozym (celý komplex)",
+      "category": "3. GPCR (Receptory spřažené s G-proteiny)",
+      "kind": "complex",
+      "pdb": "2rh1",
+      "desc": "Dvoudoménový chimérický komplex lidského β2-adrenergního receptoru (7TM) a fúzního T4-lysozymu.",
+      "n_sses": 24,
+      "n_res_sampled": 390,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.28,
+          "stress_1": 0.308,
+          "knn_pres": 76.0,
+          "conflicts": 0,
+          "n_sses": 24,
+          "time_ms": 67.1
+        },
+        "cm_binary": {
+          "local_err": 2.91,
+          "stress_1": 0.338,
+          "knn_pres": 77.1,
+          "conflicts": 0,
+          "n_sses": 24,
+          "time_ms": 231.4,
+          "angle_mae_deg": 32.0
+        },
+        "cm_distogram": {
+          "local_err": 2.41,
+          "stress_1": 0.314,
+          "knn_pres": 76.0,
+          "conflicts": 1,
+          "n_sses": 24,
+          "time_ms": 170.5,
+          "angle_mae_deg": 29.3
+        },
+        "llm_cm2prot": {
+          "local_err": 2.31,
+          "stress_1": 0.328,
+          "knn_pres": 74.0,
+          "conflicts": 0,
+          "n_sses": 24,
+          "time_ms": 87.2
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 93.3,
+        "sse_prec_at_L": 95.8,
+        "sse_f1": 73.4,
+        "res_roc_auc": 87.2,
+        "res_prec_at_L": 47.2,
+        "dist_mae_local": 2.58,
+        "time_ms": 53.1
+      },
+      "dsl": {
+        "n_cm_tokens": 253,
+        "n_2dp_tokens": 27,
+        "compression_ratio": 601.2,
+        "cm_dsl_sample": "<BOS_CM> NODE:H1_5:H:L24:CA LOOP:H1_5~H1_6:G1 NODE:H1_6:H:L4:CA LOOP:H1_6~H1_7:G1 NODE:H1_7:H:L24:CA LOOP:H1_7~H1_19:G1 NODE:H1_19:H:L24:CA LOOP:H1_19~H1_23:G1 NODE:H1_23:H:L24:CA LOOP:H1_23~H1_28:G1 NODE:H1_28:H:L13:CA LOOP:H1_28~H1_34:G5 NODE:H1_34:H:L24:CA LOOP:H1_34~H1_44:G99 NODE:H1_44:H:L24:CA LOOP:H1_44~H1_48:G1 NODE:H1_48:H:L24:CA LOOP:H1_48~H1_50:G1 NODE:H1_50:H:L16:CA LOOP:H1_50~H2_6:G99 NODE:H2_6:H:L12:CA LOOP:H2_6~E2_10:G1 NODE:E2_10:E:L11:CA LOOP:E2_10~E2_13:G1 NODE:E2_13:E:L11:CA LOOP:E2_13~E2_14:G1 NODE:E2_14:E:L10:CA LOOP:E2_14~H2_19:G1 NODE:H2_19:H:L18:CA LOOP:H2_19~E2_20:G1 NODE:E2_20:E:L3:CA LOOP:E2_20~H2_21:G1 NODE:H2_21:H:L24:CA LOOP:H2_21~H2_22:G1 NODE:H2_22:H:L14:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E2_13:E2_10:E2_14:E2_20 SSE2D:H1_5:L48:X+001.6:Y+008.3:A122 SSE2D:H1_6:L4:X-003.9:Y+004.9:A272 SSE2D:H1_7:L44:X-005.0:Y+007.0:A302 SSE2D:H1_19:L51:X-009.8:Y-000.9:A152 SSE2D:H1_23:L36:X-016.3:Y+003.1:A272 SSE2D:H1_28:L13:X-013.6:Y+005.7:A152 SSE2D:H1_34:L48:X-010.5:Y-010.0:A152 SSE2D:H1_44:L47:X+000.7:Y-006.2:A302 SSE2D:H1_48:L40:X+004.7:Y+000.1:A092 SSE2D:H1_50:L16:X+007.8:Y+002.6:A032 SSE2D:H2_6:L12:X-006.3:Y+003.0:A152 SSE2D:E2_10:L11:X-004.1:Y-012.4:A152 SSE2D:E2_13:L11:X+000.4:Y-012.0:A332 SSE2D:E2_14:L10:X+001.3:Y-007.5:A152 SSE2D:H2_19:L18:X-000.1:Y-007.7:A302 SSE2D:E2_20:L2:X-011.9:Y-014.5:A332 SSE2D:H2_21:L33:X+001.9:Y-003.0:A062 SSE2D:H2_22:L14:X+003.6:Y+001.2:A122 SSE2D:H2_23:L20:X+009.2:Y+001.1:A032 SSE2D:H2_25:L11:X+012.3:Y+001.8:A032 SSE2D:H2_29:L13:X+014.8:Y+005.1:A332 SSE2D:H2_30:L15:X+011.8:Y+011.8:A152 SSE2D:H2_31:L8:X+008.3:Y+008.5:A242 SSE2D:H2_34:L19:X+003.2:Y+009.9:A332 <EOS_2DP>"
+      }
+    },
+    "1okcA00": {
+      "id": "1okcA00",
+      "name": "SLC: Mitochondriální ADP/ATP přenašeč (SLC25A4)",
+      "category": "4. Membránové transportéry – SLC a ABC (EC 7)",
+      "kind": "domain",
+      "pdb": "1okc",
+      "desc": "SLC25A4 (ANT1) – 6TM transmembránový kardinální transportér s trojčetnou vnitřní pseudo-symetrií.",
+      "n_sses": 16,
+      "n_res_sampled": 250,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 1.95,
+          "stress_1": 0.202,
+          "knn_pres": 78.1,
+          "conflicts": 0,
+          "n_sses": 16,
+          "time_ms": 57.9
+        },
+        "cm_binary": {
+          "local_err": 2.7,
+          "stress_1": 0.23,
+          "knn_pres": 79.7,
+          "conflicts": 0,
+          "n_sses": 16,
+          "time_ms": 103.9,
+          "angle_mae_deg": 28.8
+        },
+        "cm_distogram": {
+          "local_err": 2.03,
+          "stress_1": 0.202,
+          "knn_pres": 79.7,
+          "conflicts": 0,
+          "n_sses": 16,
+          "time_ms": 74.8,
+          "angle_mae_deg": 26.1
+        },
+        "llm_cm2prot": {
+          "local_err": 2.03,
+          "stress_1": 0.211,
+          "knn_pres": 78.1,
+          "conflicts": 0,
+          "n_sses": 16,
+          "time_ms": 30.8
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 96.1,
+        "sse_prec_at_L": 93.8,
+        "sse_f1": 76.9,
+        "res_roc_auc": 86.8,
+        "res_prec_at_L": 1.2,
+        "dist_mae_local": 2.45,
+        "time_ms": 24.5
+      },
+      "dsl": {
+        "n_cm_tokens": 127,
+        "n_2dp_tokens": 18,
+        "compression_ratio": 492.1,
+        "cm_dsl_sample": "<BOS_CM> NODE:H0:H:L24:CA LOOP:H0~H1:G1 NODE:H1:H:L17:CA LOOP:H1~H2:G1 NODE:H2:H:L4:CA LOOP:H2~H3:G4 NODE:H3:H:L4:CA LOOP:H3~H4:G3 NODE:H4:H:L17:CA LOOP:H4~H5:G1 NODE:H5:H:L9:CA LOOP:H5~H6:G1 NODE:H6:H:L24:CA LOOP:H6~H8:G1 NODE:H8:H:L24:CA LOOP:H8~H10:G4 NODE:H10:H:L17:CA LOOP:H10~H11:G1 NODE:H11:H:L8:CA LOOP:H11~H12:G1 NODE:H12:H:L24:CA LOOP:H12~H13:G1 NODE:H13:H:L24:CA LOOP:H13~H14:G1 NODE:H14:H:L4:CA LOOP:H14~H15:G4 NODE:H15:H:L17:CA LOOP:H15~H16:G1 NODE:H16:H:L9:CA LOOP:H16~H17:G1 NODE:H17:H:L24:CA CONT:H0~H1:D2.0:CROSS:081 CONT:H1~H2:D2.0:CROSS:082 CONT:H8~H10:D4.5:CROSS:092 CONT:H10~H11:D5.5:CROSS:096 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H0:L33:X-006.3:Y+010.0:A117 SSE2D:H1:L17:X-002.9:Y+004.9:A147 SSE2D:H2:L4:X+005.5:Y-002.8:A357 SSE2D:H3:L4:X+011.1:Y+004.3:A357 SSE2D:H4:L17:X+000.3:Y+012.1:A327 SSE2D:H5:L9:X-009.8:Y+011.5:A207 SSE2D:H6:L37:X-017.5:Y+006.3:A237 SSE2D:H8:L44:X-013.9:Y-002.6:A027 SSE2D:H10:L17:X-018.7:Y-000.6:A177 SSE2D:H11:L8:X-016.2:Y-008.0:A057 SSE2D:H12:L38:X-010.5:Y-011.0:A207 SSE2D:H13:L46:X-003.8:Y-005.3:A147 SSE2D:H14:L4:X-002.6:Y-016.6:A057 SSE2D:H15:L17:X-000.5:Y-012.8:A087 SSE2D:H16:L9:X+003.4:Y-005.8:A327 SSE2D:H17:L30:X+000.8:Y+002.2:A327 <EOS_2DP>"
+      }
+    },
+    "1pv6A01": {
+      "id": "1pv6A01",
+      "name": "SLC / MFS: Laktózová permeáza LacY – N-doména (6TM)",
+      "category": "4. Membránové transportéry – SLC a ABC (EC 7)",
+      "kind": "domain",
+      "pdb": "1pv6",
+      "desc": "N-terminální 6-helixový svazek (TM1–TM6) MFS symportéru LacY.",
+      "n_sses": 8,
+      "n_res_sampled": 167,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 1.26,
+          "stress_1": 0.234,
+          "knn_pres": 100.0,
+          "conflicts": 0,
+          "n_sses": 8,
+          "time_ms": 26.9
+        },
+        "cm_binary": {
+          "local_err": 2.62,
+          "stress_1": 0.319,
+          "knn_pres": 84.4,
+          "conflicts": 0,
+          "n_sses": 8,
+          "time_ms": 48.0,
+          "angle_mae_deg": 31.0
+        },
+        "cm_distogram": {
+          "local_err": 1.51,
+          "stress_1": 0.25,
+          "knn_pres": 100.0,
+          "conflicts": 0,
+          "n_sses": 8,
+          "time_ms": 40.7,
+          "angle_mae_deg": 26.4
+        },
+        "llm_cm2prot": {
+          "local_err": 1.36,
+          "stress_1": 0.238,
+          "knn_pres": 96.9,
+          "conflicts": 0,
+          "n_sses": 8,
+          "time_ms": 12.7
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 90.6,
+        "sse_prec_at_L": 87.5,
+        "sse_f1": 75.9,
+        "res_roc_auc": 76.2,
+        "res_prec_at_L": 22.8,
+        "dist_mae_local": 1.91,
+        "time_ms": 8.6
+      },
+      "dsl": {
+        "n_cm_tokens": 40,
+        "n_2dp_tokens": 10,
+        "compression_ratio": 697.2,
+        "cm_dsl_sample": "<BOS_CM> NODE:H10:H:L5:CA LOOP:H10~H13:G1 NODE:H13:H:L24:CA LOOP:H13~H15:G1 NODE:H15:H:L24:CA LOOP:H15~H17:G1 NODE:H17:H:L21:CA LOOP:H17~H19:G1 NODE:H19:H:L21:CA LOOP:H19~H20:G1 NODE:H20:H:L24:CA LOOP:H20~H22:G1 NODE:H22:H:L24:CA LOOP:H22~H26:G1 NODE:H26:H:L24:CA CONT:H17~H19:D2.0:CROSS:082 CONT:H10~H13:D3.5:CROSS:082 CONT:H13~H22:D6.0:PAR:040 CONT:H15~H20:D6.0:PAR:042 CONT:H22~H26:D7.0:CROSS:122 CONT:H17~H26:D7.5:CROSS:124 CONT:H19~H26:D7.5:CROSS:107 CONT:H13~H20:D8.0:ANTI:146 CONT:H19~H20:D8.0:CROSS:123 CONT:H17~H20:D9.0:CROSS:119 CONT:H13~H26:D9.5:ANTI:137 CONT:H15~H17:D9.5:CROSS:118 CONT:H20~H22:D10.5:CROSS:117 CONT:H13~H17:D11.0:CROSS:061 CONT:H10~H20:D11.5:CROSS:097 CONT:H13~H19:D11.5:CROSS:064 CONT:H10~H22:D12.0:CROSS:086 CONT:H13~H15:D13.5:CROSS:131 CONT:H20~H26:D14.0:CROSS:056 CONT:H10~H26:D14.5:CROSS:098 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H10:L5:X+015.0:Y+000.1:A266 SSE2D:H13:L44:X+009.3:Y+001.8:A056 SSE2D:H15:L41:X+004.6:Y+016.1:A266 SSE2D:H17:L21:X-001.1:Y+007.4:A146 SSE2D:H19:L21:X-001.8:Y+005.8:A326 SSE2D:H20:L48:X+007.9:Y+008.9:A176 SSE2D:H22:L37:X+007.8:Y-004.5:A206 SSE2D:H26:L33:X+000.6:Y-002.7:A296 <EOS_2DP>"
+      }
+    },
+    "1pv6A02": {
+      "id": "1pv6A02",
+      "name": "SLC / MFS: Laktózová permeáza LacY – C-doména (6TM)",
+      "category": "4. Membránové transportéry – SLC a ABC (EC 7)",
+      "kind": "domain",
+      "pdb": "1pv6",
+      "desc": "C-terminální 6-helixový svazek (TM7–TM12) MFS symportéru LacY.",
+      "n_sses": 9,
+      "n_res_sampled": 177,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.2,
+          "stress_1": 0.295,
+          "knn_pres": 77.8,
+          "conflicts": 0,
+          "n_sses": 9,
+          "time_ms": 20.5
+        },
+        "cm_binary": {
+          "local_err": 3.76,
+          "stress_1": 0.384,
+          "knn_pres": 69.4,
+          "conflicts": 0,
+          "n_sses": 9,
+          "time_ms": 53.8,
+          "angle_mae_deg": 22.6
+        },
+        "cm_distogram": {
+          "local_err": 2.37,
+          "stress_1": 0.296,
+          "knn_pres": 86.1,
+          "conflicts": 0,
+          "n_sses": 9,
+          "time_ms": 28.4,
+          "angle_mae_deg": 20.3
+        },
+        "llm_cm2prot": {
+          "local_err": 1.98,
+          "stress_1": 0.287,
+          "knn_pres": 75.0,
+          "conflicts": 0,
+          "n_sses": 9,
+          "time_ms": 16.1
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 92.7,
+        "sse_prec_at_L": 88.9,
+        "sse_f1": 84.8,
+        "res_roc_auc": 76.8,
+        "res_prec_at_L": 24.3,
+        "dist_mae_local": 2.57,
+        "time_ms": 9.5
+      },
+      "dsl": {
+        "n_cm_tokens": 49,
+        "n_2dp_tokens": 11,
+        "compression_ratio": 639.4,
+        "cm_dsl_sample": "<BOS_CM> NODE:H10:H:L15:CA LOOP:H10~H13:G1 NODE:H13:H:L24:CA LOOP:H13~H15:G1 NODE:H15:H:L24:CA LOOP:H15~H17:G1 NODE:H17:H:L24:CA LOOP:H17~H20:G1 NODE:H20:H:L24:CA LOOP:H20~H21:G1 NODE:H21:H:L5:CA LOOP:H21~H22:G1 NODE:H22:H:L24:CA LOOP:H22~H26:G1 NODE:H26:H:L24:CA LOOP:H26~H33:G1 NODE:H33:H:L13:CA CONT:H10~H13:D2.0:CROSS:085 CONT:H21~H22:D4.5:CROSS:080 CONT:H17~H20:D6.5:ANTI:140 CONT:H20~H21:D6.5:CROSS:094 CONT:H15~H20:D7.0:PAR:042 CONT:H13~H22:D7.5:PAR:045 CONT:H10~H22:D8.0:CROSS:083 CONT:H17~H26:D8.0:CROSS:133 CONT:H22~H26:D8.5:CROSS:119 CONT:H20~H33:D8.5:CROSS:095 CONT:H13~H17:D9.5:CROSS:046 CONT:H13~H26:D9.5:ANTI:135 CONT:H10~H21:D11.0:CROSS:091 CONT:H13~H20:D11.0:ANTI:143 CONT:H15~H17:D11.0:CROSS:127 CONT:H13~H15:D11.5:CROSS:127 CONT:H17~H33:D12.0:CROSS:096 CONT:H15~H33:D12.5:CROSS:099 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H10:L15:X+010.3:Y+001.4:A296 SSE2D:H13:L46:X+006.2:Y+003.0:A356 SSE2D:H15:L43:X+004.0:Y+016.9:A236 SSE2D:H17:L31:X-003.9:Y+006.6:A236 SSE2D:H20:L42:X+001.5:Y+010.2:A146 SSE2D:H21:L5:X+009.0:Y-001.1:A236 SSE2D:H22:L41:X+006.4:Y-005.0:A206 SSE2D:H26:L32:X-002.0:Y-003.2:A296 SSE2D:H33:L13:X+011.0:Y+014.2:A026 <EOS_2DP>"
+      }
+    },
+    "1pv6_complex": {
+      "id": "1pv6_complex",
+      "name": "SLC / MFS: Laktózová permeáza LacY – Celý 12TM komplex (N+C)",
+      "category": "4. Membránové transportéry – SLC a ABC (EC 7)",
+      "kind": "complex",
+      "pdb": "1pv6",
+      "desc": "Kompletní 12TM MFS transportér LacY složený z N-terminální a C-terminální 6TM domény.",
+      "n_sses": 17,
+      "n_res_sampled": 344,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.61,
+          "stress_1": 0.289,
+          "knn_pres": 67.6,
+          "conflicts": 0,
+          "n_sses": 17,
+          "time_ms": 53.1
+        },
+        "cm_binary": {
+          "local_err": 3.6,
+          "stress_1": 0.304,
+          "knn_pres": 70.6,
+          "conflicts": 0,
+          "n_sses": 17,
+          "time_ms": 187.1,
+          "angle_mae_deg": 25.9
+        },
+        "cm_distogram": {
+          "local_err": 2.8,
+          "stress_1": 0.294,
+          "knn_pres": 69.1,
+          "conflicts": 0,
+          "n_sses": 17,
+          "time_ms": 100.3,
+          "angle_mae_deg": 22.7
+        },
+        "llm_cm2prot": {
+          "local_err": 2.57,
+          "stress_1": 0.287,
+          "knn_pres": 67.6,
+          "conflicts": 0,
+          "n_sses": 17,
+          "time_ms": 71.5
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 95.1,
+        "sse_prec_at_L": 82.4,
+        "sse_f1": 77.3,
+        "res_roc_auc": 86.3,
+        "res_prec_at_L": 25.6,
+        "dist_mae_local": 2.3,
+        "time_ms": 30.5
+      },
+      "dsl": {
+        "n_cm_tokens": 108,
+        "n_2dp_tokens": 19,
+        "compression_ratio": 1095.7,
+        "cm_dsl_sample": "<BOS_CM> NODE:H1_10:H:L5:CA LOOP:H1_10~H1_13:G1 NODE:H1_13:H:L24:CA LOOP:H1_13~H1_15:G1 NODE:H1_15:H:L24:CA LOOP:H1_15~H1_17:G1 NODE:H1_17:H:L21:CA LOOP:H1_17~H1_19:G1 NODE:H1_19:H:L21:CA LOOP:H1_19~H1_20:G1 NODE:H1_20:H:L24:CA LOOP:H1_20~H1_22:G1 NODE:H1_22:H:L24:CA LOOP:H1_22~H1_26:G1 NODE:H1_26:H:L24:CA LOOP:H1_26~H2_10:G99 NODE:H2_10:H:L15:CA LOOP:H2_10~H2_13:G1 NODE:H2_13:H:L24:CA LOOP:H2_13~H2_15:G1 NODE:H2_15:H:L24:CA LOOP:H2_15~H2_17:G1 NODE:H2_17:H:L24:CA LOOP:H2_17~H2_20:G1 NODE:H2_20:H:L24:CA LOOP:H2_20~H2_21:G1 NODE:H2_21:H:L5:CA LOOP:H2_21~H2_22:G1 NODE:H2_22:H:L24:CA LOOP:H2_22~H2_26:G1 NODE:H2_26:H:L24:CA LOOP:H2_26~H2_33:G1 NODE:H2_33:H:L13:CA CONT:H1_17~H1_19:D2.5:CROSS:083 CONT:H2_10~H2_13:D3.0:CROSS:086 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H1_10:L5:X-016.8:Y+002.6:A269 SSE2D:H1_13:L44:X-005.4:Y+000.3:A119 SSE2D:H1_15:L41:X-001.9:Y-011.4:A269 SSE2D:H1_17:L21:X-016.7:Y-005.3:A359 SSE2D:H1_19:L21:X-015.9:Y-003.7:A149 SSE2D:H1_20:L48:X-009.4:Y-007.7:A329 SSE2D:H1_22:L37:X-006.1:Y+007.5:A329 SSE2D:H1_26:L33:X-013.6:Y+005.6:A239 SSE2D:H2_10:L15:X+009.5:Y-003.9:A059 SSE2D:H2_13:L46:X+005.2:Y-000.4:A329 SSE2D:H2_15:L43:X+000.3:Y+009.9:A089 SSE2D:H2_17:L31:X+014.8:Y+003.4:A089 SSE2D:H2_20:L42:X+009.9:Y+007.6:A179 SSE2D:H2_21:L5:X+013.3:Y-003.1:A179 SSE2D:H2_22:L41:X+006.5:Y-009.3:A089 SSE2D:H2_26:L32:X+013.5:Y-006.1:A059 SSE2D:H2_33:L13:X+012.8:Y+014.0:A269 <EOS_2DP>"
+      }
+    },
+    "2hydA01": {
+      "id": "2hydA01",
+      "name": "ABC (EC 7): Transportér Sav1866 – Transmembránová TMD doména",
+      "category": "4. Membránové transportéry – SLC a ABC (EC 7)",
+      "kind": "domain",
+      "pdb": "2hyd",
+      "desc": "EC 7.6.2.- (ABC translokáza) – samostatná transmembránová doména (TMD) s dlouhými vnitrobuněčnými helixy.",
+      "n_sses": 9,
+      "n_res_sampled": 179,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.11,
+          "stress_1": 0.264,
+          "knn_pres": 94.4,
+          "conflicts": 0,
+          "n_sses": 9,
+          "time_ms": 23.6
+        },
+        "cm_binary": {
+          "local_err": 3.05,
+          "stress_1": 0.277,
+          "knn_pres": 91.7,
+          "conflicts": 0,
+          "n_sses": 9,
+          "time_ms": 52.0,
+          "angle_mae_deg": 25.2
+        },
+        "cm_distogram": {
+          "local_err": 2.74,
+          "stress_1": 0.276,
+          "knn_pres": 94.4,
+          "conflicts": 0,
+          "n_sses": 9,
+          "time_ms": 43.5,
+          "angle_mae_deg": 13.8
+        },
+        "llm_cm2prot": {
+          "local_err": 2.54,
+          "stress_1": 0.26,
+          "knn_pres": 94.4,
+          "conflicts": 0,
+          "n_sses": 9,
+          "time_ms": 16.8
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 94.8,
+        "sse_prec_at_L": 88.9,
+        "sse_f1": 85.7,
+        "res_roc_auc": 86.9,
+        "res_prec_at_L": 21.2,
+        "dist_mae_local": 1.71,
+        "time_ms": 16.6
+      },
+      "dsl": {
+        "n_cm_tokens": 44,
+        "n_2dp_tokens": 11,
+        "compression_ratio": 728.2,
+        "cm_dsl_sample": "<BOS_CM> NODE:H15:H:L16:CA LOOP:H15~H17:G1 NODE:H17:H:L24:CA LOOP:H17~H19:G1 NODE:H19:H:L24:CA LOOP:H19~H20:G1 NODE:H20:H:L9:CA LOOP:H20~H22:G1 NODE:H22:H:L24:CA LOOP:H22~_H5:G1 NODE:_H5:H:L24:CA LOOP:_H5~_H6:G1 NODE:_H6:H:L10:CA LOOP:_H6~_H7:G1 NODE:_H7:H:L24:CA LOOP:_H7~H28:G1 NODE:H28:H:L24:CA CONT:H15~H17:D3.5:CROSS:081 CONT:_H5~_H6:D4.5:CROSS:078 CONT:H22~H28:D5.0:ANTI:151 CONT:_H6~_H7:D6.5:CROSS:094 CONT:_H5~H28:D7.5:PAR:035 CONT:H17~H19:D8.0:ANTI:151 CONT:H19~H20:D8.5:CROSS:088 CONT:_H5~_H7:D9.5:ANTI:158 CONT:H15~H28:D9.5:CROSS:093 CONT:H19~H28:D10.0:CROSS:058 CONT:H22~_H5:D10.0:ANTI:153 CONT:_H7~H28:D10.0:ANTI:141 CONT:H15~H19:D10.5:CROSS:105 CONT:H20~H22:D10.5:CROSS:083 CONT:H19~H22:D11.0:CROSS:132 CONT:H20~H28:D11.0:CROSS:093 CONT:H17~H22:D12.0:CROSS:055 CONT:H20~_H5:D12.0:CROSS:092 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H15:L16:X-006.2:Y-005.9:A277 SSE2D:H17:L49:X-008.1:Y-001.9:A247 SSE2D:H19:L81:X-001.4:Y+003.7:A097 SSE2D:H20:L9:X+007.8:Y+007.1:A157 SSE2D:H22:L62:X+007.6:Y-000.9:A217 SSE2D:_H5:L72:X+015.3:Y-008.1:A037 SSE2D:_H6:L10:X+019.5:Y-011.1:A127 SSE2D:_H7:L80:X+014.3:Y-016.6:A247 SSE2D:H28:L63:X+004.8:Y-007.2:A037 <EOS_2DP>"
+      }
+    },
+    "2hydA02": {
+      "id": "2hydA02",
+      "name": "ABC (EC 7): Transportér Sav1866 – Nukleotid-vázající NBD doména",
+      "category": "4. Membránové transportéry – SLC a ABC (EC 7)",
+      "kind": "domain",
+      "pdb": "2hyd",
+      "desc": "EC 7.6.2.- (ABC translokáza) – ATPázová nukleotid-vázající doména (NBD).",
+      "n_sses": 22,
+      "n_res_sampled": 307,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 1.74,
+          "stress_1": 0.126,
+          "knn_pres": 78.4,
+          "conflicts": 0,
+          "n_sses": 22,
+          "time_ms": 62.6
+        },
+        "cm_binary": {
+          "local_err": 2.74,
+          "stress_1": 0.204,
+          "knn_pres": 81.8,
+          "conflicts": 0,
+          "n_sses": 22,
+          "time_ms": 127.6,
+          "angle_mae_deg": 34.8
+        },
+        "cm_distogram": {
+          "local_err": 1.71,
+          "stress_1": 0.147,
+          "knn_pres": 83.0,
+          "conflicts": 0,
+          "n_sses": 22,
+          "time_ms": 112.8,
+          "angle_mae_deg": 34.5
+        },
+        "llm_cm2prot": {
+          "local_err": 2.14,
+          "stress_1": 0.142,
+          "knn_pres": 76.1,
+          "conflicts": 0,
+          "n_sses": 22,
+          "time_ms": 51.2
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 96.2,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 79.1,
+        "res_roc_auc": 91.9,
+        "res_prec_at_L": 96.1,
+        "dist_mae_local": 1.87,
+        "time_ms": 32.1
+      },
+      "dsl": {
+        "n_cm_tokens": 195,
+        "n_2dp_tokens": 26,
+        "compression_ratio": 483.3,
+        "cm_dsl_sample": "<BOS_CM> NODE:E34:E:L20:CA LOOP:E34~E57:G1 NODE:E57:E:L20:CA LOOP:E57~E62:G1 NODE:E62:E:L15:CA LOOP:E62~H72:G1 NODE:H72:H:L14:CA LOOP:H72~E78:G1 NODE:E78:E:L17:CA LOOP:E78~_E5:G1 NODE:_E5:E:L5:CA LOOP:_E5~H86:G1 NODE:H86:H:L5:CA LOOP:H86~_H7:G1 NODE:_H7:H:L12:CA LOOP:_H7~E90:G1 NODE:E90:E:L11:CA LOOP:E90~H163:G3 NODE:H163:H:L13:CA LOOP:H163~_H11:G1 NODE:_H11:H:L16:CA LOOP:_H11~_H12:G1 NODE:_H12:H:L11:CA LOOP:_H12~H174:G1 NODE:H174:H:L3:CA LOOP:H174~H187:G11 NODE:H187:H:L23:CA LOOP:H187~E207:G1 NODE:E207:E:L15:CA LOOP:E207~H238:G1 NODE:H238:H:L21:CA LOOP:H238~E255:G1 NODE:E255:E:L15:CA LOOP:E255~H277:G1 NODE:H277:H:L11:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E34:E57:E78:_E5 CLUST:E62:E301:E255:_E21:E207:E90 SSE2D:E34:L20:X-003.7:Y-019.6:A351 SSE2D:E57:L20:X-008.2:Y-019.8:A171 SSE2D:E62:L15:X-010.3:Y-009.9:A351 SSE2D:H72:L14:X-002.6:Y-011.4:A111 SSE2D:E78:L17:X+000.5:Y-017.8:A171 SSE2D:_E5:L5:X+004.2:Y-017.9:A351 SSE2D:H86:L5:X+007.6:Y-015.7:A051 SSE2D:_H7:L12:X+005.9:Y-006.0:A321 SSE2D:E90:L11:X+003.7:Y-007.9:A351 SSE2D:H163:L13:X+009.9:Y+006.9:A171 SSE2D:_H11:L16:X-001.0:Y+009.6:A261 SSE2D:_H12:L11:X+002.0:Y+012.2:A051 SSE2D:H174:L3:X+011.0:Y+013.6:A171 SSE2D:H187:L23:X+004.7:Y+002.6:A141 SSE2D:E207:L15:X-001.0:Y-008.5:A351 SSE2D:H238:L21:X-006.7:Y+002.9:A141 SSE2D:E255:L15:X-005.7:Y-009.0:A351 SSE2D:H277:L11:X-013.4:Y-005.5:A171 SSE2D:E301:L18:X-014.8:Y-010.7:A351 SSE2D:_E21:L16:X-018.8:Y-011.4:A171 SSE2D:H340:L11:X-020.0:Y-011.5:A261 SSE2D:H348:L15:X-021.1:Y-006.6:A351 <EOS_2DP>"
+      }
+    },
+    "2hyd_dimer": {
+      "id": "2hyd_dimer",
+      "name": "ABC (EC 7): Transportér Sav1866 – Celý homodimer (2×TMD + 2×NBD)",
+      "category": "4. Membránové transportéry – SLC a ABC (EC 7)",
+      "kind": "complex",
+      "pdb": "2hyd",
+      "desc": "Kompletní 4-doménový ABC exportér Sav1866 s propletenými (domain-swapped) transmembránovými helixy.",
+      "n_sses": 62,
+      "n_res_sampled": 972,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 4.13,
+          "stress_1": 0.243,
+          "knn_pres": 48.4,
+          "conflicts": 0,
+          "n_sses": 62,
+          "time_ms": 227.7
+        },
+        "cm_binary": {
+          "local_err": 4.52,
+          "stress_1": 0.284,
+          "knn_pres": 48.8,
+          "conflicts": 1,
+          "n_sses": 62,
+          "time_ms": 1148.6,
+          "angle_mae_deg": 36.3
+        },
+        "cm_distogram": {
+          "local_err": 4.16,
+          "stress_1": 0.256,
+          "knn_pres": 54.0,
+          "conflicts": 3,
+          "n_sses": 62,
+          "time_ms": 2083.7,
+          "angle_mae_deg": 33.5
+        },
+        "llm_cm2prot": {
+          "local_err": 4.11,
+          "stress_1": 0.254,
+          "knn_pres": 48.8,
+          "conflicts": 0,
+          "n_sses": 62,
+          "time_ms": 319.4
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 94.1,
+        "sse_prec_at_L": 91.9,
+        "sse_f1": 57.8,
+        "res_roc_auc": 94.0,
+        "res_prec_at_L": 67.8,
+        "dist_mae_local": 3.34,
+        "time_ms": 323.6
+      },
+      "dsl": {
+        "n_cm_tokens": 701,
+        "n_2dp_tokens": 68,
+        "compression_ratio": 1347.8,
+        "cm_dsl_sample": "<BOS_CM> NODE:H1_15:H:L16:CA LOOP:H1_15~H1_17:G1 NODE:H1_17:H:L24:CA LOOP:H1_17~H1_19:G1 NODE:H1_19:H:L24:CA LOOP:H1_19~H1_20:G1 NODE:H1_20:H:L9:CA LOOP:H1_20~H1_22:G1 NODE:H1_22:H:L24:CA LOOP:H1_22~_H1_5:G1 NODE:_H1_5:H:L24:CA LOOP:_H1_5~_H1_6:G1 NODE:_H1_6:H:L10:CA LOOP:_H1_6~_H1_7:G1 NODE:_H1_7:H:L24:CA LOOP:_H1_7~H1_28:G1 NODE:H1_28:H:L24:CA LOOP:H1_28~E2_34:G99 NODE:E2_34:E:L20:CA LOOP:E2_34~E2_57:G1 NODE:E2_57:E:L20:CA LOOP:E2_57~E2_62:G1 NODE:E2_62:E:L15:CA LOOP:E2_62~H2_72:G1 NODE:H2_72:H:L14:CA LOOP:H2_72~E2_78:G1 NODE:E2_78:E:L17:CA LOOP:E2_78~_E2_5:G1 NODE:_E2_5:E:L5:CA LOOP:_E2_5~H2_86:G1 NODE:H2_86:H:L5:CA LOOP:H2_86~_H2_7:G1 NODE:_H2_7:H:L12:CA LOOP:_H2_7~E2_90:G1 NODE:E2_90:E:L11:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E2_34:E2_57:E2_78:_E2_5 CLUST:E2_62:E2_255:E2_301:E2_207:_E2_21:E2_90 CLUST:E4_34:E4_57:E4_78:_E4_5 CLUST:E4_62:E4_255:E4_301:E4_207:_E4_21:E4_90 SSE2D:H1_15:L16:X+029.6:Y-017.2:A151 SSE2D:H1_17:L49:X+029.8:Y-011.7:A061 SSE2D:H1_19:L81:X+019.3:Y-014.7:A271 SSE2D:H1_20:L9:X+011.0:Y-013.0:A031 SSE2D:H1_22:L62:X+017.8:Y-005.3:A091 SSE2D:_H1_5:L72:X+013.3:Y+004.1:A271 SSE2D:_H1_6:L10:X+009.1:Y+010.0:A331 SSE2D:_H1_7:L80:X+015.9:Y+011.9:A091 SSE2D:H1_28:L63:X+026.8:Y-004.1:A241 SSE2D:E2_34:L20:X-009.7:Y-022.4:A031 SSE2D:E2_57:L20:X-012.9:Y-019.4:A211 SSE2D:E2_62:L15:X-010.2:Y-014.5:A271 SSE2D:H2_72:L14:X-003.5:Y-015.0:A121 SSE2D:E2_78:L17:X-005.3:Y-024.0:A211 SSE2D:_E2_5:L5:X-001.4:Y-026.3:A031 SSE2D:H2_86:L5:X+001.2:Y-025.4:A121 SSE2D:_H2_7:L12:X+003.3:Y-017.4:A301 SSE2D:E2_90:L11:X-009.7:Y-000.6:A271 SSE2D:H2_163:L13:X+004.2:Y-008.3:A181 SSE2D:_H2_11:L16:X-006.9:Y-005.0:A271 SSE2D:_H2_12:L11:X-005.5:Y+000.2:A031 SSE2D:H2_174:L3:X-001.1:Y-006.6:A121 SSE2D:H2_187:L23:X-001.7:Y+004.6:A151 ..."
+      }
+    },
+    "1bxwA00": {
+      "id": "1bxwA00",
+      "name": "Beta-barel: OmpA (8-vláknový TM barel)",
+      "category": "5. Beta-barely (Transmembránové i solubilní, monomery i trimer)",
+      "kind": "domain",
+      "pdb": "1bxw",
+      "desc": "Vnější membránový protein A (E. coli) – kompaktní uzavřený 8-vláknový antiparalelní β-barel.",
+      "n_sses": 8,
+      "n_res_sampled": 192,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 0.29,
+          "stress_1": 0.045,
+          "knn_pres": 100.0,
+          "conflicts": 0,
+          "n_sses": 8,
+          "time_ms": 12.3
+        },
+        "cm_binary": {
+          "local_err": 1.17,
+          "stress_1": 0.172,
+          "knn_pres": 100.0,
+          "conflicts": 0,
+          "n_sses": 8,
+          "time_ms": 19.5,
+          "angle_mae_deg": 16.1
+        },
+        "cm_distogram": {
+          "local_err": 0.57,
+          "stress_1": 0.092,
+          "knn_pres": 100.0,
+          "conflicts": 0,
+          "n_sses": 8,
+          "time_ms": 55.2,
+          "angle_mae_deg": 11.8
+        },
+        "llm_cm2prot": {
+          "local_err": 0.51,
+          "stress_1": 0.083,
+          "knn_pres": 100.0,
+          "conflicts": 0,
+          "n_sses": 8,
+          "time_ms": 7.4
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 95.0,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 100.0,
+        "res_roc_auc": 89.9,
+        "res_prec_at_L": 96.9,
+        "dist_mae_local": 0.9,
+        "time_ms": 8.0
+      },
+      "dsl": {
+        "n_cm_tokens": 46,
+        "n_2dp_tokens": 11,
+        "compression_ratio": 801.4,
+        "cm_dsl_sample": "<BOS_CM> NODE:E3:E:L24:CA LOOP:E3~E8:G1 NODE:E8:E:L24:CA LOOP:E8~E10:G1 NODE:E10:E:L24:CA LOOP:E10~E16:G1 NODE:E16:E:L24:CA LOOP:E16~E19:G1 NODE:E19:E:L24:CA LOOP:E19~E24:G1 NODE:E24:E:L24:CA LOOP:E24~E27:G1 NODE:E27:E:L24:CA LOOP:E27~E34:G1 NODE:E34:E:L24:CA SHEET:E3:E8:E34:E10:E27:E16:E24:E19 CONT:E16~E19:D2.0:ANTI:153 CONT:E19~E24:D2.0:ANTI:154 CONT:E3~E34:D3.5:ANTI:140 CONT:E8~E10:D3.5:ANTI:147 CONT:E16~E24:D3.5:PAR:033 CONT:E3~E8:D3.5:ANTI:139 CONT:E10~E16:D3.5:ANTI:143 CONT:E27~E34:D3.5:CROSS:131 CONT:E24~E27:D4.5:CROSS:131 CONT:E10~E19:D5.5:PAR:045 CONT:E10~E24:D6.0:CROSS:127 CONT:E8~E16:D6.5:PAR:042 CONT:E8~E34:D6.5:CROSS:052 CONT:E19~E27:D6.5:CROSS:059 CONT:E3~E10:D7.0:CROSS:048 CONT:E3~E27:D7.0:CROSS:059 CONT:E16~E27:D8.0:CROSS:113 CONT:E8~E19:D8.0:CROSS:131 CONT:E8~E24:D8.0:CROSS:055 ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E3:E8:E34:E10:E27:E16:E24:E19 SSE2D:E3:L30:X-002.1:Y-005.4:A096 SSE2D:E8:L34:X+001.7:Y-004.2:A276 SSE2D:E10:L35:X+004.4:Y-001.4:A096 SSE2D:E16:L40:X+004.0:Y+002.6:A276 SSE2D:E19:L41:X+002.6:Y+004.6:A096 SSE2D:E24:L43:X+000.7:Y+004.6:A276 SSE2D:E27:L29:X-004.3:Y+002.0:A096 SSE2D:E34:L28:X-005.1:Y-002.6:A276 <EOS_2DP>"
+      }
+    },
+    "1emaA00": {
+      "id": "1emaA00",
+      "name": "Beta-barel: GFP (11-vláknový solubilní barel)",
+      "category": "5. Beta-barely (Transmembránové i solubilní, monomery i trimer)",
+      "kind": "domain",
+      "pdb": "1ema",
+      "desc": "Zelený fluorescenční protein (GFP) – 11-vláknový β-barel obklopující centrální chromoforový helix.",
+      "n_sses": 19,
+      "n_res_sampled": 314,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 1.76,
+          "stress_1": 0.41,
+          "knn_pres": 55.3,
+          "conflicts": 1,
+          "n_sses": 19,
+          "time_ms": 39.5
+        },
+        "cm_binary": {
+          "local_err": 2.9,
+          "stress_1": 0.479,
+          "knn_pres": 55.3,
+          "conflicts": 2,
+          "n_sses": 19,
+          "time_ms": 164.5,
+          "angle_mae_deg": 25.2
+        },
+        "cm_distogram": {
+          "local_err": 1.84,
+          "stress_1": 0.411,
+          "knn_pres": 57.9,
+          "conflicts": 1,
+          "n_sses": 19,
+          "time_ms": 124.6,
+          "angle_mae_deg": 24.1
+        },
+        "llm_cm2prot": {
+          "local_err": 1.87,
+          "stress_1": 0.352,
+          "knn_pres": 59.2,
+          "conflicts": 0,
+          "n_sses": 19,
+          "time_ms": 66.3
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 77.9,
+        "sse_prec_at_L": 89.5,
+        "sse_f1": 69.2,
+        "res_roc_auc": 82.1,
+        "res_prec_at_L": 85.4,
+        "dist_mae_local": 3.03,
+        "time_ms": 84.7
+      },
+      "dsl": {
+        "n_cm_tokens": 195,
+        "n_2dp_tokens": 22,
+        "compression_ratio": 505.6,
+        "cm_dsl_sample": "<BOS_CM> NODE:H12:H:L11:CA LOOP:H12~E17:G1 NODE:E17:E:L24:CA LOOP:E17~E20:G1 NODE:E20:E:L24:CA LOOP:E20~E23:G1 NODE:E23:E:L24:CA LOOP:E23~H24:G1 NODE:H24:H:L11:CA LOOP:H24~H25:G1 NODE:H25:H:L5:CA LOOP:H25~E26:G1 NODE:E26:E:L3:CA LOOP:E26~H28:G1 NODE:H28:H:L4:CA LOOP:H28~H29:G1 NODE:H29:H:L5:CA LOOP:H29~H30:G1 NODE:H30:H:L8:CA LOOP:H30~E31:G1 NODE:E31:E:L24:CA LOOP:E31~E35:G1 NODE:E35:E:L24:CA LOOP:E35~E38:G1 NODE:E38:E:L24:CA LOOP:E38~E41:G1 NODE:E41:E:L3:CA LOOP:E41~E43:G5 NODE:E43:E:L24:CA LOOP:E43~E47:G1 NODE:E47:E:L24:CA LOOP:E47~E52:G1 NODE:E52:E:L24:CA LOOP:E52~E55:G1 NODE:E55:E:L24:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E17:E20:E38:E23:E35:E59:E31:E26:E52:E47:E43:E55:E41 SSE2D:H12:L11:X-002.9:Y+003.2:A343 SSE2D:E17:L33:X+013.6:Y+015.1:A283 SSE2D:E20:L35:X+009.6:Y+016.6:A103 SSE2D:E23:L25:X+004.1:Y+015.5:A283 SSE2D:H24:L11:X+009.1:Y+008.5:A313 SSE2D:H25:L5:X+007.7:Y+002.0:A253 SSE2D:E26:L2:X-002.2:Y+013.6:A103 SSE2D:H28:L4:X-000.3:Y-008.1:A133 SSE2D:H29:L5:X+000.5:Y-004.9:A073 SSE2D:H30:L8:X+001.5:Y+000.3:A043 SSE2D:E31:L27:X+015.0:Y+001.3:A283 SSE2D:E35:L32:X+016.6:Y+006.1:A103 SSE2D:E38:L34:X+016.8:Y+010.5:A283 SSE2D:E41:L2:X+004.3:Y-006.5:A283 SSE2D:E43:L24:X+001.5:Y+000.9:A103 SSE2D:E47:L37:X+005.9:Y-001.1:A283 SSE2D:E52:L36:X+011.2:Y-001.1:A103 SSE2D:E55:L31:X-000.7:Y+005.8:A283 SSE2D:E59:L33:X+001.2:Y+011.3:A103 <EOS_2DP>"
+      }
+    },
+    "2omfA00": {
+      "id": "2omfA00",
+      "name": "Beta-barel: Porin OmpF – Monomer (16-vláknový barel)",
+      "category": "5. Beta-barely (Transmembránové i solubilní, monomery i trimer)",
+      "kind": "domain",
+      "pdb": "2omf",
+      "desc": "Samostatná podjednotka bakteriálního porinu OmpF tvořící široký 16-vláknový transmembránový β-barel.",
+      "n_sses": 27,
+      "n_res_sampled": 452,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.07,
+          "stress_1": 0.338,
+          "knn_pres": 51.9,
+          "conflicts": 1,
+          "n_sses": 27,
+          "time_ms": 70.5
+        },
+        "cm_binary": {
+          "local_err": 3.36,
+          "stress_1": 0.409,
+          "knn_pres": 61.1,
+          "conflicts": 0,
+          "n_sses": 27,
+          "time_ms": 372.5,
+          "angle_mae_deg": 31.1
+        },
+        "cm_distogram": {
+          "local_err": 2.22,
+          "stress_1": 0.319,
+          "knn_pres": 59.3,
+          "conflicts": 0,
+          "n_sses": 27,
+          "time_ms": 230.6,
+          "angle_mae_deg": 28.5
+        },
+        "llm_cm2prot": {
+          "local_err": 3.41,
+          "stress_1": 0.553,
+          "knn_pres": 54.6,
+          "conflicts": 0,
+          "n_sses": 27,
+          "time_ms": 56.1
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 85.3,
+        "sse_prec_at_L": 96.3,
+        "sse_f1": 66.3,
+        "res_roc_auc": 89.3,
+        "res_prec_at_L": 86.3,
+        "dist_mae_local": 3.68,
+        "time_ms": 71.0
+      },
+      "dsl": {
+        "n_cm_tokens": 251,
+        "n_2dp_tokens": 33,
+        "compression_ratio": 814.0,
+        "cm_dsl_sample": "<BOS_CM> NODE:E6:E:L13:CA LOOP:E6~E9:G1 NODE:E9:E:L24:CA LOOP:E9~E11:G1 NODE:E11:E:L3:CA LOOP:E11~E12:G3 NODE:E12:E:L5:CA LOOP:E12~E19:G1 NODE:E19:E:L24:CA LOOP:E19~E20:G1 NODE:E20:E:L24:CA LOOP:E20~E26:G1 NODE:E26:E:L24:CA LOOP:E26~E29:G1 NODE:E29:E:L18:CA LOOP:E29~H31:G1 NODE:H31:H:L15:CA LOOP:H31~E39:G13 NODE:E39:E:L20:CA LOOP:E39~E42:G1 NODE:E42:E:L24:CA LOOP:E42~E46:G1 NODE:E46:E:L3:CA LOOP:E46~E51:G7 NODE:E51:E:L3:CA LOOP:E51~E52:G1 NODE:E52:E:L24:CA LOOP:E52~E54:G1 NODE:E54:E:L24:CA LOOP:E54~H58:G1 NODE:H58:H:L7:CA LOOP:H58~E62:G1 NODE:E62:E:L3:CA LOOP:E62~E64:G3 NODE:E64:E:L24:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E6:E9:E19:E20:E26:E29:E39:E42:E52:E54:E64:E66:E72:E76:E84:E87:E92:E12 CLUST:E11:E90 CLUST:E46:E51 CLUST:E62:E71:E67 SSE2D:E6:L13:X+011.4:Y+011.3:A297 SSE2D:E9:L46:X+007.1:Y+009.3:A117 SSE2D:E11:L2:X+011.7:Y-013.9:A147 SSE2D:E12:L5:X+009.3:Y+013.2:A297 SSE2D:E19:L35:X+009.7:Y+004.6:A297 SSE2D:E20:L39:X+010.7:Y-000.6:A117 SSE2D:E26:L32:X+010.4:Y-006.0:A297 SSE2D:E29:L18:X+007.0:Y-009.1:A117 SSE2D:H31:L15:X-002.8:Y+001.9:A357 SSE2D:E39:L20:X+004.1:Y-012.0:A297 SSE2D:E42:L25:X+000.2:Y-015.9:A117 SSE2D:E46:L2:X-017.7:Y-006.3:A237 SSE2D:E51:L2:X-015.7:Y-009.5:A057 SSE2D:E52:L32:X-005.2:Y-015.2:A297 SSE2D:E54:L35:X-008.9:Y-012.8:A117 SSE2D:H58:L7:X-013.8:Y-014.6:A207 SSE2D:E62:L2:X-003.9:Y-018.4:A087 SSE2D:E64:L41:X-011.9:Y-008.2:A297 SSE2D:E66:L35:X-013.9:Y-003.6:A117 SSE2D:E67:L12:X-004.3:Y-010.4:A267 SSE2D:E71:L11:X-005.0:Y-014.6:A087 SSE2D:E72:L35:X-014.0:Y+001.4:A297 SSE2D:E76:L44:X-012.2:Y+006.3:A117 ..."
+      }
+    },
+    "2omf_trimer": {
+      "id": "2omf_trimer",
+      "name": "Beta-barel: Porin OmpF – Biologický trimer (3×16 = 48 β-vláken)",
+      "category": "5. Beta-barely (Transmembránové i solubilní, monomery i trimer)",
+      "kind": "complex",
+      "pdb": "2omf",
+      "desc": "Kompletní biologický trimer porinu OmpF se třemi 16-vláknovými β-barely uspořádanými kolem trojčetné osy.",
+      "n_sses": 81,
+      "n_res_sampled": 1356,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 4.28,
+          "stress_1": 0.174,
+          "knn_pres": 57.4,
+          "conflicts": 3,
+          "n_sses": 81,
+          "time_ms": 418.3
+        },
+        "cm_binary": {
+          "local_err": 4.48,
+          "stress_1": 0.243,
+          "knn_pres": 50.9,
+          "conflicts": 0,
+          "n_sses": 81,
+          "time_ms": 2690.7,
+          "angle_mae_deg": 25.4
+        },
+        "cm_distogram": {
+          "local_err": 3.4,
+          "stress_1": 0.174,
+          "knn_pres": 56.5,
+          "conflicts": 3,
+          "n_sses": 81,
+          "time_ms": 4601.6,
+          "angle_mae_deg": 23.8
+        },
+        "llm_cm2prot": {
+          "local_err": 4.49,
+          "stress_1": 0.222,
+          "knn_pres": 49.7,
+          "conflicts": 3,
+          "n_sses": 81,
+          "time_ms": 427.6
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 95.7,
+        "sse_prec_at_L": 92.6,
+        "sse_f1": 68.7,
+        "res_roc_auc": 95.6,
+        "res_prec_at_L": 89.5,
+        "dist_mae_local": 3.3,
+        "time_ms": 566.1
+      },
+      "dsl": {
+        "n_cm_tokens": 983,
+        "n_2dp_tokens": 95,
+        "compression_ratio": 1870.5,
+        "cm_dsl_sample": "<BOS_CM> NODE:E1_6:E:L13:CA LOOP:E1_6~E1_9:G1 NODE:E1_9:E:L24:CA LOOP:E1_9~E1_11:G1 NODE:E1_11:E:L3:CA LOOP:E1_11~E1_12:G3 NODE:E1_12:E:L5:CA LOOP:E1_12~E1_19:G1 NODE:E1_19:E:L24:CA LOOP:E1_19~E1_20:G1 NODE:E1_20:E:L24:CA LOOP:E1_20~E1_26:G1 NODE:E1_26:E:L24:CA LOOP:E1_26~E1_29:G1 NODE:E1_29:E:L18:CA LOOP:E1_29~H1_31:G1 NODE:H1_31:H:L15:CA LOOP:H1_31~E1_39:G13 NODE:E1_39:E:L20:CA LOOP:E1_39~E1_42:G1 NODE:E1_42:E:L24:CA LOOP:E1_42~E1_46:G1 NODE:E1_46:E:L3:CA LOOP:E1_46~E1_51:G7 NODE:E1_51:E:L3:CA LOOP:E1_51~E1_52:G1 NODE:E1_52:E:L24:CA LOOP:E1_52~E1_54:G1 NODE:E1_54:E:L24:CA LOOP:E1_54~H1_58:G1 NODE:H1_58:H:L7:CA LOOP:H1_58~E1_62:G1 NODE:E1_62:E:L3:CA LOOP:E1_62~E1_64:G3 NODE:E1_64:E:L24:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E1_6:E1_9:E1_92:E1_87:E1_84:E1_76:E1_72:E1_66:E1_64:E1_54:E1_52:E1_42:E1_39:E1_29:E1_26:E1_20:E1_19:E1_12 CLUST:E1_67:E1_71:E1_62 CLUST:E1_11:E1_90 CLUST:E1_46:E1_51 CLUST:E2_6:E2_9:E2_92:E2_87:E2_84:E2_76:E2_72:E2_66:E2_64:E2_54:E2_52:E2_42:E2_39:E2_29:E2_26:E2_20:E2_19:E2_12 CLUST:E2_67:E2_71:E2_62 CLUST:E2_11:E2_90 CLUST:E2_46:E2_51 CLUST:E3_6:E3_9:E3_92:E3_87:E3_84:E3_76:E3_72:E3_66:E3_64:E3_54:E3_52:E3_42:E3_39:E3_29:E3_26:E3_20:E3_19:E3_12 CLUST:E3_67:E3_71:E3_62 CLUST:E3_11:E3_90 CLUST:E3_46:E3_51 SSE2D:E1_6:L13:X-004.9:Y-010.9:A057 SSE2D:E1_9:L46:X-010.6:Y-009.4:A237 SSE2D:E1_11:L2:X-022.5:Y-018.2:A357 SSE2D:E1_12:L5:X-007.6:Y-014.1:A057 SSE2D:E1_19:L35:X-008.3:Y-004.3:A057 SSE2D:E1_20:L39:X-007.9:Y+000.5:A237 SSE2D:E1_26:L32:X-009.1:Y+005.6:A057 SSE2D:E1_29:L18:X-012.5:Y+009.9:A237 SSE2D:H1_31:L15:X-020.9:Y-000.6:A177 SSE2D:E1_39:L20:X-016.2:Y+012.0:A057 SSE2D:E1_42:L25:X-020.6:Y+014.7:A237 SSE2D:E1_46:L2:X-017.2:Y+017.7:A327 SSE2D:E1_51:L2:X-020.4:Y+015.6:A147 SSE2D:E1_52:L32:X-025.5:Y+013.6:A057 SSE2D:E1_54:L35:X-029.3:Y+010.5:A237 ..."
+      }
+    },
+    "1qjbA00": {
+      "id": "1qjbA00",
+      "name": "14-3-3ζ protein – Monomer (doména)",
+      "category": "6. Regulační a vazebné proteiny – 14-3-3",
+      "kind": "domain",
+      "pdb": "1qjb",
+      "desc": "Jedna podjednotka lidského 14-3-3ζ proteinu (9 antiparalelních α-helixů tvořících amfipatický žlábek).",
+      "n_sses": 10,
+      "n_res_sampled": 215,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 0.79,
+          "stress_1": 0.056,
+          "knn_pres": 92.5,
+          "conflicts": 0,
+          "n_sses": 10,
+          "time_ms": 19.0
+        },
+        "cm_binary": {
+          "local_err": 3.52,
+          "stress_1": 0.24,
+          "knn_pres": 92.5,
+          "conflicts": 0,
+          "n_sses": 10,
+          "time_ms": 65.2,
+          "angle_mae_deg": 32.5
+        },
+        "cm_distogram": {
+          "local_err": 1.09,
+          "stress_1": 0.083,
+          "knn_pres": 97.5,
+          "conflicts": 0,
+          "n_sses": 10,
+          "time_ms": 32.8,
+          "angle_mae_deg": 29.1
+        },
+        "llm_cm2prot": {
+          "local_err": 1.33,
+          "stress_1": 0.124,
+          "knn_pres": 95.0,
+          "conflicts": 0,
+          "n_sses": 10,
+          "time_ms": 17.4
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 100.0,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 100.0,
+        "res_roc_auc": 93.3,
+        "res_prec_at_L": 55.8,
+        "dist_mae_local": 1.24,
+        "time_ms": 13.2
+      },
+      "dsl": {
+        "n_cm_tokens": 50,
+        "n_2dp_tokens": 12,
+        "compression_ratio": 924.5,
+        "cm_dsl_sample": "<BOS_CM> NODE:H0:H:L20:CA LOOP:H0~H1:G1 NODE:H1:H:L22:CA LOOP:H1~H2:G1 NODE:H2:H:L24:CA LOOP:H2~H3:G1 NODE:H3:H:L24:CA LOOP:H3~H5:G1 NODE:H5:H:L24:CA LOOP:H5~H6:G1 NODE:H6:H:L24:CA LOOP:H6~H9:G1 NODE:H9:H:L24:CA LOOP:H9~H10:G1 NODE:H10:H:L24:CA LOOP:H10~H11:G1 NODE:H11:H:L5:CA LOOP:H11~H13:G1 NODE:H13:H:L24:CA CONT:H10~H11:D2.0:CROSS:082 CONT:H9~H10:D7.0:CROSS:129 CONT:H0~H1:D7.0:CROSS:118 CONT:H9~H13:D7.5:CROSS:051 CONT:H5~H6:D8.0:CROSS:132 CONT:H2~H3:D8.0:ANTI:144 CONT:H11~H13:D8.0:CROSS:096 CONT:H1~H2:D8.5:CROSS:113 CONT:H1~H3:D8.5:CROSS:061 CONT:H3~H5:D9.5:CROSS:134 CONT:H10~H13:D9.5:CROSS:125 CONT:H0~H2:D10.0:CROSS:068 CONT:H6~H9:D10.0:CROSS:123 CONT:H5~H9:D10.5:CROSS:056 CONT:H9~H11:D11.0:CROSS:092 CONT:H2~H5:D11.0:CROSS:046 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H0:L20:X-013.8:Y-010.5:A354 SSE2D:H1:L22:X-005.7:Y-013.6:A114 SSE2D:H2:L44:X-004.8:Y-005.0:A114 SSE2D:H3:L52:X+003.7:Y-010.3:A324 SSE2D:H5:L32:X+005.5:Y-001.0:A144 SSE2D:H6:L31:X+011.2:Y+004.3:A324 SSE2D:H9:L25:X+002.1:Y+009.3:A084 SSE2D:H10:L27:X+004.3:Y+016.9:A294 SSE2D:H11:L5:X+002.7:Y+018.1:A234 SSE2D:H13:L33:X-005.1:Y+012.3:A054 <EOS_2DP>"
+      }
+    },
+    "1qjb_dimer": {
+      "id": "1qjb_dimer",
+      "name": "14-3-3ζ protein – Homodimer (komplex A+B)",
+      "category": "6. Regulační a vazebné proteiny – 14-3-3",
+      "kind": "complex",
+      "pdb": "1qjb",
+      "desc": "Biologický homodimer 14-3-3ζ ve tvaru W / podkovy se dvěma vazebnými žlábky pro fosfopeptidy.",
+      "n_sses": 20,
+      "n_res_sampled": 430,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 1.94,
+          "stress_1": 0.108,
+          "knn_pres": 87.5,
+          "conflicts": 0,
+          "n_sses": 20,
+          "time_ms": 43.7
+        },
+        "cm_binary": {
+          "local_err": 3.63,
+          "stress_1": 0.185,
+          "knn_pres": 91.2,
+          "conflicts": 0,
+          "n_sses": 20,
+          "time_ms": 211.7,
+          "angle_mae_deg": 32.3
+        },
+        "cm_distogram": {
+          "local_err": 2.02,
+          "stress_1": 0.108,
+          "knn_pres": 88.8,
+          "conflicts": 0,
+          "n_sses": 20,
+          "time_ms": 145.0,
+          "angle_mae_deg": 30.2
+        },
+        "llm_cm2prot": {
+          "local_err": 2.52,
+          "stress_1": 0.111,
+          "knn_pres": 85.0,
+          "conflicts": 0,
+          "n_sses": 20,
+          "time_ms": 55.4
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 99.6,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 90.1,
+        "res_roc_auc": 94.7,
+        "res_prec_at_L": 48.6,
+        "dist_mae_local": 1.77,
+        "time_ms": 44.0
+      },
+      "dsl": {
+        "n_cm_tokens": 113,
+        "n_2dp_tokens": 22,
+        "compression_ratio": 1636.3,
+        "cm_dsl_sample": "<BOS_CM> NODE:H1_0:H:L20:CA LOOP:H1_0~H1_1:G1 NODE:H1_1:H:L22:CA LOOP:H1_1~H1_2:G1 NODE:H1_2:H:L24:CA LOOP:H1_2~H1_3:G1 NODE:H1_3:H:L24:CA LOOP:H1_3~H1_5:G1 NODE:H1_5:H:L24:CA LOOP:H1_5~H1_6:G1 NODE:H1_6:H:L24:CA LOOP:H1_6~H1_9:G1 NODE:H1_9:H:L24:CA LOOP:H1_9~H1_10:G1 NODE:H1_10:H:L24:CA LOOP:H1_10~H1_11:G1 NODE:H1_11:H:L5:CA LOOP:H1_11~H1_13:G1 NODE:H1_13:H:L24:CA NODE:H2_0:H:L20:CB LOOP:H2_0~H2_1:G1 NODE:H2_1:H:L22:CB LOOP:H2_1~H2_2:G1 NODE:H2_2:H:L24:CB LOOP:H2_2~H2_3:G1 NODE:H2_3:H:L24:CB LOOP:H2_3~H2_5:G1 NODE:H2_5:H:L24:CB LOOP:H2_5~H2_6:G1 NODE:H2_6:H:L24:CB LOOP:H2_6~H2_9:G1 NODE:H2_9:H:L24:CB LOOP:H2_9~H2_10:G1 NODE:H2_10:H:L24:CB LOOP:H2_10~H2_11:G1 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H1_0:L20:X-001.2:Y+000.8:A210 SSE2D:H1_1:L22:X+003.8:Y+011.3:A060 SSE2D:H1_2:L44:X+008.8:Y+003.4:A300 SSE2D:H1_3:L52:X+012.3:Y+011.5:A120 SSE2D:H1_5:L32:X+019.8:Y+005.9:A330 SSE2D:H1_6:L31:X+027.6:Y+004.3:A180 SSE2D:H1_9:L25:X+022.3:Y-004.6:A030 SSE2D:H1_10:L27:X+027.6:Y-010.8:A240 SSE2D:H1_11:L5:X+027.0:Y-013.7:A030 SSE2D:H1_13:L33:X+016.9:Y-011.1:A090 SSE2D:H2_0:L20:X+002.0:Y+006.4:A150 SSE2D:H2_1:L22:X-003.5:Y+012.9:A330 SSE2D:H2_2:L44:X-007.9:Y+003.5:A120 SSE2D:H2_3:L52:X-011.3:Y+009.6:A300 SSE2D:H2_5:L32:X-019.4:Y+005.5:A060 SSE2D:H2_6:L31:X-027.1:Y+004.8:A180 SSE2D:H2_9:L25:X-022.9:Y-004.5:A330 SSE2D:H2_10:L27:X-028.3:Y-010.4:A120 SSE2D:H2_11:L5:X-028.5:Y-013.2:A360 SSE2D:H2_13:L33:X-018.0:Y-011.5:A240 <EOS_2DP>"
+      }
+    },
+    "2hhbA00": {
+      "id": "2hhbA00",
+      "name": "Hemoglobin – α-podjednotka (doména)",
+      "category": "7. Globiny – Hemoglobin (Domény a α2β2 tetramer)",
+      "kind": "domain",
+      "pdb": "2hhb",
+      "desc": "Lidský hemoglobin, α-řetězec – klasický myoglobinový/globinový 3-vrstvý ortogonální helikální svazek.",
+      "n_sses": 10,
+      "n_res_sampled": 157,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.93,
+          "stress_1": 0.395,
+          "knn_pres": 72.5,
+          "conflicts": 0,
+          "n_sses": 10,
+          "time_ms": 19.3
+        },
+        "cm_binary": {
+          "local_err": 3.44,
+          "stress_1": 0.443,
+          "knn_pres": 70.0,
+          "conflicts": 0,
+          "n_sses": 10,
+          "time_ms": 40.1,
+          "angle_mae_deg": 22.2
+        },
+        "cm_distogram": {
+          "local_err": 3.0,
+          "stress_1": 0.392,
+          "knn_pres": 72.5,
+          "conflicts": 0,
+          "n_sses": 10,
+          "time_ms": 33.2,
+          "angle_mae_deg": 20.9
+        },
+        "llm_cm2prot": {
+          "local_err": 2.95,
+          "stress_1": 0.334,
+          "knn_pres": 72.5,
+          "conflicts": 0,
+          "n_sses": 10,
+          "time_ms": 19.9
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 89.5,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 78.3,
+        "res_roc_auc": 85.3,
+        "res_prec_at_L": 61.8,
+        "dist_mae_local": 3.26,
+        "time_ms": 8.6
+      },
+      "dsl": {
+        "n_cm_tokens": 59,
+        "n_2dp_tokens": 12,
+        "compression_ratio": 417.8,
+        "cm_dsl_sample": "<BOS_CM> NODE:H6:H:L21:CA LOOP:H6~H7:G1 NODE:H7:H:L4:CA LOOP:H7~H8:G1 NODE:H8:H:L22:CA LOOP:H8~H10:G1 NODE:H10:H:L12:CA LOOP:H10~H17:G4 NODE:H17:H:L24:CA LOOP:H17~H18:G1 NODE:H18:H:L4:CA LOOP:H18~H21:G1 NODE:H21:H:L7:CA LOOP:H21~H23:G1 NODE:H23:H:L15:CA LOOP:H23~H28:G1 NODE:H28:H:L24:CA LOOP:H28~H31:G1 NODE:H31:H:L24:CA CONT:H6~H7:D2.0:CROSS:085 CONT:H7~H8:D2.0:CROSS:083 CONT:H17~H18:D2.0:CROSS:088 CONT:H21~H23:D2.0:CROSS:082 CONT:H18~H21:D2.5:CROSS:088 CONT:H8~H10:D3.5:CROSS:094 CONT:H8~H17:D7.0:CROSS:102 CONT:H23~H31:D7.0:CROSS:080 CONT:H6~H8:D8.0:CROSS:089 CONT:H8~H28:D8.0:CROSS:112 CONT:H17~H21:D8.0:CROSS:099 CONT:H6~H31:D8.5:CROSS:093 CONT:H7~H17:D8.5:CROSS:097 CONT:H10~H28:D9.5:CROSS:099 CONT:H6~H17:D10.0:CROSS:109 CONT:H21~H31:D10.0:CROSS:083 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H6:L21:X-009.5:Y-005.4:A353 SSE2D:H7:L4:X-006.2:Y+001.9:A083 SSE2D:H8:L22:X+000.8:Y+002.1:A083 SSE2D:H10:L12:X+006.1:Y+002.6:A143 SSE2D:H17:L29:X-005.3:Y-000.6:A203 SSE2D:H18:L4:X-005.5:Y-005.3:A143 SSE2D:H21:L7:X-000.2:Y-012.7:A053 SSE2D:H23:L15:X+002.3:Y-014.0:A083 SSE2D:H28:L29:X+003.8:Y-005.9:A293 SSE2D:H31:L28:X-004.6:Y-012.8:A113 <EOS_2DP>"
+      }
+    },
+    "2hhbB00": {
+      "id": "2hhbB00",
+      "name": "Hemoglobin – β-podjednotka (doména)",
+      "category": "7. Globiny – Hemoglobin (Domény a α2β2 tetramer)",
+      "kind": "domain",
+      "pdb": "2hhb",
+      "desc": "Lidský hemoglobin, β-řetězec – globinový fold s hemovou kapsou.",
+      "n_sses": 12,
+      "n_res_sampled": 172,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 3.43,
+          "stress_1": 0.416,
+          "knn_pres": 64.6,
+          "conflicts": 0,
+          "n_sses": 12,
+          "time_ms": 52.8
+        },
+        "cm_binary": {
+          "local_err": 3.56,
+          "stress_1": 0.418,
+          "knn_pres": 70.8,
+          "conflicts": 0,
+          "n_sses": 12,
+          "time_ms": 59.3,
+          "angle_mae_deg": 22.5
+        },
+        "cm_distogram": {
+          "local_err": 3.24,
+          "stress_1": 0.42,
+          "knn_pres": 72.9,
+          "conflicts": 0,
+          "n_sses": 12,
+          "time_ms": 36.5,
+          "angle_mae_deg": 20.7
+        },
+        "llm_cm2prot": {
+          "local_err": 3.17,
+          "stress_1": 0.368,
+          "knn_pres": 75.0,
+          "conflicts": 0,
+          "n_sses": 12,
+          "time_ms": 31.6
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 90.8,
+        "sse_prec_at_L": 83.3,
+        "sse_f1": 68.0,
+        "res_roc_auc": 82.9,
+        "res_prec_at_L": 65.7,
+        "dist_mae_local": 2.96,
+        "time_ms": 12.0
+      },
+      "dsl": {
+        "n_cm_tokens": 69,
+        "n_2dp_tokens": 14,
+        "compression_ratio": 428.8,
+        "cm_dsl_sample": "<BOS_CM> NODE:H6:H:L20:CB LOOP:H6~H8:G1 NODE:H8:H:L22:CB LOOP:H8~H10:G1 NODE:H10:H:L12:CB LOOP:H10~H11:G1 NODE:H11:H:L5:CB LOOP:H11~H15:G3 NODE:H15:H:L9:CB LOOP:H15~H17:G1 NODE:H17:H:L24:CB LOOP:H17~H18:G1 NODE:H18:H:L4:CB LOOP:H18~H21:G1 NODE:H21:H:L7:CB LOOP:H21~H23:G1 NODE:H23:H:L15:CB LOOP:H23~H28:G1 NODE:H28:H:L24:CB LOOP:H28~H30:G1 NODE:H30:H:L6:CB LOOP:H30~H31:G1 NODE:H31:H:L24:CB CONT:H21~H23:D2.0:CROSS:080 CONT:H10~H11:D2.5:CROSS:084 CONT:H17~H18:D2.5:CROSS:089 CONT:H18~H21:D2.5:CROSS:088 CONT:H28~H30:D2.5:CROSS:094 CONT:H8~H10:D3.5:CROSS:093 CONT:H30~H31:D4.0:CROSS:084 CONT:H15~H17:D5.5:CROSS:079 CONT:H8~H17:D7.0:CROSS:103 CONT:H23~H31:D7.0:CROSS:079 CONT:H6~H8:D7.5:CROSS:087 CONT:H11~H17:D8.0:CROSS:095 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H6:L20:X-011.6:Y-004.9:A015 SSE2D:H8:L22:X-003.2:Y+002.7:A075 SSE2D:H10:L12:X+001.7:Y+004.5:A105 SSE2D:H11:L5:X+002.6:Y+006.9:A315 SSE2D:H15:L9:X-009.3:Y+005.6:A195 SSE2D:H17:L30:X-005.2:Y-003.8:A195 SSE2D:H18:L4:X-006.7:Y-009.5:A105 SSE2D:H21:L7:X+001.0:Y-015.1:A045 SSE2D:H23:L15:X+004.2:Y-013.4:A045 SSE2D:H28:L29:X+003.4:Y-004.5:A285 SSE2D:H30:L6:X+001.9:Y-009.5:A165 SSE2D:H31:L33:X-003.4:Y-013.5:A105 <EOS_2DP>"
+      }
+    },
+    "2hhb_tetramer": {
+      "id": "2hhb_tetramer",
+      "name": "Hemoglobin – Celý α2β2 tetramer (komplex A+B+C+D)",
+      "category": "7. Globiny – Hemoglobin (Domény a α2β2 tetramer)",
+      "kind": "complex",
+      "pdb": "2hhb",
+      "desc": "Kompletní kvartérní tetramer lidského deoxyhemoglobinu (α1, β1, α2, β2).",
+      "n_sses": 44,
+      "n_res_sampled": 658,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 4.9,
+          "stress_1": 0.303,
+          "knn_pres": 48.3,
+          "conflicts": 0,
+          "n_sses": 44,
+          "time_ms": 96.0
+        },
+        "cm_binary": {
+          "local_err": 5.13,
+          "stress_1": 0.308,
+          "knn_pres": 48.9,
+          "conflicts": 0,
+          "n_sses": 44,
+          "time_ms": 737.1,
+          "angle_mae_deg": 25.2
+        },
+        "cm_distogram": {
+          "local_err": 4.98,
+          "stress_1": 0.304,
+          "knn_pres": 48.9,
+          "conflicts": 0,
+          "n_sses": 44,
+          "time_ms": 1029.6,
+          "angle_mae_deg": 23.5
+        },
+        "llm_cm2prot": {
+          "local_err": 4.92,
+          "stress_1": 0.303,
+          "knn_pres": 50.6,
+          "conflicts": 0,
+          "n_sses": 44,
+          "time_ms": 185.6
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 94.7,
+        "sse_prec_at_L": 84.1,
+        "sse_f1": 60.5,
+        "res_roc_auc": 93.5,
+        "res_prec_at_L": 34.3,
+        "dist_mae_local": 3.6,
+        "time_ms": 195.9
+      },
+      "dsl": {
+        "n_cm_tokens": 409,
+        "n_2dp_tokens": 46,
+        "compression_ratio": 1058.6,
+        "cm_dsl_sample": "<BOS_CM> NODE:H1_6:H:L21:CA LOOP:H1_6~H1_7:G1 NODE:H1_7:H:L4:CA LOOP:H1_7~H1_8:G1 NODE:H1_8:H:L22:CA LOOP:H1_8~H1_10:G1 NODE:H1_10:H:L12:CA LOOP:H1_10~H1_17:G4 NODE:H1_17:H:L24:CA LOOP:H1_17~H1_18:G1 NODE:H1_18:H:L4:CA LOOP:H1_18~H1_21:G1 NODE:H1_21:H:L7:CA LOOP:H1_21~H1_23:G1 NODE:H1_23:H:L15:CA LOOP:H1_23~H1_28:G1 NODE:H1_28:H:L24:CA LOOP:H1_28~H1_31:G1 NODE:H1_31:H:L24:CA NODE:H2_6:H:L20:CB LOOP:H2_6~H2_8:G1 NODE:H2_8:H:L22:CB LOOP:H2_8~H2_10:G1 NODE:H2_10:H:L12:CB LOOP:H2_10~H2_11:G1 NODE:H2_11:H:L5:CB LOOP:H2_11~H2_15:G3 NODE:H2_15:H:L9:CB LOOP:H2_15~H2_17:G1 NODE:H2_17:H:L24:CB LOOP:H2_17~H2_18:G1 NODE:H2_18:H:L4:CB LOOP:H2_18~H2_21:G1 NODE:H2_21:H:L7:CB LOOP:H2_21~H2_23:G1 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H1_6:L21:X-016.1:Y+009.4:A326 SSE2D:H1_7:L4:X-016.7:Y+014.7:A116 SSE2D:H1_8:L22:X-008.1:Y+011.3:A146 SSE2D:H1_10:L12:X-001.5:Y+012.7:A026 SSE2D:H1_17:L29:X-010.8:Y+017.4:A176 SSE2D:H1_18:L4:X-008.5:Y+018.0:A086 SSE2D:H1_21:L7:X-002.9:Y+019.0:A356 SSE2D:H1_23:L15:X+001.4:Y+017.3:A056 SSE2D:H1_28:L29:X-003.0:Y+005.6:A266 SSE2D:H1_31:L28:X-007.4:Y+005.6:A056 SSE2D:H2_6:L20:X-020.3:Y+000.3:A236 SSE2D:H2_8:L22:X-014.1:Y-006.9:A086 SSE2D:H2_10:L12:X-010.4:Y-011.5:A206 SSE2D:H2_11:L5:X-017.5:Y-018.4:A266 SSE2D:H2_15:L9:X-022.4:Y-004.3:A236 SSE2D:H2_17:L30:X-019.6:Y-009.6:A026 SSE2D:H2_18:L4:X-016.5:Y-011.4:A116 SSE2D:H2_21:L7:X-011.6:Y-014.6:A206 SSE2D:H2_23:L15:X-009.0:Y-015.7:A146 SSE2D:H2_28:L29:X-006.3:Y-004.9:A296 SSE2D:H2_30:L6:X-012.9:Y+001.5:A146 SSE2D:H2_31:L33:X-009.1:Y-002.8:A146 SSE2D:H3_6:L21:X+016.0:Y-009.5:A146 SSE2D:H3_7:L4:X+016.7:Y-014.8:A296 SSE2D:H3_8:L22:X+008.1:Y-011.2:A326 SSE2D:H3_10:L12:X+001.5:Y-012.7:A206 SSE2D:H3_17:L29:X+010.4:Y-017.4:A356 ..."
+      }
+    },
+    "1bl8A00": {
+      "id": "1bl8A00",
+      "name": "Draslíkový kanál KcsA – Jedna podjednotka (doména)",
+      "category": "8. Iontové kanály – KcsA (Doména a tetramerní pór)",
+      "kind": "domain",
+      "pdb": "1bl8",
+      "desc": "Samostatná podjednotka K+ kanálu KcsA (vnější TM1 helix, krátký pore-helix a vnitřní TM2 helix).",
+      "n_sses": 3,
+      "n_res_sampled": 67,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 0.0,
+          "stress_1": 0.0,
+          "knn_pres": 100.0,
+          "conflicts": 0,
+          "n_sses": 3,
+          "time_ms": 3.1
+        },
+        "cm_binary": {
+          "local_err": 1.46,
+          "stress_1": 0.228,
+          "knn_pres": 100.0,
+          "conflicts": 0,
+          "n_sses": 3,
+          "time_ms": 12.1,
+          "angle_mae_deg": 21.3
+        },
+        "cm_distogram": {
+          "local_err": 0.98,
+          "stress_1": 0.135,
+          "knn_pres": 100.0,
+          "conflicts": 0,
+          "n_sses": 3,
+          "time_ms": 4.9,
+          "angle_mae_deg": 19.0
+        },
+        "llm_cm2prot": {
+          "local_err": 0.52,
+          "stress_1": 0.095,
+          "knn_pres": 100.0,
+          "conflicts": 0,
+          "n_sses": 3,
+          "time_ms": 3.8
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 95.0,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 100.0,
+        "res_roc_auc": 71.3,
+        "res_prec_at_L": 3.0,
+        "dist_mae_local": 0.87,
+        "time_ms": 3.8
+      },
+      "dsl": {
+        "n_cm_tokens": 10,
+        "n_2dp_tokens": 5,
+        "compression_ratio": 448.9,
+        "cm_dsl_sample": "<BOS_CM> NODE:H8:H:L24:CA LOOP:H8~H13:G1 NODE:H13:H:L19:CA LOOP:H13~H17:G5 NODE:H17:H:L24:CA CONT:H8~H13:D7.0:CROSS:118 CONT:H13~H17:D7.0:CROSS:065 CONT:H8~H17:D8.5:ANTI:145 <EOS_CM>",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H8:L45:X-006.1:Y+001.3:A257 SSE2D:H13:L19:X+000.9:Y+003.4:A167 SSE2D:H17:L49:X+000.3:Y-005.5:A107 <EOS_2DP>"
+      }
+    },
+    "1bl8_tetramer": {
+      "id": "1bl8_tetramer",
+      "name": "Draslíkový kanál KcsA – Celý biologický tetramer (komplex A+B+C+D)",
+      "category": "8. Iontové kanály – KcsA (Doména a tetramerní pór)",
+      "kind": "complex",
+      "pdb": "1bl8",
+      "desc": "Kompletní symetrický tetramer K+ kanálu KcsA obklopující centrální selektivitní filtr a vodní dutinu.",
+      "n_sses": 12,
+      "n_res_sampled": 268,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 1.63,
+          "stress_1": 0.18,
+          "knn_pres": 75.0,
+          "conflicts": 0,
+          "n_sses": 12,
+          "time_ms": 20.5
+        },
+        "cm_binary": {
+          "local_err": 2.31,
+          "stress_1": 0.201,
+          "knn_pres": 75.0,
+          "conflicts": 0,
+          "n_sses": 12,
+          "time_ms": 104.9,
+          "angle_mae_deg": 24.8
+        },
+        "cm_distogram": {
+          "local_err": 1.8,
+          "stress_1": 0.182,
+          "knn_pres": 75.0,
+          "conflicts": 0,
+          "n_sses": 12,
+          "time_ms": 56.2,
+          "angle_mae_deg": 20.9
+        },
+        "llm_cm2prot": {
+          "local_err": 1.64,
+          "stress_1": 0.177,
+          "knn_pres": 75.0,
+          "conflicts": 0,
+          "n_sses": 12,
+          "time_ms": 24.5
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 92.9,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 76.0,
+        "res_roc_auc": 90.3,
+        "res_prec_at_L": 29.9,
+        "dist_mae_local": 2.8,
+        "time_ms": 19.3
+      },
+      "dsl": {
+        "n_cm_tokens": 78,
+        "n_2dp_tokens": 14,
+        "compression_ratio": 920.8,
+        "cm_dsl_sample": "<BOS_CM> NODE:H1_8:H:L24:CA LOOP:H1_8~H1_13:G1 NODE:H1_13:H:L19:CA LOOP:H1_13~H1_17:G5 NODE:H1_17:H:L24:CA NODE:H2_8:H:L24:CB LOOP:H2_8~H2_13:G1 NODE:H2_13:H:L19:CB LOOP:H2_13~H2_17:G5 NODE:H2_17:H:L24:CB NODE:H3_8:H:L24:CC LOOP:H3_8~H3_13:G1 NODE:H3_13:H:L19:CC LOOP:H3_13~H3_17:G5 NODE:H3_17:H:L24:CC NODE:H4_8:H:L24:CD LOOP:H4_8~H4_13:G1 NODE:H4_13:H:L19:CD LOOP:H4_13~H4_17:G5 NODE:H4_17:H:L24:CD CONT:H1_8~H1_13:D7.5:CROSS:116 CONT:H1_13~H1_17:D7.5:CROSS:067 CONT:H2_8~H2_13:D7.5:CROSS:116 CONT:H2_13~H2_17:D7.5:CROSS:067 CONT:H3_8~H3_13:D7.5:CROSS:116 CONT:H3_13~H3_17:D7.5:CROSS:067 CONT:H4_8~H4_13:D7.5:CROSS:116 CONT:H4_13~H4_17:D7.5:CROSS:067 CONT:H3_17~H4_17:D8.0:CROSS:056 CONT:H1_17~H2_17:D8.0:CROSS:056 CONT:H1_17~H4_17:D8.0:CROSS:056 CONT:H2_17~H3_17:D8.0:CROSS:056 CONT:H1_8~H1_17:D8.5:ANTI:143 CONT:H2_8~H2_17:D8.5:ANTI:143 CONT:H3_8~H3_17:D8.5:ANTI:143 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H1_8:L45:X+001.8:Y-013.8:A118 SSE2D:H1_13:L19:X-003.8:Y-009.7:A028 SSE2D:H1_17:L49:X-002.6:Y-005.7:A298 SSE2D:H2_8:L45:X-013.9:Y-001.7:A208 SSE2D:H2_13:L19:X-009.7:Y+003.8:A118 SSE2D:H2_17:L49:X-005.8:Y+002.7:A028 SSE2D:H3_8:L45:X-001.8:Y+013.7:A298 SSE2D:H3_13:L19:X+003.8:Y+009.6:A208 SSE2D:H3_17:L49:X+002.6:Y+005.6:A118 SSE2D:H4_8:L45:X+013.8:Y+001.9:A028 SSE2D:H4_13:L19:X+009.7:Y-003.8:A298 SSE2D:H4_17:L49:X+005.8:Y-002.5:A208 <EOS_2DP>"
+      }
+    },
+    "1j4nA00": {
+      "id": "1j4nA00",
+      "name": "Akvaporin AQP1 – Monomer (doména)",
+      "category": "9. Vodní kanály – Akvaporin AQP1 (Doména a tetramer)",
+      "kind": "domain",
+      "pdb": "1j4n",
+      "desc": "Monomerní vodní kanál AQP1 – 6 transmembránových helixů a 2 poloviční NPA helixy (přesýpací hodiny).",
+      "n_sses": 10,
+      "n_res_sampled": 194,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 0.76,
+          "stress_1": 0.18,
+          "knn_pres": 80.0,
+          "conflicts": 0,
+          "n_sses": 10,
+          "time_ms": 21.8
+        },
+        "cm_binary": {
+          "local_err": 2.74,
+          "stress_1": 0.275,
+          "knn_pres": 92.5,
+          "conflicts": 0,
+          "n_sses": 10,
+          "time_ms": 53.3,
+          "angle_mae_deg": 29.0
+        },
+        "cm_distogram": {
+          "local_err": 0.83,
+          "stress_1": 0.183,
+          "knn_pres": 82.5,
+          "conflicts": 0,
+          "n_sses": 10,
+          "time_ms": 49.3,
+          "angle_mae_deg": 27.1
+        },
+        "llm_cm2prot": {
+          "local_err": 0.86,
+          "stress_1": 0.18,
+          "knn_pres": 82.5,
+          "conflicts": 0,
+          "n_sses": 10,
+          "time_ms": 17.4
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 93.8,
+        "sse_prec_at_L": 90.0,
+        "sse_f1": 84.8,
+        "res_roc_auc": 87.1,
+        "res_prec_at_L": 43.8,
+        "dist_mae_local": 1.84,
+        "time_ms": 12.1
+      },
+      "dsl": {
+        "n_cm_tokens": 61,
+        "n_2dp_tokens": 12,
+        "compression_ratio": 617.0,
+        "cm_dsl_sample": "<BOS_CM> NODE:H2:H:L24:CA LOOP:H2~H3:G1 NODE:H3:H:L24:CA LOOP:H3~H4:G1 NODE:H4:H:L5:CA LOOP:H4~H5:G4 NODE:H5:H:L14:CA LOOP:H5~H7:G1 NODE:H7:H:L24:CA LOOP:H7~H10:G7 NODE:H10:H:L24:CA LOOP:H10~H14:G1 NODE:H14:H:L24:CA LOOP:H14~H16:G1 NODE:H16:H:L16:CA LOOP:H16~H19:G1 NODE:H19:H:L24:CA LOOP:H19~H20:G1 NODE:H20:H:L15:CA CONT:H3~H4:D2.0:CROSS:082 CONT:H5~H16:D4.5:CROSS:098 CONT:H7~H20:D4.5:CROSS:079 CONT:H10~H19:D6.0:CROSS:048 CONT:H2~H4:D7.5:CROSS:101 CONT:H2~H7:D7.5:PAR:041 CONT:H3~H14:D7.5:CROSS:124 CONT:H5~H20:D8.0:CROSS:101 CONT:H7~H16:D8.0:CROSS:065 CONT:H5~H19:D8.5:CROSS:067 CONT:H5~H7:D9.0:CROSS:113 CONT:H16~H19:D9.5:CROSS:111 CONT:H2~H3:D9.5:CROSS:133 CONT:H5~H10:D9.5:CROSS:076 CONT:H10~H14:D9.5:CROSS:130 CONT:H2~H16:D11.0:CROSS:074 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H2:L51:X-004.2:Y-007.2:A108 SSE2D:H3:L27:X+005.4:Y-005.3:A258 SSE2D:H4:L5:X+003.4:Y-006.2:A318 SSE2D:H5:L14:X-003.1:Y+004.7:A348 SSE2D:H7:L37:X-010.2:Y-002.2:A168 SSE2D:H10:L35:X+004.1:Y+011.0:A168 SSE2D:H14:L27:X+008.4:Y+002.2:A348 SSE2D:H16:L16:X-006.1:Y+004.7:A258 SSE2D:H19:L33:X-001.8:Y+013.6:A078 SSE2D:H20:L15:X-013.8:Y+001.3:A168 <EOS_2DP>"
+      }
+    },
+    "1j4n_tetramer": {
+      "id": "1j4n_tetramer",
+      "name": "Akvaporin AQP1 – Celý biologický tetramer (4× kanál)",
+      "category": "9. Vodní kanály – Akvaporin AQP1 (Doména a tetramer)",
+      "kind": "complex",
+      "pdb": "1j4n",
+      "desc": "Biologický tetramer akvaporinu AQP1 v membráně (4 vodní kanály kolem čtyřčetné osy symetrie).",
+      "n_sses": 40,
+      "n_res_sampled": 776,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.89,
+          "stress_1": 0.152,
+          "knn_pres": 70.0,
+          "conflicts": 0,
+          "n_sses": 40,
+          "time_ms": 66.3
+        },
+        "cm_binary": {
+          "local_err": 5.0,
+          "stress_1": 0.259,
+          "knn_pres": 67.5,
+          "conflicts": 0,
+          "n_sses": 40,
+          "time_ms": 874.5,
+          "angle_mae_deg": 28.4
+        },
+        "cm_distogram": {
+          "local_err": 3.68,
+          "stress_1": 0.201,
+          "knn_pres": 70.0,
+          "conflicts": 0,
+          "n_sses": 40,
+          "time_ms": 1213.7,
+          "angle_mae_deg": 27.5
+        },
+        "llm_cm2prot": {
+          "local_err": 3.11,
+          "stress_1": 0.178,
+          "knn_pres": 68.8,
+          "conflicts": 0,
+          "n_sses": 40,
+          "time_ms": 171.0
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 95.8,
+        "sse_prec_at_L": 80.0,
+        "sse_f1": 68.1,
+        "res_roc_auc": 96.3,
+        "res_prec_at_L": 67.0,
+        "dist_mae_local": 2.4,
+        "time_ms": 171.4
+      },
+      "dsl": {
+        "n_cm_tokens": 354,
+        "n_2dp_tokens": 42,
+        "compression_ratio": 1701.1,
+        "cm_dsl_sample": "<BOS_CM> NODE:H1_2:H:L24:CA LOOP:H1_2~H1_3:G1 NODE:H1_3:H:L24:CA LOOP:H1_3~H1_4:G1 NODE:H1_4:H:L5:CA LOOP:H1_4~H1_5:G4 NODE:H1_5:H:L14:CA LOOP:H1_5~H1_7:G1 NODE:H1_7:H:L24:CA LOOP:H1_7~H1_10:G7 NODE:H1_10:H:L24:CA LOOP:H1_10~H1_14:G1 NODE:H1_14:H:L24:CA LOOP:H1_14~H1_16:G1 NODE:H1_16:H:L16:CA LOOP:H1_16~H1_19:G1 NODE:H1_19:H:L24:CA LOOP:H1_19~H1_20:G1 NODE:H1_20:H:L15:CA NODE:H2_2:H:L24:CB LOOP:H2_2~H2_3:G1 NODE:H2_3:H:L24:CB LOOP:H2_3~H2_4:G1 NODE:H2_4:H:L5:CB LOOP:H2_4~H2_5:G4 NODE:H2_5:H:L14:CB LOOP:H2_5~H2_7:G1 NODE:H2_7:H:L24:CB LOOP:H2_7~H2_10:G7 NODE:H2_10:H:L24:CB LOOP:H2_10~H2_14:G1 NODE:H2_14:H:L24:CB LOOP:H2_14~H2_16:G1 NODE:H2_16:H:L16:CB LOOP:H2_16~H2_19:G1 ...",
+        "p2d_dsl_sample": "<BOS_2DP> SSE2D:H1_2:L51:X+012.4:Y+009.5:A216 SSE2D:H1_3:L27:X+005.5:Y+005.9:A096 SSE2D:H1_4:L5:X+010.0:Y+011.2:A036 SSE2D:H1_5:L14:X+006.2:Y+022.1:A276 SSE2D:H1_7:L37:X+015.8:Y+016.0:A126 SSE2D:H1_10:L35:X-003.2:Y+016.3:A156 SSE2D:H1_14:L27:X-000.3:Y+009.0:A336 SSE2D:H1_16:L16:X+008.9:Y+022.0:A066 SSE2D:H1_19:L33:X-002.6:Y+022.0:A246 SSE2D:H1_20:L15:X+015.1:Y+024.8:A126 SSE2D:H2_2:L51:X-012.4:Y-009.5:A036 SSE2D:H2_3:L27:X-005.5:Y-005.9:A276 SSE2D:H2_4:L5:X-010.0:Y-011.2:A216 SSE2D:H2_5:L14:X-006.2:Y-022.1:A096 SSE2D:H2_7:L37:X-015.8:Y-016.0:A306 SSE2D:H2_10:L35:X+003.2:Y-016.3:A336 SSE2D:H2_14:L27:X+000.3:Y-009.0:A156 SSE2D:H2_16:L16:X-008.9:Y-022.0:A246 SSE2D:H2_19:L33:X+002.6:Y-022.0:A066 SSE2D:H2_20:L15:X-015.1:Y-024.8:A306 SSE2D:H3_2:L51:X+009.5:Y-012.4:A306 SSE2D:H3_3:L27:X+005.9:Y-005.5:A186 SSE2D:H3_4:L5:X+011.2:Y-010.0:A126 SSE2D:H3_5:L14:X+022.1:Y-006.2:A006 SSE2D:H3_7:L37:X+016.0:Y-015.8:A216 SSE2D:H3_10:L35:X+016.3:Y+003.2:A246 SSE2D:H3_14:L27:X+009.0:Y+000.3:A066 ..."
+      }
+    },
+    "1bmfA02": {
+      "id": "1bmfA02",
+      "name": "Extra velký systém (EC 7): F1-ATPáza – Katalytická α/β doména",
+      "category": "10. Extra velké multipodjednotkové komplexy (F1-ATPáza, GroEL)",
+      "kind": "domain",
+      "pdb": "1bmf",
+      "desc": "EC 7.1.2.2 – nukleotid-vázající RecA-like α/β doména jedné podjednotky F1-ATPázy.",
+      "n_sses": 25,
+      "n_res_sampled": 332,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 3.08,
+          "stress_1": 0.264,
+          "knn_pres": 58.0,
+          "conflicts": 1,
+          "n_sses": 25,
+          "time_ms": 75.2
+        },
+        "cm_binary": {
+          "local_err": 4.17,
+          "stress_1": 0.334,
+          "knn_pres": 51.0,
+          "conflicts": 0,
+          "n_sses": 25,
+          "time_ms": 181.0,
+          "angle_mae_deg": 35.8
+        },
+        "cm_distogram": {
+          "local_err": 3.42,
+          "stress_1": 0.291,
+          "knn_pres": 49.0,
+          "conflicts": 1,
+          "n_sses": 25,
+          "time_ms": 156.3,
+          "angle_mae_deg": 34.6
+        },
+        "llm_cm2prot": {
+          "local_err": 4.31,
+          "stress_1": 0.351,
+          "knn_pres": 51.0,
+          "conflicts": 0,
+          "n_sses": 25,
+          "time_ms": 79.4
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 93.5,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 75.1,
+        "res_roc_auc": 84.4,
+        "res_prec_at_L": 39.2,
+        "dist_mae_local": 2.54,
+        "time_ms": 65.0
+      },
+      "dsl": {
+        "n_cm_tokens": 317,
+        "n_2dp_tokens": 35,
+        "compression_ratio": 347.7,
+        "cm_dsl_sample": "<BOS_CM> NODE:_E0:E:L8:CA LOOP:_E0~_E2:G2 NODE:_E2:E:L8:CA LOOP:_E2~_E3:G1 NODE:_E3:E:L3:CA LOOP:_E3~_E4:G10 NODE:_E4:E:L8:CA LOOP:_E4~_E5:G5 NODE:_E5:E:L3:CA LOOP:_E5~E34:G4 NODE:E34:E:L5:CA LOOP:E34~H53:G1 NODE:H53:H:L8:CA LOOP:H53~E57:G1 NODE:E57:E:L5:CA LOOP:E57~_E9:G1 NODE:_E9:E:L3:CA LOOP:_E9~E62:G1 NODE:E62:E:L12:CA LOOP:E62~H72:G1 NODE:H72:H:L24:CA LOOP:H72~E90:G1 NODE:E90:E:L24:CA LOOP:E90~H99:G1 NODE:H99:H:L21:CA LOOP:H99~H147:G1 NODE:H147:H:L7:CA LOOP:H147~E152:G1 NODE:E152:E:L18:CA LOOP:E152~H187:G1 NODE:H187:H:L24:CA LOOP:H187~E207:G1 NODE:E207:E:L22:CA LOOP:E207~H221:G1 NODE:H221:H:L23:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E34:E57 CLUST:E62:_E9:E255:_E22:E207:_E5:E90:_E29:E152:E301:_E2:_E28:_E3 CLUST:E224:E228 CLUST:_E0:_E4 SSE2D:_E0:L8:X-012.9:Y+010.4:A319 SSE2D:_E2:L8:X+000.6:Y+011.4:A109 SSE2D:_E3:L2:X+001.1:Y+016.3:A289 SSE2D:_E4:L8:X-015.7:Y+007.9:A139 SSE2D:_E5:L2:X-021.2:Y-005.4:A109 SSE2D:E34:L5:X-000.9:Y-007.6:A319 SSE2D:H53:L8:X+006.6:Y-011.1:A259 SSE2D:E57:L5:X-003.9:Y-010.3:A139 SSE2D:_E9:L2:X-009.9:Y-010.4:A109 SSE2D:E62:L12:X-005.8:Y-009.9:A109 SSE2D:H72:L27:X-003.3:Y-004.0:A019 SSE2D:E90:L24:X-004.3:Y+003.0:A109 SSE2D:H99:L21:X+003.5:Y+005.5:A109 SSE2D:H147:L7:X-000.3:Y+005.8:A289 SSE2D:E152:L18:X-001.9:Y+007.1:A109 SSE2D:H187:L33:X-006.4:Y-002.1:A259 SSE2D:E207:L22:X-006.9:Y-001.0:A109 SSE2D:H221:L23:X-009.9:Y-004.6:A289 SSE2D:E224:L2:X-025.0:Y-010.2:A139 SSE2D:E228:L2:X-022.0:Y-007.5:A139 SSE2D:H244:L19:X-013.9:Y-004.9:A079 SSE2D:_E22:L5:X-016.1:Y-004.7:A289 SSE2D:E255:L28:X-008.8:Y-005.3:A109 ..."
+      }
+    },
+    "1bmf_complex": {
+      "id": "1bmf_complex",
+      "name": "Extra velký systém (EC 7): F1-ATPáza – Celý motor α3β3γ (19 domén!)",
+      "category": "10. Extra velké multipodjednotkové komplexy (F1-ATPáza, GroEL)",
+      "kind": "complex",
+      "pdb": "1bmf",
+      "desc": "EC 7.1.2.2 – kompletní mitochondriální F1-ATPáza (hexamer α3β3 + centrální rotační hřídel γ, 19 domén, >150 SSE).",
+      "n_sses": 222,
+      "n_res_sampled": 3272,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 6.28,
+          "stress_1": 0.336,
+          "knn_pres": 32.5,
+          "conflicts": 9,
+          "n_sses": 222,
+          "time_ms": 2352.9
+        },
+        "cm_binary": {
+          "local_err": 7.92,
+          "stress_1": 0.337,
+          "knn_pres": 37.4,
+          "conflicts": 12,
+          "n_sses": 222,
+          "time_ms": 16391.1,
+          "angle_mae_deg": 33.6
+        },
+        "cm_distogram": {
+          "local_err": 6.51,
+          "stress_1": 0.354,
+          "knn_pres": 30.6,
+          "conflicts": 9,
+          "n_sses": 222,
+          "time_ms": 31874.5,
+          "angle_mae_deg": 31.8
+        },
+        "llm_cm2prot": {
+          "local_err": 7.22,
+          "stress_1": 0.362,
+          "knn_pres": 23.4,
+          "conflicts": 18,
+          "n_sses": 222,
+          "time_ms": 4523.8
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 96.7,
+        "sse_prec_at_L": 87.8,
+        "sse_f1": 49.0,
+        "res_roc_auc": 96.8,
+        "res_prec_at_L": 54.0,
+        "dist_mae_local": 3.57,
+        "time_ms": 4718.8
+      },
+      "dsl": {
+        "n_cm_tokens": 2686,
+        "n_2dp_tokens": 251,
+        "compression_ratio": 3985.8,
+        "cm_dsl_sample": "<BOS_CM> NODE:E01_3:E:L21:CA LOOP:E01_3~E01_6:G1 NODE:E01_6:E:L16:CA LOOP:E01_6~E01_8:G1 NODE:E01_8:E:L12:CA LOOP:E01_8~E01_11:G1 NODE:E01_11:E:L20:CA LOOP:E01_11~E01_14:G1 NODE:E01_14:E:L17:CA LOOP:E01_14~H01_18:G1 NODE:H01_18:H:L7:CA LOOP:H01_18~E01_19:G1 NODE:E01_19:E:L12:CA LOOP:E01_19~_E02_0:G99 NODE:_E02_0:E:L8:CA LOOP:_E02_0~_E02_2:G2 NODE:_E02_2:E:L8:CA LOOP:_E02_2~_E02_4:G12 NODE:_E02_4:E:L8:CA LOOP:_E02_4~E02_34:G11 NODE:E02_34:E:L5:CA LOOP:E02_34~H02_53:G1 NODE:H02_53:H:L8:CA LOOP:H02_53~E02_57:G1 NODE:E02_57:E:L5:CA LOOP:E02_57~E02_62:G2 NODE:E02_62:E:L12:CA LOOP:E02_62~H02_72:G1 NODE:H02_72:H:L24:CA LOOP:H02_72~E02_90:G1 NODE:E02_90:E:L24:CA LOOP:E02_90~H02_99:G1 NODE:H02_99:H:L21:CA LOOP:H02_99~H02_147:G1 NODE:H02_147:H:L7:CA ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E01_3:E01_6:E01_19:E01_14:E01_8:E01_11 CLUST:E02_34:E02_57 CLUST:E02_62:E02_255:E02_301:E02_207:_E02_29:E02_90:_E02_22:E02_152:_E02_2 CLUST:_E02_0:_E02_4 CLUST:E02_224:E02_228 CLUST:E04_3:E04_6:E04_19:E04_14:E04_8:E04_11 CLUST:E05_34:E05_57 CLUST:E05_62:E05_255:E05_301:E05_207:_E05_29:E05_90:_E05_22:E05_152:_E05_2 CLUST:_E05_0:_E05_4 CLUST:E05_224:E05_228 CLUST:E07_3:E07_6:E07_19:E07_14:E07_8:E07_11 CLUST:E08_34:E08_57 CLUST:E08_62:E08_255:E08_301:E08_207:_E08_29:E08_90:_E08_22:E08_152:_E08_2 CLUST:_E08_0:_E08_4 CLUST:E08_224:E08_228 CLUST:E10_0:E10_2:E10_8:E10_9:E10_5:E10_12 CLUST:E11_129:E11_152 CLUST:E11_207:E11_255:_E11_17:_E11_3:_E11_23:_E11_5:_H11_24:_E11_26 CLUST:_E11_11:_E11_21 CLUST:E13_0:E13_2:E13_8:E13_9:E13_5:E13_12 CLUST:E14_129:E14_152 CLUST:E14_207:E14_255:_E14_17:_E14_3:_E14_23:_E14_5:_H14_24:_E14_26 CLUST:_E14_11:_E14_21 CLUST:E16_0:E16_2:E16_8:E16_9:E16_5:E16_12 CLUST:E17_129:E17_152 CLUST:E17_207:E17_255:_E17_17:_E17_3:_E17_23:_E17_5:_H17_24:_E17_26 CLUST:_E17_11:_E17_21 ..."
+      }
+    },
+    "1aonA01": {
+      "id": "1aonA01",
+      "name": "Extra velký systém: Chaperonin GroEL – Ekvatoriální ATPázová doména",
+      "category": "10. Extra velké multipodjednotkové komplexy (F1-ATPáza, GroEL)",
+      "kind": "domain",
+      "pdb": "1aon",
+      "desc": "Ekvatoriální doména podjednotky chaperoninu GroEL zajišťující vazbu ATP a kontakt mezi kruhy.",
+      "n_sses": 17,
+      "n_res_sampled": 264,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 2.4,
+          "stress_1": 0.306,
+          "knn_pres": 73.5,
+          "conflicts": 0,
+          "n_sses": 17,
+          "time_ms": 26.8
+        },
+        "cm_binary": {
+          "local_err": 3.18,
+          "stress_1": 0.32,
+          "knn_pres": 73.5,
+          "conflicts": 0,
+          "n_sses": 17,
+          "time_ms": 113.2,
+          "angle_mae_deg": 23.9
+        },
+        "cm_distogram": {
+          "local_err": 2.59,
+          "stress_1": 0.304,
+          "knn_pres": 77.9,
+          "conflicts": 0,
+          "n_sses": 17,
+          "time_ms": 71.5,
+          "angle_mae_deg": 23.5
+        },
+        "llm_cm2prot": {
+          "local_err": 2.76,
+          "stress_1": 0.328,
+          "knn_pres": 76.5,
+          "conflicts": 0,
+          "n_sses": 17,
+          "time_ms": 31.7
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 95.2,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 80.9,
+        "res_roc_auc": 89.9,
+        "res_prec_at_L": 68.9,
+        "dist_mae_local": 2.22,
+        "time_ms": 42.5
+      },
+      "dsl": {
+        "n_cm_tokens": 131,
+        "n_2dp_tokens": 23,
+        "compression_ratio": 532.0,
+        "cm_dsl_sample": "<BOS_CM> NODE:E1:E:L15:CA LOOP:E1~H2:G1 NODE:H2:H:L24:CA LOOP:H2~E4:G1 NODE:E4:E:L8:CA LOOP:E4~E5:G2 NODE:E5:E:L8:CA LOOP:E5~H6:G1 NODE:H6:H:L11:CA LOOP:H6~H7:G1 NODE:H7:H:L24:CA LOOP:H7~H8:G1 NODE:H8:H:L24:CA LOOP:H8~H9:G1 NODE:H9:H:L24:CA LOOP:H9~E11:G99 NODE:E11:E:L5:CA LOOP:E11~H12:G1 NODE:H12:H:L15:CA LOOP:H12~H13:G2 NODE:H13:H:L24:CA LOOP:H13~H14:G1 NODE:H14:H:L17:CA LOOP:H14~E16:G1 NODE:E16:E:L11:CA LOOP:E16~E17:G1 NODE:E17:E:L10:CA LOOP:E17~E19:G1 NODE:E19:E:L5:CA LOOP:E19~H20:G1 NODE:H20:H:L24:CA LOOP:H20~E21:G1 NODE:E21:E:L15:CA SHEET:E1:E21 SHEET:E4:E5 ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E1:E21 CLUST:E4:E5 CLUST:E11:E19 CLUST:E16:E17 SSE2D:E1:L15:X+008.2:Y-005.3:A199 SSE2D:H2:L32:X+012.3:Y+003.2:A019 SSE2D:E4:L8:X+021.8:Y+010.8:A109 SSE2D:E5:L8:X+020.5:Y+007.0:A289 SSE2D:H6:L11:X+017.3:Y+006.4:A169 SSE2D:H7:L30:X+010.9:Y-001.2:A349 SSE2D:H8:L31:X+009.5:Y+008.4:A229 SSE2D:H9:L33:X-003.5:Y+008.4:A349 SSE2D:E11:L5:X-001.4:Y+012.1:A049 SSE2D:H12:L15:X-002.1:Y+015.9:A259 SSE2D:H13:L38:X+005.3:Y+014.8:A049 SSE2D:H14:L17:X+000.3:Y+024.2:A289 SSE2D:E16:L11:X+003.6:Y+021.8:A319 SSE2D:E17:L10:X+006.5:Y+024.3:A139 SSE2D:E19:L5:X+001.3:Y+009.1:A229 SSE2D:H20:L31:X+002.7:Y+003.6:A169 SSE2D:E21:L15:X+004.4:Y-004.0:A019 <EOS_2DP>"
+      }
+    },
+    "1aon_ring": {
+      "id": "1aon_ring",
+      "name": "Extra velký systém: Chaperonin GroEL – Heptamerní kruh (7 podjednotek)",
+      "category": "10. Extra velké multipodjednotkové komplexy (F1-ATPáza, GroEL)",
+      "kind": "complex",
+      "pdb": "1aon",
+      "desc": "Sedmičetný symetrický cis-kruh ekvatoriálních domén chaperoninu GroEL (řetězce A–G, ~100 SSE).",
+      "n_sses": 119,
+      "n_res_sampled": 1848,
+      "forward": {
+        "ref_sammon": {
+          "local_err": 4.12,
+          "stress_1": 0.256,
+          "knn_pres": 66.6,
+          "conflicts": 0,
+          "n_sses": 119,
+          "time_ms": 881.2
+        },
+        "cm_binary": {
+          "local_err": 4.68,
+          "stress_1": 0.305,
+          "knn_pres": 66.2,
+          "conflicts": 0,
+          "n_sses": 119,
+          "time_ms": 5180.4,
+          "angle_mae_deg": 26.7
+        },
+        "cm_distogram": {
+          "local_err": 4.35,
+          "stress_1": 0.279,
+          "knn_pres": 59.7,
+          "conflicts": 0,
+          "n_sses": 119,
+          "time_ms": 7554.0,
+          "angle_mae_deg": 27.3
+        },
+        "llm_cm2prot": {
+          "local_err": 5.19,
+          "stress_1": 0.377,
+          "knn_pres": 66.2,
+          "conflicts": 0,
+          "n_sses": 119,
+          "time_ms": 1357.1
+        }
+      },
+      "inverse": {
+        "sse_roc_auc": 98.9,
+        "sse_prec_at_L": 100.0,
+        "sse_f1": 74.5,
+        "res_roc_auc": 98.5,
+        "res_prec_at_L": 68.1,
+        "dist_mae_local": 2.49,
+        "time_ms": 1394.9
+      },
+      "dsl": {
+        "n_cm_tokens": 1345,
+        "n_2dp_tokens": 149,
+        "compression_ratio": 2539.1,
+        "cm_dsl_sample": "<BOS_CM> NODE:E1_1:E:L15:CA LOOP:E1_1~H1_2:G1 NODE:H1_2:H:L24:CA LOOP:H1_2~E1_4:G1 NODE:E1_4:E:L8:CA LOOP:E1_4~E1_5:G2 NODE:E1_5:E:L8:CA LOOP:E1_5~H1_6:G1 NODE:H1_6:H:L11:CA LOOP:H1_6~H1_7:G1 NODE:H1_7:H:L24:CA LOOP:H1_7~H1_8:G1 NODE:H1_8:H:L24:CA LOOP:H1_8~H1_9:G1 NODE:H1_9:H:L24:CA LOOP:H1_9~E1_11:G99 NODE:E1_11:E:L5:CA LOOP:E1_11~H1_12:G1 NODE:H1_12:H:L15:CA LOOP:H1_12~H1_13:G2 NODE:H1_13:H:L24:CA LOOP:H1_13~H1_14:G1 NODE:H1_14:H:L17:CA LOOP:H1_14~E1_16:G1 NODE:E1_16:E:L11:CA LOOP:E1_16~E1_17:G1 NODE:E1_17:E:L10:CA LOOP:E1_17~E1_19:G1 NODE:E1_19:E:L5:CA LOOP:E1_19~H1_20:G1 NODE:H1_20:H:L24:CA LOOP:H1_20~E1_21:G1 NODE:E1_21:E:L15:CA NODE:E2_1:E:L15:CB LOOP:E2_1~H2_2:G1 ...",
+        "p2d_dsl_sample": "<BOS_2DP> CLUST:E1_1:E1_21 CLUST:E1_4:E1_5 CLUST:E1_11:E1_19 CLUST:E1_16:E1_17 CLUST:E2_1:E2_21 CLUST:E2_4:E2_5 CLUST:E2_11:E2_19 CLUST:E2_16:E2_17 CLUST:E3_1:E3_21 CLUST:E3_4:E3_5 CLUST:E3_11:E3_19 CLUST:E3_16:E3_17 CLUST:E4_1:E4_21 CLUST:E4_4:E4_5 CLUST:E4_11:E4_19 CLUST:E4_16:E4_17 CLUST:E5_1:E5_21 CLUST:E5_4:E5_5 CLUST:E5_11:E5_19 CLUST:E5_16:E5_17 CLUST:E6_1:E6_21 CLUST:E6_4:E6_5 CLUST:E6_11:E6_19 CLUST:E6_16:E6_17 CLUST:E7_1:E7_21 CLUST:E7_4:E7_5 CLUST:E7_11:E7_19 ..."
+      }
+    }
+  }
+}

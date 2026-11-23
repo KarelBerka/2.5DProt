@@ -91,9 +91,15 @@ def vectors_intersection(start1, end1, start2, end2):
     x4 = end2[0]
     y3 = start2[1]
     y4 = end2[1]
-    if ((x2-x1)==0) or (((y2-y1)*(x4-x3)-(x2-x1)*(y4-y3))== 0):
+    denom = (y2-y1)*(x4-x3)-(x2-x1)*(y4-y3)
+    if abs(denom) < 1e-9:
        return [None, None]
     else:
-       px = ((y2-y1)*(x4-x3)*x1+(x2-x1)*(x4-x3)*(y3-y1)-(y4-y3)*(x2-x1)*x3)/((y2-y1)*(x4-x3)-(x2-x1)*(y4-y3))
-       py = (px*(y2-y1)+y1*(x2-x1)-x1*(y2-y1))/(x2-x1)
+       px = ((y2-y1)*(x4-x3)*x1+(x2-x1)*(x4-x3)*(y3-y1)-(y4-y3)*(x2-x1)*x3)/denom
+       if abs(x2-x1) >= abs(x4-x3) and abs(x2-x1) > 1e-9:
+           py = (px*(y2-y1)+y1*(x2-x1)-x1*(y2-y1))/(x2-x1)
+       elif abs(x4-x3) > 1e-9:
+           py = (px*(y4-y3)+y3*(x4-x3)-x3*(y4-y3))/(x4-x3)
+       else:
+           return [None, None]
        return [px, py] 

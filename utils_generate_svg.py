@@ -7,9 +7,14 @@ import utils_sses_types
 import utils_image
 import utils_color_ligands
 import utils_color
+import utils_membrane
 import loader
-import pymol
+try:
+    import pymol
+except ImportError:
+    pymol = None
 import superimpose2d
+import colorsys
 import json
 import os
 import os.path
@@ -109,15 +114,16 @@ def count_start_end(layout, angles, sizes, chosen_sses):
 
 
 def intersection(se1, se2, h1, h2):
-    """ return whethe two vectors intersect themselves """
+    """ return whether two line segments intersect """
     p = utils_vector.vectors_intersection(se1[0], se1[1], se2[0], se2[1])
     if (p[0] is None) and (p[1] is None):
         return False
-    if ((((se1[0][0] < p[0]) and (p[0] < se1[1][0])) or ((se1[0][0] > p[0]) and (p[0] > se1[1][0]))) and
-            (((se2[0][0] < p[0]) and (p[0] < se2[1][0])) or ((se2[0][0] > p[0]) and (p[0] > se2[1][0])))):
-        return True
-    else:
-        return False
+    eps = 1e-5
+    in_x1 = min(se1[0][0], se1[1][0]) - eps <= p[0] <= max(se1[0][0], se1[1][0]) + eps
+    in_y1 = min(se1[0][1], se1[1][1]) - eps <= p[1] <= max(se1[0][1], se1[1][1]) + eps
+    in_x2 = min(se2[0][0], se2[1][0]) - eps <= p[0] <= max(se2[0][0], se2[1][0]) + eps
+    in_y2 = min(se2[0][1], se2[1][1]) - eps <= p[1] <= max(se2[0][1], se2[1][1]) + eps
+    return in_x1 and in_y1 and in_x2 and in_y2
 
 
 def point_to_point_min_dist(p1, d1, p2, d2):
@@ -162,8 +168,8 @@ def resolve_sses_conflicts(layout, angles, sizes, relevant_sses, beta_con):
                 while (fixed == 0) and (countn < 10):
                     countn = countn + 1          # one more try to fix
 
-                    if (angles[h1] == angles[h2]):
-                        # both SSEs are parallel
+                    if abs((angles[h1] - angles[h2]) % 180) < 1e-4:
+                        # both SSEs are parallel or antiparallel
                         dif = [end[h1][0] - start[h1][0], end[h1][1] - start[h1][1]]
                         if ((utils.point_to_line_dist2(start[h1], dif, start[h2]) < 1) and
                            (utils.point_to_line_min(start[h1], end[h1], start[h2]) == 0)) or \
@@ -310,7 +316,7 @@ def write_ligands_legend(img, ligands_data, ligands, dimensions, args):
 def show_full_layout(img, layout, ind, helices_residues, angles, sizes,
                      pdb_file, chain_id, chain, domain, h_type, colors,
                      add_descriptions, opacity, img_data, spike, ligands,
-                     ligands_data, img_data_ligands, args, threeddata, charges, am):
+                     ligands_data, img_data_ligands, args, threeddata, charges, am, membrane=None):
     """ Draw full layout -
         text info if it is necessary
     """
@@ -318,12 +324,22 @@ def show_full_layout(img, layout, ind, helices_residues, angles, sizes,
     chain_groups = {}
     chain_groups_links = {}
     chain_groups_sses = {}
+    tm_helices = set(membrane.get("tm_helices", [])) if membrane else set()
 
     # decode color tag
     for sse in colors:
         if colors[sse][0] == 's':
             c = colors[sse]
-            color_tuple = pymol.cmd.get_color_tuple(colors[sse])
+            if pymol is not None:
+                color_tuple = pymol.cmd.get_color_tuple(colors[sse])
+            else:
+                try:
+                    val = float(c[1:]) / 999.0
+                except ValueError:
+                    val = 0.5
+                # PyMOL spectrum 's000'..'s999' goes from blue (240 deg) through green to red (0 deg)
+                hue = (1.0 - max(0.0, min(1.0, val))) * (240.0 / 360.0)
+                color_tuple = colorsys.hsv_to_rgb(hue, 0.85, 0.90)
             color_tuple_p = (int(color_tuple[0] * 255),
                              int(color_tuple[1] * 255),
                              int(color_tuple[2] * 255))
@@ -466,7 +482,8 @@ def show_full_layout(img, layout, ind, helices_residues, angles, sizes,
                         gr = False
                     img.secstr(name=helic+"_"+str(helices_residues[helic][0])+"_"+str(helices_residues[helic][1]),
                         coord=coord, size=sizes[helic], angle=angles[helic], h_type=helic_type,
-                        color=h_color, opacity=opacity, threeddata=threeddata[helic], sse_group=gr)
+                        color=h_color, opacity=opacity, threeddata=threeddata[helic], sse_group=gr,
+                        is_tm=(helic in tm_helices))
                 img_data[helic] = {"size": sizes[helic] * 2 * img.CIRCLE_MULTIPLIER,
                                "color": h_color,
                                "layout": coord,
@@ -548,81 +565,157 @@ def show_ligands(img, ind, ligands, opacity, add_descriptions, ligands_data, img
 
 
 def show_channels(img, ind, channels, opacity, add_descriptions, channels_data, args):
-    """ Draw full layout -
-        text info if it is necessary
     """
+    Draw protein tunnels/channels as smooth variable-width ribbons and return
+    tunnel mouth label descriptors to be rendered in the foreground layer.
+    """
+    if not channels:
+        return []
 
-    start_ch = None
-    previous_coord = None
-    p_p_coord = None
-    if opacity < 1:
-        opacity = opacity #/ 2
+    tunnel_groups = []
+    current_prefix = None
+    current_keys = []
     for l in channels:
-        text_name = ""
-
         d = -1
         for i, c in enumerate(l):
             if c.isalpha():
                 d = i
                 break
-        s_l = l[:d]
-        for i in channels_data:
-            if (channels[l]["id"] == i["id"]) and (channels[l]["filename"] == i["filename"]):
-                text_name = i["text_names"]
-                channels[l]["color"] = i["color"]
-                break
-        if "color" not in channels[l]:
-            channels[l]["color"] = "#665646"
-        if start_ch == None or start_ch != s_l:
-            # if we have the first point of our channel
-            if previous_coord != None and p_p_coord != None:
-                # this is not the first channel we have to draw the end of previous channel
-                img.channels_end(name=l+i['filename'][7:-8]+i['filename'][-7:-5]+i['filename'][-8], coord=previous_coord,
-                             previous_coord=p_p_coord, size=channels[l]["radius"], text_name=text_name,
-                             opacity=opacity, input_color=channels[l]["color"], ocolor=channels[l]["color"], channel_group=channel_group)
-
-            coord = [(channels[l]["layout"][0]+ind[0], channels[l]["layout"][1]+ind[1]),(channels[l]["layout"][0]+ind[0], channels[l]["layout"][1]+ind[1])]
-            previous_coord = coord
-            p_p_coord = None
-            start_ch = s_l
-            channel_group = img.add_group(start_ch, opacity=opacity, color=channels[l]["color"], classname="tunnel")
+        s_l = l[:d] if d != -1 else l
+        if current_prefix is None or s_l != current_prefix:
+            if current_keys:
+                tunnel_groups.append((current_prefix, current_keys))
+            current_prefix = s_l
+            current_keys = [l]
         else:
-            # it not the first point of channel, we have to draw the line
-            c = (channels[l]["layout"][0] + ind[0], channels[l]["layout"][1] + ind[1])
-            # transformed coords
-            avg_p_c = [(previous_coord[1][0]+previous_coord[0][0])/2, (previous_coord[1][1]+previous_coord[0][1])/2]
-            # coord of average point in the middle of channel
-            diff0 = [avg_p_c[0]-c[0],avg_p_c[1]-c[1]]
-            # vector from previous avg to current avg
-            r = math.sqrt(diff0[0]*diff0[0]+diff0[1]*diff0[1])
-            if r == 0:
-                diff = [0.5, 0.5]
-            else:
-                diff =[diff0[0]/r, diff0[1]/r]
-            # normed version of vector from previous avg to current avg
-            coord = [(channels[l]["layout"][0] + ind[0] + diff[1]*channels[l]["radius"]/5, channels[l]["layout"][1] + ind[1] - diff[0]*channels[l]["radius"]/5),
-                     (channels[l]["layout"][0] + ind[0] - diff[1]*channels[l]["radius"]/5, channels[l]["layout"][1] + ind[1] + diff[0]*channels[l]["radius"]/5)]
-            # with the given color draw the ligand
-            if p_p_coord == None:
-                img.channels_start(name=l+i['filename'][7:-8]+i['filename'][-7:-5]+i['filename'][-8], coord=coord,
-                                   previous_coord=previous_coord, size=channels[l]["radius"], text_name=text_name, 
-                                   opacity=opacity, input_color=channels[l]["color"], ocolor=channels[l]["color"], channel_group=channel_group)
-            else:
-                # draw both verions of rectangle - just prevent from channels  twists
-                img.channels_middle(name=l+i['filename'][7:-8]+i['filename'][-7:-5]+i['filename'][-8], coord=coord,
-                                    previous_coord=previous_coord, p_p_coord=p_p_coord, size=channels[l]["radius"], text_name=text_name,
-                                    opacity=opacity, input_color=channels[l]["color"], ocolor=channels[l]["color"], channel_group=channel_group)
-                img.channels_middle(name=l+i['filename'][7:-8]+i['filename'][-7:-5]+i['filename'][-8], coord=coord,
-                                    previous_coord=[previous_coord[1], previous_coord[0]], p_p_coord=p_p_coord, size=channels[l]["radius"], text_name=text_name,
-                                    opacity=opacity, input_color=channels[l]["color"], ocolor=channels[l]["color"], channel_group=channel_group)
-            previous_coord = coord
-            p_p_coord = previous_coord
+            current_keys.append(l)
+    if current_keys:
+        tunnel_groups.append((current_prefix, current_keys))
 
-    if previous_coord != None and p_p_coord != None:
-        # this is not the first channel we have to draw the end of previous channel
-        img.channels_end(name=l+i['filename'][7:-8]+i['filename'][-7:-5]+i['filename'][-8], coord=previous_coord,
-                     previous_coord=p_p_coord, size=channels[l]["radius"], text_name=text_name,
-                     opacity=opacity, input_color=channels[l]["color"], ocolor=channels[l]["color"], channel_group=channel_group)
+    label_items = []
+    for idx_t, (s_l, t_keys) in enumerate(tunnel_groups):
+        first_l = t_keys[0]
+        ch_entry = channels[first_l]
+        text_name = str(ch_entry.get("text_names") or "")
+        color = ch_entry.get("color")
+
+        for i in channels_data:
+            if (ch_entry.get("id") == i.get("id")) and (ch_entry.get("filename") == i.get("filename")):
+                if not text_name:
+                    text_name = str(i.get("text_names") or "")
+                if not color or str(color).lower() in ("none", "grey", "gray", "#665646", "#887766"):
+                    color = i.get("color")
+                break
+
+        if not color or str(color).lower() in ("none", "grey", "gray", "#665646", "#887766"):
+            color = utils_membrane.pick_tunnel_color(text_name, idx=idx_t)
+
+        pts = [(channels[k]["layout"][0] + ind[0], channels[k]["layout"][1] + ind[1]) for k in t_keys]
+        rads = [float(channels[k].get("radius", 1.5)) for k in t_keys]
+
+        channel_group = img.add_group(s_l, opacity=opacity, color=color, classname="tunnel")
+        img.tunnel_ribbon(pts, rads, color=color, opacity=opacity, channel_group=channel_group)
+
+        if len(pts) >= 2 and text_name:
+            p_end = pts[-1]
+            p_prev = pts[max(0, len(pts) - 3)]
+            dx = p_end[0] - p_prev[0]
+            dy = p_end[1] - p_prev[1]
+            dn = math.hypot(dx, dy)
+            ux, uy = (dx / dn, dy / dn) if dn > 1e-4 else (0.0, 1.0)
+            w_end = max(0.24, min(0.75, 0.19 * rads[-1]))
+            lbl_pt = [p_end[0] + ux * (w_end + 1.05), p_end[1] + uy * (w_end + 1.05)]
+            label_items.append({
+                "text": text_name,
+                "pos": lbl_pt,
+                "anchor": p_end,
+                "ux": ux,
+                "uy": uy,
+                "color": color,
+            })
+
+    return label_items
+
+
+def show_channel_labels(img, label_items, layout, ind, angles, sizes, ligands=None):
+    """Render de-overlapped tunnel mouth labels in a foreground SVG group."""
+    if not label_items:
+        return
+
+    # Collect 2D SSE segments and ligand centers in shifted canvas coordinates
+    sse_segs = []
+    if layout:
+        for s, coord in layout.items():
+            ang = math.radians(angles.get(s, 0.0)) if angles else 0.0
+            hl = 0.1 * float(sizes.get(s, 8)) if sizes else 0.8
+            cx, cy = coord[0] + ind[0], coord[1] + ind[1]
+            a = (cx + hl * math.sin(ang), cy + hl * math.cos(ang))
+            b = (cx - hl * math.sin(ang), cy - hl * math.cos(ang))
+            sse_segs.append((a, b))
+
+    lig_pts = []
+    if ligands:
+        for lk, lval in ligands.items():
+            if isinstance(lval, dict) and lval.get("layout"):
+                lig_pts.append((lval["layout"][0] + ind[0], lval["layout"][1] + ind[1]))
+
+    for _ in range(18):
+        # 1. Clear SSE segments and ligands
+        for item in label_items:
+            px, py = item["pos"]
+            for (ax, ay), (bx, by) in sse_segs:
+                vx, vy = bx - ax, by - ay
+                v2 = vx * vx + vy * vy
+                t = max(0.0, min(1.0, ((px - ax) * vx + (py - ay) * vy) / (v2 + 1e-9)))
+                qx, qy = ax + t * vx, ay + t * vy
+                ddx, ddy = px - qx, py - qy
+                d = math.hypot(ddx, ddy)
+                if d < 1.25:
+                    if d > 1e-4:
+                        px += (ddx / d) * (1.25 - d) * 0.5
+                        py += (ddy / d) * (1.25 - d) * 0.5
+                    else:
+                        px += item["ux"] * 0.6
+                        py += item["uy"] * 0.6
+
+            for lx, ly in lig_pts:
+                ddx, ddy = px - lx, py - ly
+                d = math.hypot(ddx, ddy)
+                if d < 1.75:
+                    if d > 1e-4:
+                        px += (ddx / d) * (1.75 - d) * 0.5
+                        py += (ddy / d) * (1.75 - d) * 0.5
+            item["pos"] = [px, py]
+
+        # 2. Pairwise label-label repulsion
+        n_lbl = len(label_items)
+        for i in range(n_lbl):
+            for j in range(i + 1, n_lbl):
+                p1 = label_items[i]["pos"]
+                p2 = label_items[j]["pos"]
+                ddx = p1[0] - p2[0]
+                ddy = p1[1] - p2[1]
+                if abs(ddx) < 3.6 and abs(ddy) < 1.25:
+                    push_y = (1.25 - abs(ddy)) * 0.45 * (1.0 if ddy >= 0 else -1.0)
+                    push_x = (3.6 - abs(ddx)) * 0.25 * (1.0 if ddx >= 0 else -1.0)
+                    p1[0] += push_x
+                    p1[1] += push_y
+                    p2[0] -= push_x
+                    p2[1] -= push_y
+
+        # 3. Tether label near its tunnel mouth
+        for item in label_items:
+            ax, ay = item["anchor"]
+            ddx = item["pos"][0] - ax
+            ddy = item["pos"][1] - ay
+            d = math.hypot(ddx, ddy)
+            if d > 2.6:
+                item["pos"][0] = ax + (ddx / d) * 2.6
+                item["pos"][1] = ay + (ddy / d) * 2.6
+
+    lbl_group = img.dwg.add(img.dwg.g(id="tunnel_labels", class_="tunnel_labels"))
+    for item in label_items:
+        img.tunnel_label(item["text"], item["pos"], color=item["color"], group=lbl_group)
 
 
 def show_template_layout(img, layout, ind, h_type, sizes, colors, angle):
@@ -787,6 +880,27 @@ def stretch_dimensions(l_all_loaded, data_ligands, ligands_set, ligands_data):
         width_left_max, width_right_max, height_up_max, height_down_max = \
             stretch_dimensions_by_layout(l, width_left_max, width_right_max,
                                          height_up_max, height_down_max, avg=1)
+        if "channels" in l.data:
+            for ch_k in l.data["channels"]:
+                ch_pt = l.data["channels"][ch_k].get("layout")
+                if ch_pt:
+                    width_left_max, width_right_max, height_up_max, height_down_max = \
+                        stretch_dimensions_by_ligands(ch_pt, width_left_max, width_right_max,
+                                                      height_up_max, height_down_max, avg=1)
+        if "ligands" in l.data and l.data["ligands"]:
+            for lg_k in l.data["ligands"]:
+                lg_pt = l.data["ligands"][lg_k].get("layout")
+                if lg_pt:
+                    width_left_max, width_right_max, height_up_max, height_down_max = \
+                        stretch_dimensions_by_ligands(lg_pt, width_left_max, width_right_max,
+                                                      height_up_max, height_down_max, avg=1)
+        if "ghost_sses" in l.data and l.data["ghost_sses"]:
+            for gh in l.data["ghost_sses"]:
+                gh_pt = gh.get("coord")
+                if gh_pt:
+                    width_left_max, width_right_max, height_up_max, height_down_max = \
+                        stretch_dimensions_by_ligands(gh_pt, width_left_max, width_right_max,
+                                                      height_up_max, height_down_max, avg=1)
 
     # Set the appropriate canvas size based on ligands layouts
     for l in data_ligands:
@@ -868,13 +982,65 @@ def draw_nonempty_layouts_set(l_all_loaded, otemplate, opacity, img, template,
                     h, l.data['h_type'], l.data['size']) == 0):
                 sses_first_level.append(h)
 
-        # Fix sses layout conflicts (use just the sses which will be shown
+        # Snap SSE angles to multiples of angle_step degrees (if enabled) and fix layout conflicts
+        _mem_cfg = l.data.get('membrane')
+        _step_cfg = _mem_cfg.get('angle_step', utils_membrane.ANGLE_STEP) if isinstance(_mem_cfg, dict) else utils_membrane.ANGLE_STEP
+        l.data['angles'] = utils_membrane.snap_angles_dict(
+            l.data['angles'], beta_connectivity=l.data.get('beta_connectivity'), step=_step_cfg
+        )
         layout = resolve_sses_conflicts(l.data['layout'], l.data['angles'], l.data['size'],
                                         sses_to_display, l.data['beta_connectivity'])
+        ghosts = []
+        if len(l_all_loaded) == 1 and not getattr(args, "multi", False) and opacity == 1 and "3dlayout" in l.data:
+            ghosts = utils_membrane.compute_ghost_sses(
+                layout_2d={h: layout[h] for h in sses_to_display if h in layout},
+                angles_2d=l.data["angles"],
+                sizes=l.data["size"],
+                vectors_3d=l.data["3dlayout"],
+                h_type=l.data.get("h_type"),
+                beta_connectivity=l.data.get("beta_connectivity"),
+                mem_info=l.data.get("membrane"),
+                helices_residues=l.data.get("helices_residues"),
+                ligands=l.data.get("ligands") if ligands else None,
+            )
+        if ligands and "ligands" in l.data:
+            layout_with_ghosts = {h: layout[h] for h in sses_to_display if h in layout}
+            angles_with_ghosts = dict(l.data["angles"])
+            sizes_with_ghosts = dict(l.data["size"])
+            for idx_g, gh in enumerate(ghosts):
+                gk = f"__ghost_{idx_g}_{gh['source_sse']}"
+                layout_with_ghosts[gk] = gh["coord"]
+                angles_with_ghosts[gk] = gh["angle"]
+                sizes_with_ghosts[gk] = gh["size"]
+            utils_membrane.deoverlap_ligands_from_sses(
+                l.data["ligands"],
+                layout_with_ghosts,
+                angles_with_ghosts,
+                sizes_with_ghosts,
+                l.data.get("membrane"),
+            )
+        if "channels" in l.data and l.data["channels"]:
+            utils_membrane.localize_channels_2d(
+                l.data["channels"],
+                layout_2d={h: layout[h] for h in sses_to_display if h in layout},
+                angles_2d=l.data["angles"],
+                sizes=l.data["size"],
+                vectors_3d=l.data.get("3dlayout"),
+                h_type=l.data.get("h_type"),
+                ligands=l.data.get("ligands"),
+                mem_info=l.data.get("membrane"),
+            )
         if (c < ratio * len(l_all_loaded)):
             try:
+                tunnel_labels = []
+                if c == 0 and isinstance(l.data.get("membrane"), dict) and l.data["membrane"].get("is_transmembrane", True) and (('only' not in vars(args)) or ("sses" in args.only)):
+                    mem = l.data["membrane"]
+                    img.membrane_band(
+                        y_center=mem.get("y_center_2d", 0.0) + ind[1],
+                        half_height=mem.get("band_half_height_2d", 3.0),
+                    )
                 if ("channels" in l.data) and (('only' not in vars(args))  or ("channels" in args.only)):
-                    show_channels(img, ind, l.data["channels"], opacity, add_descriptions, channels_data, args)
+                    tunnel_labels = show_channels(img, ind, l.data["channels"], opacity, add_descriptions, channels_data, args)
                 logging.debug("Drawing full %s" % l.filename)
                 if 'chain' in l.data.keys():
                     chain = l.data['chain']
@@ -896,10 +1062,45 @@ def draw_nonempty_layouts_set(l_all_loaded, otemplate, opacity, img, template,
                                  l.data['protein'], l.data['chain_id'], chain, l.data['domain'],
                                  l.data['h_type'], l.data['color'], add_descriptions, opacity,
                                  img_data, spike, ligands, ligands_data, img_data_ligands, args,
-                                 l.data['3dlayout'], charges, am)
+                                 l.data['3dlayout'], charges, am, membrane=l.data.get("membrane"))
+
+                    if ghosts:
+                        for gh in ghosts:
+                            src_s = gh["source_sse"]
+                            part_s = gh.get("partner_sse")
+                            g_color = l.data["color"].get(src_s, "#6b7682")
+                            g_coord = (gh["coord"][0] + ind[0], gh["coord"][1] + ind[1])
+                            p_coord = (layout[part_s][0] + ind[0], layout[part_s][1] + ind[1]) if part_s in layout else None
+                            p_size = l.data["size"].get(part_s) if part_s else None
+                            p_angle = l.data["angles"].get(part_s) if part_s else None
+                            orig_c = gh.get("origin_coord")
+                            orig_coord = (orig_c[0] + ind[0], orig_c[1] + ind[1]) if orig_c else None
+                            img.ghost_secstr(
+                                name=src_s,
+                                coord=g_coord,
+                                size=gh["size"],
+                                angle=gh["angle"],
+                                color=g_color,
+                                partner_coord=p_coord,
+                                partner_size=p_size,
+                                partner_angle=p_angle,
+                                origin_coord=orig_coord,
+                                show_arc=bool(gh.get("show_arc", False)),
+                            )
 
                 if ligands and "ligands" in l.data and (('only' not in vars(args)) or ("ligands" in args.only)):
                     show_ligands(img, ind, l.data["ligands"], opacity, add_descriptions, ligands_data, img_data_ligands, args)
+
+                if tunnel_labels and (not hasattr(args, "multi") or not args.multi):
+                    show_channel_labels(
+                        img,
+                        tunnel_labels,
+                        {h: layout[h] for h in sses_to_display if h in layout},
+                        ind,
+                        l.data["angles"],
+                        l.data["size"],
+                        l.data.get("ligands"),
+                    )
 
 
             except Exception:
@@ -1065,6 +1266,9 @@ def process_layout_list(l, layout_all_lists, layout_call_lists,
                 layout_short_list.append(l1)
             rot_trans = superimpose2d.multi_superimpose(
                 layout_short_list, allow_mirror=True)
+        elif any(ld.data.get("membrane") for ld in l_all_loaded):
+            # Keep membrane-aligned orientation horizontal while superimposing family members
+            rot_trans = utils_membrane.superimpose_membrane_layouts(layout_all_lists)
         else:
             rot_trans = superimpose2d.multi_superimpose(
                 layout_all_lists, allow_mirror=True)
@@ -1090,10 +1294,54 @@ def process_layout_list(l, layout_all_lists, layout_call_lists,
 
     dimensions = None
     if (start_set == 0):
-        # channels are inside proteins, thus the canvast should
-        # not be stretched for them
+        # Pre-localize channels and ghost SSEs on the rotated layout so canvas bounds include exterior elements
+        for l_pre in l_all_loaded[:1]:
+            if ("channels" in l_pre.data and l_pre.data["channels"]) or (len(l_all_loaded) == 1 and not getattr(args, "multi", False) and "3dlayout" in l_pre.data):
+                vis_pre = [
+                    h for h in l_pre.data["layout"].keys()
+                    if utils_sses_types.sse_should_be_shown(h, l_pre.data["h_type"], l_pre.data["size"]) == 0
+                ]
+                _mem_pre = l_pre.data.get("membrane")
+                _step_pre = _mem_pre.get("angle_step", utils_membrane.ANGLE_STEP) if isinstance(_mem_pre, dict) else utils_membrane.ANGLE_STEP
+                ang_pre = utils_membrane.snap_angles_dict(
+                    dict(l_pre.data["angles"]), beta_connectivity=l_pre.data.get("beta_connectivity"), step=_step_pre
+                )
+                lay_pre = resolve_sses_conflicts(
+                    dict(l_pre.data["layout"]), ang_pre, l_pre.data["size"], vis_pre, l_pre.data["beta_connectivity"]
+                )
+                if ligands and "ligands" in l_pre.data:
+                    utils_membrane.deoverlap_ligands_from_sses(
+                        l_pre.data["ligands"],
+                        {h: lay_pre[h] for h in vis_pre if h in lay_pre},
+                        ang_pre,
+                        l_pre.data["size"],
+                        l_pre.data.get("membrane"),
+                    )
+                if "channels" in l_pre.data and l_pre.data["channels"]:
+                    utils_membrane.localize_channels_2d(
+                        l_pre.data["channels"],
+                        layout_2d={h: lay_pre[h] for h in vis_pre if h in lay_pre},
+                        angles_2d=ang_pre,
+                        sizes=l_pre.data["size"],
+                        vectors_3d=l_pre.data.get("3dlayout"),
+                        h_type=l_pre.data.get("h_type"),
+                        ligands=l_pre.data.get("ligands"),
+                        mem_info=l_pre.data.get("membrane"),
+                    )
+                if len(l_all_loaded) == 1 and not getattr(args, "multi", False) and "3dlayout" in l_pre.data:
+                    l_pre.data["ghost_sses"] = utils_membrane.compute_ghost_sses(
+                        layout_2d={h: lay_pre[h] for h in vis_pre if h in lay_pre},
+                        angles_2d=ang_pre,
+                        sizes=l_pre.data["size"],
+                        vectors_3d=l_pre.data["3dlayout"],
+                        h_type=l_pre.data.get("h_type"),
+                        beta_connectivity=l_pre.data.get("beta_connectivity"),
+                        mem_info=l_pre.data.get("membrane"),
+                        helices_residues=l_pre.data.get("helices_residues"),
+                        ligands=l_pre.data.get("ligands") if ligands else None,
+                    )
         dimensions, ind = stretch_dimensions(l_all_loaded, {}, l_all_loaded, ligands_data)
-        if ligands:
+        if ligands and ("ligands" in args.add_descriptions):
             if len(ligands_data) > 5:
                 dimensions = ((dimensions[0][0], dimensions[0][1] + 5 * 2),
                               (dimensions[1][0], dimensions[1][1] + 5 * 2))
@@ -1282,6 +1530,28 @@ def compute(args):
         # Read all layout files
         logging.debug("Loading full layout %s" % filename)
         l = loader.Layout(filename=filename)
+
+        # Automatically detect 3D transmembrane bundle & align to horizontal membrane if 3dlayout is present
+        if "3dlayout" in l.data and "membrane" not in l.data:
+            l.data["layout"], l.data["angles"], mem_info = utils_membrane.align_layout_to_membrane(
+                l.data["layout"],
+                l.data["angles"],
+                l.data.get("size", {}),
+                l.data.get("beta_connectivity", []),
+                l.data["3dlayout"],
+                helices_residues=l.data.get("helices_residues"),
+                h_type=l.data.get("h_type"),
+                ligands=l.data.get("ligands"),
+                channels=l.data.get("channels"),
+            )
+            if mem_info:
+                l.data["membrane"] = mem_info
+        else:
+            _mem_l = l.data.get("membrane")
+            _step_l = _mem_l.get("angle_step", utils_membrane.ANGLE_STEP) if isinstance(_mem_l, dict) else utils_membrane.ANGLE_STEP
+            l.data["angles"] = utils_membrane.snap_angles_dict(
+                l.data["angles"], beta_connectivity=l.data.get("beta_connectivity"), step=_step_l
+            )
 
         l_list = {}
         cl_list = {}

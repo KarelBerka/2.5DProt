@@ -13,6 +13,8 @@ import utils_matrix2layout
 import utils_angleslayout
 import utils_sses_types
 import utils_cluster
+import utils_membrane
+import utils_dimred
 
 
 class SSESStats(object):
@@ -281,10 +283,11 @@ class Layout(object):
     ###HELIC_TYPE_DIGIT = 'digit'
     ###HELIC_TYPE_DOT = 'dot'
 
-    def __init__(self, sses_stats=None, ignore_ordering=None, annotation=None):
+    def __init__(self, sses_stats=None, ignore_ordering=None, annotation=None, method=None):
         self.ignore_ordering = ignore_ordering
         self.sses_stats = sses_stats
         self.annotation = annotation
+        self.method = method
 
     def get_most_probable_sse(self, set):
        return self.sses_stats.most_probable(set)
@@ -399,12 +402,32 @@ class Layout(object):
            self.c_layout, self.ca_layout = utils_cluster.compute_clusters_layout(
                             all_c, sses_distances, sses_sizes, near,
                             relevant_sses, orientation, start_layout,
-                            start_angles, prime_s, chain, domain)
+                            start_angles, prime_s, chain, domain,
+                            method=getattr(self, 'method', None), sses_positions=sses_positions)
 
         # Now we are ready to do start layout if it is possible apply coords from starting layout
         self.layout = utils_matrix2layout.get_fake_layout(all_c, start_layout, relevant_sses, {})
         # Set layout angles to start version
         self.a_layout = utils_angleslayout.get_fake_angles_layout(all_c, start_angles, relevant_sses)
+
+        active_method = utils_dimred.get_active_method(getattr(self, 'method', None))
+        if active_method != "evolution":
+            joint_clusters = set(prime_c) | set(sec_c)
+            if len(joint_clusters) > 0:
+                self.layout, self.a_layout, self.c_layout, self.ca_layout = \
+                        utils_matrix2layout.modify_layout_via_evolution(
+                        self.layout, self.a_layout, self.c_layout, self.ca_layout,
+                        sses_distances, sses_sizes, joint_clusters, set(), start_layout,
+                        sses_positions=sses_positions, method=getattr(self, 'method', None))
+                self.a_layout, self.ca_layout = \
+                        utils_angleslayout.modify_angles_layout_via_evolution(
+                        self.a_layout, self.ca_layout, sses_angles, sses_sizes,
+                        joint_clusters, set(), start_angles, self.layout,
+                        self.c_layout, sses_positions, method=getattr(self, 'method', None))
+            self.layout, self.a_layout = \
+                        utils_matrix2layout.count_sse_coords_based_on_cluster_coords(
+                        self.layout, self.a_layout, self.c_layout, self.ca_layout)
+            return
 
         # First round - optimize prime SSEs coords if we have enough of them
         relevant_clusters = prime_c   # primary SSEs only in this round
@@ -414,12 +437,13 @@ class Layout(object):
             self.layout, self.a_layout, self.c_layout, self.ca_layout = \
                     utils_matrix2layout.modify_layout_via_evolution(\
                     self.layout, self.a_layout, self.c_layout, self.ca_layout, \
-                    sses_distances,  sses_sizes, relevant_clusters, set(), start_layout)
+                    sses_distances,  sses_sizes, relevant_clusters, set(), start_layout, \
+                    sses_positions=sses_positions, method=getattr(self, 'method', None))
             self.a_layout, self.ca_layout = \
                     utils_angleslayout.modify_angles_layout_via_evolution(\
                     self.a_layout, self.ca_layout, sses_angles,  sses_sizes, \
                     relevant_clusters, set(), start_angles, self.layout, \
-                    self.c_layout, sses_positions)
+                    self.c_layout, sses_positions, method=getattr(self, 'method', None))
 
             # Setup for a second round in which we do not want to move with what we have optimised now
             fixed_clusters = relevant_clusters
@@ -435,12 +459,13 @@ class Layout(object):
             self.layout, self.a_layout, self.c_layout, self.ca_layout = \
                     utils_matrix2layout.modify_layout_via_evolution(\
                     self.layout, self.a_layout, self.c_layout, self.ca_layout, \
-                    sses_distances, sses_sizes, relevant_clusters, fixed_clusters, start_layout)
+                    sses_distances, sses_sizes, relevant_clusters, fixed_clusters, start_layout, \
+                    sses_positions=sses_positions, method=getattr(self, 'method', None))
             self.a_layout, self.ca_layout = \
                     utils_angleslayout.modify_angles_layout_via_evolution(\
                     self.a_layout, self.ca_layout,  sses_angles, sses_sizes, \
                     relevant_clusters, fixed_clusters, start_angles, \
-                    self.layout, self.c_layout, sses_positions)
+                    self.layout, self.c_layout, sses_positions, method=getattr(self, 'method', None))
 
         # compute layout from cluster sfuff to per sse stuff
         self.layout, self.a_layout = \
@@ -489,6 +514,16 @@ class Layout(object):
         self.evolution_computation(prime_s, sec_s, prime_c, sec_c, all_c, sses_sizes, sses_distances, sses_angles, \
                         start_layout, start_angles, False, self.annotation.get_beta_connectivity_near, \
                         self.annotation.get_beta_connectivity_cluster_orientation, sses_positions, chain, domain)
+        self.membrane = None
+        if not getattr(self, "apply_membrane", True):
+            self.membrane = {"is_TM": False}
+        elif not start_layout:
+            self.layout, self.a_layout, self.membrane = utils_membrane.align_layout_to_membrane(
+                self.layout, self.a_layout, self.annotation.sizes, all_c, sses_positions,
+                helices_residues=self.annotation.helices_residues, h_type=self.h_type
+            )
+        else:
+            self.a_layout = utils_membrane.snap_angles_dict(self.a_layout, beta_connectivity=all_c)
 
 
     def three_steps_evolution_computation(self, prime_s, sec_s, th_s, prime_c, sec_c, all_c, th_c, \
@@ -509,12 +544,32 @@ class Layout(object):
            self.c_layout, self.ca_layout = utils_cluster.compute_clusters_layout(
                             all_c, sses_distances, sses_sizes, near,
                             relevant_sses, orientation, start_layout,
-                            start_angles, prime_s, chain, domain)
+                            start_angles, prime_s, chain, domain,
+                            method=getattr(self, 'method', None), sses_positions=sses_positions)
 
         # Now we are ready to do start layout if it is possible apply coords from starting layout
         self.layout = utils_matrix2layout.get_fake_layout(all_c, start_layout, relevant_sses, OrderedDict())
         # Set layout angles to start version
         self.a_layout = utils_angleslayout.get_fake_angles_layout(all_c, start_angles, relevant_sses)
+
+        active_method = utils_dimred.get_active_method(getattr(self, 'method', None))
+        if active_method != "evolution":
+            joint_clusters = set(prime_c) | set(sec_c)
+            if len(joint_clusters) > 0:
+                self.layout, self.a_layout, self.c_layout, self.ca_layout = \
+                        utils_matrix2layout.modify_layout_via_evolution(
+                        self.layout, self.a_layout, self.c_layout, self.ca_layout,
+                        sses_distances, sses_sizes, joint_clusters, set(), start_layout,
+                        sses_positions=sses_positions, method=getattr(self, 'method', None))
+                self.a_layout, self.ca_layout = \
+                        utils_angleslayout.modify_angles_layout_via_evolution(
+                        self.a_layout, self.ca_layout, sses_angles, sses_sizes,
+                        joint_clusters, set(), start_angles, self.layout,
+                        self.c_layout, sses_positions, method=getattr(self, 'method', None))
+            self.layout, self.a_layout = \
+                        utils_matrix2layout.count_sse_coords_based_on_cluster_coords(
+                        self.layout, self.a_layout, self.c_layout, self.ca_layout)
+            return
 
         # First round - optimize prime SSEs coords if we have enough of them
         fixed_clusters = set()
@@ -560,7 +615,7 @@ class Layout(object):
                     utils_angleslayout.modify_angles_layout_via_evolution(\
                     self.a_layout, self.ca_layout, sses_angles,  sses_sizes, \
                     relevant_clusters, set(), start_angles, self.layout, \
-                    self.c_layout, sses_positions)
+                    self.c_layout, sses_positions, method=getattr(self, 'method', None))
 
         # Lets set variables for next round
         fixed_clusters = fixed_clusters.union(relevant_clusters)
@@ -587,7 +642,7 @@ class Layout(object):
                     utils_angleslayout.modify_angles_layout_via_evolution(\
                     self.a_layout, self.ca_layout,  sses_angles, sses_sizes, \
                     relevant_clusters, fixed_clusters, start_angles, \
-                    self.layout, self.c_layout, sses_positions)
+                    self.layout, self.c_layout, sses_positions, method=getattr(self, 'method', None))
 
         # compute layout from cluster sfuff to per sse stuff
         self.layout, self.a_layout = \
@@ -686,7 +741,7 @@ class Layout(object):
             self.layout, self.a_layout, self.c_layout, self.ca_layout = \
                     utils_matrix2layout.modify_protein_layout_via_evolution( \
                     self.layout, self.a_layout, self.c_layout, self.ca_layout, \
-                    sses_distances, sses_sizes)
+                    sses_distances, sses_sizes, method=getattr(self, 'method', None))
 
         # compute layout from cluster sfuff to per sse stuff
         self.layout, self.a_layout = \
@@ -793,8 +848,18 @@ class Layout(object):
             'color': self.annotation.color,
             '3dlayout':rl,
         }
-        with open(filename, 'w') as fd:
-            json.dump(data, fd, indent=4, separators=(',', ': '))
+        if getattr(self, 'membrane', None):
+            data['membrane'] = self.membrane
+        if getattr(self, 'ligands_data', None):
+            data['ligands'] = self.ligands_data
+        import time as _time
+        for _r in range(6):
+            try:
+                with open(filename, 'w', encoding='utf-8') as fd:
+                    json.dump(data, fd, indent=4, separators=(',', ': '))
+                break
+            except OSError:
+                _time.sleep(0.15)
         return filename
 
 
@@ -837,10 +902,10 @@ class Layout(object):
                     p="%04d"%(n)
                  else:
                     njdkj
-                if sses[0] == "_":                       # minor SSEs starts _E or _H - thus skip first two chars
-                    name = str(sses[:2]+p+sses[2:])
-                else:                                  # major SSEs starts with E or H - thus skip only one character
-                    name = str(sses[0]+p+sses[1:])
+                 if sses[0] == "_":                       # minor SSEs starts _E or _H - thus skip first two chars
+                     name = str(sses[:2]+p+sses[2:])
+                 else:                                  # major SSEs starts with E or H - thus skip only one character
+                     name = str(sses[0]+p+sses[1:])
                  layout[name]=self.layout[c][d][sses]
                  a_layout[name]=self.a_layout[c][d][sses]
                  size[name]=self.sizes[c][d][sses]

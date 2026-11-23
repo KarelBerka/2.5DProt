@@ -9,16 +9,24 @@ import math
 import numpy
 import json
 from collections import OrderedDict
-import Bio.PDB
+try:
+    import Bio.PDB
+    _AtomBase = Bio.PDB.Atom.Atom
+except ImportError:
+    Bio = None
+    _AtomBase = object
 import utils
 import utils_image
-import two_d_prot.pdbe_api
-import two_d_prot.pdbe_downloader
-import two_d_prot.parser_workaround
+try:
+    import two_d_prot.pdbe_api
+    import two_d_prot.pdbe_downloader
+    import two_d_prot.parser_workaround
+except ImportError:
+    two_d_prot = None
 
 
 # used in utils_rmsd.py
-class AtomLike(Bio.PDB.Atom.Atom):
+class AtomLike(_AtomBase):
 
     def __init__(self, coord, name=None):
         self.coord = coord
@@ -29,7 +37,7 @@ class AtomLike(Bio.PDB.Atom.Atom):
 # used in Family and Domain classes
 class Item(object):
 
-    pdbe_api_mapping = two_d_prot.pdbe_api.PDBeApiMapping()
+    pdbe_api_mapping = two_d_prot.pdbe_api.PDBeApiMapping() if two_d_prot else None
 
 
 class Protein(object):

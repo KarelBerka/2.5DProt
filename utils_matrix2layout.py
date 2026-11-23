@@ -2,11 +2,13 @@
 # -*- coding: UTF-8 -*-
 
 import math
+import os
 import random
 import logging
 from collections import OrderedDict
 import utils
 import utils_angleslayout
+import utils_dimred
 import tempfile
 import subprocess
 import json
@@ -55,19 +57,19 @@ def find_best_rotation_reflection(movable_clusters, layout, a_layout, \
             angle = None
             reflection = False
 
-            # at first try angles 0, 10, 20 ... 350
+            # at first try angles 0, 30, 60 ... 330
             i = 0
-            while i < 36:
-                a_layout[for_helic] = i * 10.0
+            while i < 12:
+                a_layout[for_helic] = i * 30.0
                 e1, e2 = count_error(layout, a_layout, c_layout, ca_layout, sses_sizes, relevant_sses, \
                     movable_sses, for_helic, sses_distance, start_layout, flags)
                 err = e1 + e2
                 if (minerr == None) or (minerr > err):
-                    angle = i * 10.0
+                    angle = i * 30.0
                     minerr = err
                 i = i + 1
 
-            # now we have to test reflection and try angles 0, 10, 20, ... 350
+            # now we have to test reflection and try angles 0, 30, 60, ... 330
             i = 0
             # reflection itself
             for sse in c_layout[for_helic]:
@@ -75,13 +77,13 @@ def find_best_rotation_reflection(movable_clusters, layout, a_layout, \
                 ca_layout[for_helic][sse] = 360 - ca_layout[for_helic][sse]
 
             # and the rotation afterwards
-            while i < 36:
-                a_layout[for_helic] = i * 10.0
+            while i < 12:
+                a_layout[for_helic] = i * 30.0
                 e1,e2 = count_error(layout, a_layout, c_layout, ca_layout, sses_sizes, relevant_sses, \
                     movable_sses, for_helic, sses_distance, start_layout, flags)
                 err = e1 + e2
                 if (minerr > err):
-                    angle = i * 10.0
+                    angle = i * 30.0
                     reflection = True
                     minerr = err
                 i = i + 1
@@ -247,7 +249,19 @@ def count_sse_coords_based_on_cluster_coords(layout, a_layout, c_layout, ca_layo
 
 def modify_layout_via_evolution(layout, a_layout, c_layout, ca_layout, \
         sses_distance, sses_sizes, movable_clusters, fixed_clusters, start_layout, \
-        tmp_dir, flags = {}):
+        tmp_dir="", flags = {}, sses_positions=None, method=None):
+
+    active_method = utils_dimred.get_active_method(flags, method)
+    if active_method != "evolution":
+        layout, a_layout, c_layout, ca_layout = utils_dimred.compute_dimred_layout(
+            layout, a_layout, c_layout, ca_layout,
+            sses_distance, sses_sizes, movable_clusters, fixed_clusters, start_layout,
+            sses_positions=sses_positions, flags=flags, method=active_method
+        )
+        if "+evolution" not in active_method:
+            return layout, a_layout, c_layout, ca_layout
+        flags = dict(flags) if flags else {}
+        flags.setdefault("step_size", 4.0)
 
     dmax = 0
     # TODO: should not be all sse_distance members only movable_clusters + fixed clusters together
@@ -280,7 +294,7 @@ def modify_layout_via_evolution(layout, a_layout, c_layout, ca_layout, \
        for i in cl.split(":"):
           movable_sses.append(i)
 
-    relevant_sses = movable_sses
+    relevant_sses = list(movable_sses)
     for cl in fixed_clusters:
        for i in cl.split(":"):
           relevant_sses.append(i)
@@ -291,7 +305,8 @@ def modify_layout_via_evolution(layout, a_layout, c_layout, ca_layout, \
                 sses_sizes, relevant_sses, movable_sses,  sses_distance, \
                 start_layout, flags)
 
-    if True:
+    c_bin = "../gcc/sses_main_loop" if os.path.isfile("../gcc/sses_main_loop") else ("gcc/sses_main_loop" if os.path.isfile("gcc/sses_main_loop") else None)
+    if c_bin and tmp_dir:
         # use language c to be faster
         if STEP_SIZE >0.01:
             tmp_input_file = f"{tmp_dir}/c_input_sses"
@@ -314,7 +329,7 @@ def modify_layout_via_evolution(layout, a_layout, c_layout, ca_layout, \
             with open(tmp_input_file, "w") as tmp:
                json.dump(data, tmp)
 
-            command = f"../gcc/sses_main_loop {tmp_input_file} {tmp_output_file}"
+            command = f"{c_bin} {tmp_input_file} {tmp_output_file}"
             p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             out, err = p.communicate()
             r = p.wait()
@@ -508,7 +523,16 @@ def count_all_protein_error(layout, a_layout, c_layout, ca_layout, \
 
 
 def modify_protein_layout_via_evolution(layout, a_layout, c_layout, ca_layout, \
-        sses_distance, sses_sizes, tmp_dir):
+        sses_distance, sses_sizes, tmp_dir="", method=None, flags=None):
+
+    active_method = utils_dimred.get_active_method(flags, method)
+    if active_method != "evolution":
+        layout, a_layout, c_layout, ca_layout = utils_dimred.compute_protein_dimred_layout(
+            layout, a_layout, c_layout, ca_layout,
+            sses_distance, sses_sizes, method=active_method
+        )
+        if "+evolution" not in active_method:
+            return layout, a_layout, c_layout, ca_layout
 
     nchain = 0
     for i in layout:

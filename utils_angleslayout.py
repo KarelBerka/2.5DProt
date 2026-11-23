@@ -9,10 +9,13 @@ import logging
 import utils
 from collections import OrderedDict
 import utils_matrix2layout
+import utils_membrane
+import utils_dimred
 import subprocess
 
 
 A_MAX = 30
+ANGLE_STEP = 30.0
 
 def count_2d_angle(v1, v2):
     angle = abs(v1 - v2)
@@ -158,12 +161,22 @@ def final_angles_rotation(a_layout, relevant_sses, layout, \
         alpha_3d = utils.count_angle_in_triangle(best_sses_3d_center, best_sses_3d_start, centre_3d)
         alpha_2d = utils.count_angle_in_triangle_2d(best_sses_2d_center, best_sses_2d_start, centre_2d)
         for i in a_layout:
-            a_layout[i] = (a_layout[i]-alpha_2d+alpha_3d) % 360
+            a_layout[i] = utils_membrane.snap_angle((a_layout[i]-alpha_2d+alpha_3d) % 360)
+    for i in a_layout:
+        a_layout[i] = utils_membrane.snap_angle(a_layout[i])
     return a_layout, ca_layout
 
 def modify_angles_layout_via_evolution(a_layout, ca_layout, \
         sses_angles, sses_sizes, movable_clusters, fixed_clusters, \
-        start_angles, layout, c_layout, sses_positions): #, layout3d):
+        start_angles, layout, c_layout, sses_positions, method=None): #, layout3d):
+
+    active_method = utils_dimred.get_active_method(None, method)
+    if active_method != "evolution" and "+evolution" not in active_method:
+        return utils_dimred.compute_projected_angles(
+            a_layout, ca_layout, sses_angles, sses_sizes,
+            movable_clusters, fixed_clusters, start_angles,
+            layout, c_layout, sses_positions, method=active_method
+        )
 
     ANGLES_SIZE = 45#180
     if (len(movable_clusters)<6):
@@ -286,6 +299,8 @@ def modify_angles_layout_via_evolution(a_layout, ca_layout, \
                     return final_angles_rotation(a_layout, movable_clusters, \
                          layout, c_layout, ca_layout, sses_sizes, sses_positions)
                 else:
+                    for k in a_layout:
+                        a_layout[k] = utils_membrane.snap_angle(a_layout[k])
                     return a_layout, ca_layout
             error_checkpoint = errors_summary
 
@@ -301,4 +316,6 @@ def modify_angles_layout_via_evolution(a_layout, ca_layout, \
                return final_angles_rotation(a_layout, movable_clusters, \
                       layout, c_layout, ca_layout, sses_sizes, sses_positions)
             else:
+               for k in a_layout:
+                   a_layout[k] = utils_membrane.snap_angle(a_layout[k])
                return a_layout, ca_layout

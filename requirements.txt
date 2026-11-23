@@ -1,5 +1,8 @@
-tabulate
-svgwrite
 numpy
-biopython
+scipy
+scikit-learn
+matplotlib
 gemmi
+biopython
+svgwrite
+tabulate

@@ -1,0 +1,1004 @@
+{
+  "aggregate_34_domains": {
+    "n_domains": 34,
+    "classic_2dprots_mean_center_rmsd": 9.26,
+    "classic_2dprots_median_center_rmsd": 9.12,
+    "classic_2dprots_mean_tm_score": 0.466,
+    "new_25dprots_mean_center_rmsd": 2.11,
+    "new_25dprots_median_center_rmsd": 1.72,
+    "new_25dprots_mean_endpoint_rmsd": 2.73,
+    "new_25dprots_mean_tm_score": 0.907,
+    "new_25dprots_median_tm_score": 0.936,
+    "new_25dprots_mean_time_ms": 35.2
+  },
+  "showcase_reconstructions": [
+    {
+      "id": "1bxwA00",
+      "name": "Beta-barel (TM): OmpA (8-vláknový transmembránový barel)",
+      "n_sse": 8,
+      "n_res": 294,
+      "rmsd_2d_center": 2.56,
+      "tm_2d_center": 0.866,
+      "rmsd_25d_center": 1.08,
+      "tm_25d_center": 0.971,
+      "rmsd_25d_endpoints": 1.67,
+      "tm_25d_endpoints": 0.938,
+      "local_dist_mae": 1.16,
+      "time_25d_ms": 10.3,
+      "cif_file": "reconstructed_25d_1bxwA00.cif",
+      "dsl_25d": "<BOS_25DP> CLUST:E3:E8:E34:E10:E27:E16:E24:E19 SSE25D:E3:L30:X-002.1:Y-005.4:Z-001.3:A096:EL-55:C-001.4,-004.9,-001.3:U001,-55:S31.1 SSE25D:E8:L34:X+001.7:Y-004.2:Z+000.9:A276:EL+78:C+001.2,-003.4,+000.9:U218,+78:S34.9 SSE25D:E10:L35:X+004.4:Y-001.4:Z-000.2:A096:EL-78:C+004.5,-000.9,-000.2:U079,-78:S35.8 SSE25D:E16:L40:X+004.0:Y+002.6:Z+000.7:A276:EL+54:C+002.9,+002.1,+000.7:U272,+54:S40.3 SSE25D:E19:L41:X+002.6:Y+004.6:Z-000.1:A096:EL-44:C+003.5,+004.1,-000.1:U079,-44:S42.1 SSE25D:E24:L43:X+000.7:Y+004.6:Z-001.0:A276:EL+33:C+003.1,+004.7,-001.0:U249,+33:S43.0 SSE25D:E27:L29:X-004.3:Y+002.0:Z+000.6:A096:EL-27:C-007.2,+002.8,+000.6:U035,-27:S29.5 SSE25D:E34:L28:X-005.1:Y-002.6:Z+000.4:A276:EL+37:C-004.8,-004.3,+000.4:U189,+37:S28.8 <EOS_25DP>",
+      "sse_res_spans": {
+        "E3": [
+          1,
+          30
+        ],
+        "E8": [
+          33,
+          66
+        ],
+        "E10": [
+          69,
+          103
+        ],
+        "E16": [
+          106,
+          145
+        ],
+        "E19": [
+          148,
+          188
+        ],
+        "E24": [
+          191,
+          233
+        ],
+        "E27": [
+          236,
+          264
+        ],
+        "E34": [
+          267,
+          294
+        ]
+      }
+    },
+    {
+      "id": "1lz1A00",
+      "name": "EC 3: Lidský lysozym (doména)",
+      "n_sse": 16,
+      "n_res": 174,
+      "rmsd_2d_center": 6.55,
+      "tm_2d_center": 0.422,
+      "rmsd_25d_center": 0.35,
+      "tm_25d_center": 0.993,
+      "rmsd_25d_endpoints": 0.44,
+      "tm_25d_endpoints": 0.99,
+      "local_dist_mae": 0.2,
+      "time_25d_ms": 18.2,
+      "cif_file": "reconstructed_25d_1lz1A00.cif",
+      "dsl_25d": "<BOS_25DP> CLUST:E7:E16 CLUST:E11:E12 CLUST:E17:E21:E24 CLUST:E28:E32 SSE25D:E7:L2:X-010.5:Y-000.6:Z-006.8:A297:EL+00:C-011.8,-002.5,-006.8:U139,+00:S02.4 SSE25D:H9:L16:X-005.4:Y-006.7:Z+001.7:A057:EL+71:C-005.3,-008.1,+001.7:U053,+71:S17.0 SSE25D:E11:L2:X+004.4:Y-005.2:Z+009.4:A297:EL+12:C+004.5,-003.5,+009.4:U027,+12:S02.5 SSE25D:E12:L2:X+006.0:Y-001.9:Z+006.3:A117:EL-51:C+006.8,-004.3,+006.3:U225,-51:S02.5 SSE25D:H14:L17:X+001.3:Y-000.1:Z-003.5:A327:EL-41:C+001.7,-001.9,-003.5:U324,-41:S17.7 SSE25D:E16:L2:X-008.7:Y+003.0:Z-006.2:A117:EL+28:C-008.4,+001.9,-006.2:U318,+28:S02.4 SSE25D:E17:L12:X-005.4:Y+014.2:Z-008.3:A027:EL-09:C-005.3,+014.7,-008.3:U030,-09:S12.1 SSE25D:E21:L12:X-002.0:Y+010.9:Z-003.7:A207:EL+09:C-004.9,+014.6,-003.7:U196,+09:S12.3 SSE25D:E24:L5:X+001.8:Y+010.6:Z-000.4:A027:EL+19:C-002.8,+012.1,-000.4:U357,+19:S05.6 SSE25D:E28:L2:X-010.5:Y+015.2:Z+004.9:A117:EL-33:C-008.2,+016.9,+004.9:U310,-33:S02.5 SSE25D:E32:L2:X-012.3:Y+011.6:Z+006.3:A117:EL-84:C-010.8,+013.3,+006.3:U150,-84:S02.4 SSE25D:H33:L8:X-009.4:Y+009.5:Z+002.5:A177:EL-21:C-012.0,+009.9,+002.5:U182,-21:S08.9 SSE25D:H37:L21:X-003.7:Y+005.2:Z+008.1:A087:EL+14:C-000.8,+005.0,+008.1:U075,+14:S21.0 SSE25D:H43:L8:X+006.3:Y+006.3:Z+001.6:A327:EL-54:C+008.2,+006.4,+001.6:U324,-54:S08.8 SSE25D:H53:L10:X+008.6:Y+005.3:Z-005.8:A147:EL-19:C+008.4,+003.7,-005.8:U148,-19:S10.2 SSE25D:H58:L7:X+003.2:Y-009.3:Z-006.0:A237:EL+05:C+004.3,-010.3,-006.0:U242,+05:S07.6 <EOS_25DP>",
+      "sse_res_spans": {
+        "E7": [
+          1,
+          3
+        ],
+        "H9": [
+          6,
+          21
+        ],
+        "E11": [
+          24,
+          26
+        ],
+        "E12": [
+          29,
+          31
+        ],
+        "H14": [
+          34,
+          50
+        ],
+        "E16": [
+          53,
+          55
+        ],
+        "E17": [
+          58,
+          69
+        ],
+        "E21": [
+          72,
+          83
+        ],
+        "E24": [
+          86,
+          90
+        ],
+        "E28": [
+          93,
+          95
+        ],
+        "E32": [
+          108,
+          110
+        ],
+        "H33": [
+          113,
+          120
+        ],
+        "H37": [
+          123,
+          143
+        ],
+        "H43": [
+          146,
+          153
+        ],
+        "H53": [
+          156,
+          165
+        ],
+        "H58": [
+          168,
+          174
+        ]
+      }
+    },
+    {
+      "id": "1f88A00",
+      "name": "GPCR: Bovinní rodopsin – 7TM monomer (doména)",
+      "n_sse": 13,
+      "n_res": 402,
+      "rmsd_2d_center": 13.09,
+      "tm_2d_center": 0.367,
+      "rmsd_25d_center": 1.91,
+      "tm_25d_center": 0.934,
+      "rmsd_25d_endpoints": 3.08,
+      "tm_25d_endpoints": 0.871,
+      "local_dist_mae": 1.28,
+      "time_25d_ms": 23.8,
+      "cif_file": "reconstructed_25d_1f88A00.cif",
+      "dsl_25d": "<BOS_25DP> CLUST:E0:E2 CLUST:E27:E30 SSE25D:E0:L5:X+005.0:Y-007.1:Z-013.2:A177:EL-46:C+011.2,-011.4,-013.2:U319,-46:S05.5 SSE25D:E2:L5:X+001.0:Y-007.3:Z-009.9:A357:EL+46:C+007.5,-010.9,-009.9:U151,+46:S05.3 SSE25D:H3:L5:X-008.6:Y-014.3:Z-004.8:A147:EL+71:C+004.0,-021.0,-004.8:U098,+71:S05.2 SSE25D:H5:L48:X-014.5:Y-010.4:Z+004.4:A327:EL+14:C-015.0,-008.5,+004.4:U320,+14:S47.8 SSE25D:H7:L43:X-013.5:Y-001.6:Z-000.7:A207:EL-33:C-015.8,-002.9,-000.7:U151,-33:S43.2 SSE25D:H19:L49:X-006.1:Y+004.6:Z-001.0:A057:EL+41:C-011.8,+005.6,-001.0:U340,+41:S48.3 SSE25D:H23:L35:X-013.4:Y+006.0:Z-002.4:A177:EL-43:C-011.4,+010.9,-002.4:U126,-43:S35.8 SSE25D:E27:L11:X-005.2:Y-000.8:Z-008.6:A177:EL+43:C+000.9,-006.2,-008.6:U158,+43:S11.7 SSE25D:E30:L11:X-008.5:Y-001.0:Z-006.5:A357:EL-15:C-000.6,-004.8,-006.5:U032,-15:S11.6 SSE25D:H34:L42:X-002.9:Y+011.9:Z+004.9:A087:EL+53:C-002.6,+012.7,+004.9:U301,+53:S41.8 SSE25D:H44:L52:X+002.9:Y+000.2:Z+011.7:A297:EL-38:C-002.7,+003.3,+011.7:U124,-38:S50.5 SSE25D:H48:L41:X-003.8:Y-008.5:Z+008.9:A147:EL+36:C-006.7,-005.2,+008.9:U299,+36:S41.4 SSE25D:H50:L18:X-002.1:Y-009.9:Z+017.2:A207:EL-21:C-026.8,+000.2,+017.2:U244,-21:S18.0 <EOS_25DP>",
+      "sse_res_spans": {
+        "E0": [
+          1,
+          5
+        ],
+        "E2": [
+          8,
+          12
+        ],
+        "H3": [
+          27,
+          31
+        ],
+        "H5": [
+          34,
+          81
+        ],
+        "H7": [
+          84,
+          126
+        ],
+        "H19": [
+          129,
+          177
+        ],
+        "H23": [
+          180,
+          214
+        ],
+        "E27": [
+          217,
+          227
+        ],
+        "E30": [
+          230,
+          240
+        ],
+        "H34": [
+          244,
+          285
+        ],
+        "H44": [
+          288,
+          339
+        ],
+        "H48": [
+          342,
+          382
+        ],
+        "H50": [
+          385,
+          402
+        ]
+      }
+    },
+    {
+      "id": "1adsA00",
+      "name": "EC 1: Aldózareduktáza (TIM barel)",
+      "n_sse": 35,
+      "n_res": 434,
+      "rmsd_2d_center": 7.93,
+      "tm_2d_center": 0.513,
+      "rmsd_25d_center": 1.68,
+      "tm_25d_center": 0.952,
+      "rmsd_25d_endpoints": 1.83,
+      "tm_25d_endpoints": 0.946,
+      "local_dist_mae": 0.61,
+      "time_25d_ms": 61.3,
+      "cif_file": "reconstructed_25d_1adsA00.cif",
+      "dsl_25d": "<BOS_25DP> CLUST:E2:E3 CLUST:E4:E6:E13:E22:E28:E39:E43:E51:E67:E68 CLUST:E27:E38 CLUST:E29:E36 CLUST:E33:E34 CLUST:E45:E47 SSE25D:E2:L8:X+010.2:Y-013.5:Z-012.2:A089:EL-34:C+011.3,-011.4,-012.2:U305,-34:S08.7 SSE25D:E3:L8:X+010.1:Y-009.6:Z-009.9:A269:EL+54:C+012.3,-008.6,-009.9:U169,+54:S08.7 SSE25D:E4:L2:X+012.2:Y-007.5:Z-002.8:A239:EL+50:C+013.1,-012.1,-002.8:U016,+50:S02.4 SSE25D:E6:L5:X+010.4:Y-008.7:Z+004.1:A239:EL+53:C+011.8,-007.4,+004.1:U321,+53:S05.6 SSE25D:H11:L21:X+021.0:Y-002.3:Z+006.5:A149:EL-50:C+018.6,-004.9,+006.5:U125,-50:S20.3 SSE25D:E13:L9:X+009.3:Y-003.4:Z-000.1:A239:EL+33:C+012.6,-004.6,-000.1:U297,+33:S09.0 SSE25D:H15:L5:X+009.9:Y+002.2:Z+007.8:A059:EL+72:C+004.6,+002.4,+007.8:U024,+72:S05.6 SSE25D:H17:L21:X+015.0:Y+005.9:Z+002.0:A089:EL-40:C+020.0,+004.0,+002.0:U096,-40:S21.9 SSE25D:H21:L5:X+014.7:Y-001.7:Z-008.6:A239:EL+07:C+020.1,-000.5,-008.6:U235,+07:S05.3 SSE25D:E22:L19:X+005.8:Y-000.1:Z-001.8:A239:EL+22:C+007.5,+000.1,-001.8:U291,+22:S18.9 SSE25D:H24:L5:X+000.6:Y+006.5:Z+003.0:A299:EL-35:C-005.0,+006.5,+003.0:U315,-35:S05.4 SSE25D:H26:L23:X+006.3:Y+008.0:Z-002.1:A089:EL+11:C+003.3,+010.9,-002.1:U101,+11:S22.9 SSE25D:E27:L2:X+004.4:Y+002.1:Z-006.6:A359:EL-16:C+010.5,+004.1,-006.6:U191,-16:S02.5 SSE25D:E28:L11:X+000.6:Y+000.2:Z-004.0:A239:EL+31:C+002.6,+000.3,-004.0:U266,+31:S12.4 SSE25D:E29:L2:X-005.4:Y+008.0:Z+004.0:A029:EL+32:C-009.2,+004.7,+004.0:U331,+32:S02.6 SSE25D:E33:L2:X-012.5:Y+010.3:Z+013.4:A269:EL+15:C-013.2,+005.5,+013.4:U269,+15:S02.4 SSE25D:E34:L2:X-012.4:Y+006.3:Z+010.3:A089:EL-49:C-014.2,+002.0,+010.3:U007,-49:S02.5 SSE25D:E36:L2:X-008.9:Y+009.9:Z+004.6:A209:EL-66:C-013.9,+004.6,+004.6:U031,-66:S02.5 SSE25D:H37:L22:X-005.5:Y+002.6:Z-009.8:A059:EL-21:C-003.0,+007.1,-009.8:U070,-21:S22.5 SSE25D:E38:L2:X+000.4:Y+002.0:Z-009.7:A359:EL-28:C+007.7,+005.9,-009.7:U175,-28:S02.4 SSE25D:E39:L12:X-002.8:Y-003.1:Z-006.1:A239:EL+41:C-000.4,-002.8,-006.1:U225,+41:S12.7 SSE25D:H41:L13:X-009.1:Y-009.0:Z-011.2:A329:EL-51:C-009.5,-006.2,-011.2:U015,-51:S13.2 SSE25D:E43:L14:X-001.6:Y-007.9:Z-003.3:A239:EL+55:C+000.0,-009.4,-003.3:U194,+55:S14.5 SSE25D:E45:L2:X+003.7:Y-020.8:Z+003.6:A329:EL+39:C+000.5,-019.4,+003.6:U189,+39:S02.3 SSE25D:E47:L2:X+000.4:Y-022.8:Z+003.5:A149:EL-77:C-003.3,-019.9,+003.5:U011,-77:S02.2 SSE25D:H49:L15:X-003.3:Y-018.8:Z-010.0:A359:EL-58:C-003.9,-016.6,-010.0:U036,-58:S15.4 SSE25D:E51:L15:X+001.4:Y-011.4:Z-003.5:A239:EL+79:C+003.2,-012.1,-003.5:U133,+79:S15.4 SSE25D:H63:L15:X+014.1:Y-029.8:Z+012.9:A089:EL-14:C+009.2,-026.3,+012.9:U110,-14:S15.1 SSE25D:H65:L19:X+010.9:Y-020.8:Z+001.4:A299:EL-69:C+009.6,-021.5,+001.4:U287,-69:S19.6 SSE25D:E67:L5:X+006.3:Y-011.8:Z-002.3:A239:EL+60:C+007.8,-013.6,-002.3:U046,+60:S05.9 SSE25D:E68:L2:X+009.4:Y-014.3:Z+007.7:A239:EL+42:C+011.6,-011.1,+007.7:U075,+42:S02.5 SSE25D:H69:L14:X+019.8:Y-015.0:Z+006.5:A239:EL-58:C+018.7,-016.3,+006.5:U199,-58:S14.6 SSE25D:H72:L16:X+003.0:Y-028.5:Z+003.0:A299:EL+22:C+003.2,-027.1,+003.0:U287,+22:S17.6 SSE25D:H75:L5:X-010.7:Y-003.5:Z+009.8:A269:EL-04:C-011.9,-006.2,+009.8:U285,-04:S05.1 SSE25D:H78:L8:X-009.6:Y-011.1:Z-000.1:A209:EL-23:C-014.3,-011.2,-000.1:U200,-23:S08.7 <EOS_25DP>",
+      "sse_res_spans": {
+        "E2": [
+          1,
+          8
+        ],
+        "E3": [
+          11,
+          18
+        ],
+        "E4": [
+          21,
+          23
+        ],
+        "E6": [
+          26,
+          30
+        ],
+        "H11": [
+          33,
+          53
+        ],
+        "E13": [
+          56,
+          64
+        ],
+        "H15": [
+          67,
+          71
+        ],
+        "H17": [
+          74,
+          94
+        ],
+        "H21": [
+          97,
+          101
+        ],
+        "E22": [
+          104,
+          122
+        ],
+        "H24": [
+          125,
+          129
+        ],
+        "H26": [
+          132,
+          154
+        ],
+        "E27": [
+          157,
+          159
+        ],
+        "E28": [
+          162,
+          172
+        ],
+        "E29": [
+          175,
+          177
+        ],
+        "E33": [
+          185,
+          187
+        ],
+        "E34": [
+          192,
+          194
+        ],
+        "E36": [
+          197,
+          199
+        ],
+        "H37": [
+          203,
+          224
+        ],
+        "E38": [
+          227,
+          229
+        ],
+        "E39": [
+          232,
+          243
+        ],
+        "H41": [
+          246,
+          258
+        ],
+        "E43": [
+          264,
+          277
+        ],
+        "E45": [
+          280,
+          282
+        ],
+        "E47": [
+          285,
+          287
+        ],
+        "H49": [
+          290,
+          304
+        ],
+        "E51": [
+          307,
+          321
+        ],
+        "H63": [
+          333,
+          347
+        ],
+        "H65": [
+          350,
+          368
+        ],
+        "E67": [
+          371,
+          375
+        ],
+        "E68": [
+          378,
+          380
+        ],
+        "H69": [
+          383,
+          396
+        ],
+        "H72": [
+          399,
+          414
+        ],
+        "H75": [
+          418,
+          422
+        ],
+        "H78": [
+          427,
+          434
+        ]
+      }
+    }
+  ],
+  "all_34_domains": [
+    {
+      "id": "1tqnA00",
+      "name": "CYP3A4 (Cytochrom P450 3A4)",
+      "n_sse": 37,
+      "n_res": 618,
+      "rmsd_2d_center": 11.35,
+      "tm_2d_center": 0.415,
+      "rmsd_25d_center": 2.16,
+      "tm_25d_center": 0.938,
+      "rmsd_25d_endpoints": 2.76,
+      "tm_25d_endpoints": 0.918,
+      "local_dist_mae": 0.9,
+      "time_25d_ms": 80.2
+    },
+    {
+      "id": "2hi4A00",
+      "name": "CYP1A2 (Cytochrom P450 1A2)",
+      "n_sse": 44,
+      "n_res": 659,
+      "rmsd_2d_center": 13.61,
+      "tm_2d_center": 0.412,
+      "rmsd_25d_center": 1.77,
+      "tm_25d_center": 0.958,
+      "rmsd_25d_endpoints": 2.1,
+      "tm_25d_endpoints": 0.945,
+      "local_dist_mae": 0.72,
+      "time_25d_ms": 120.1
+    },
+    {
+      "id": "1adsA00",
+      "name": "EC 1: Aldózareduktáza (TIM barel)",
+      "n_sse": 35,
+      "n_res": 434,
+      "rmsd_2d_center": 7.93,
+      "tm_2d_center": 0.513,
+      "rmsd_25d_center": 1.68,
+      "tm_25d_center": 0.952,
+      "rmsd_25d_endpoints": 1.83,
+      "tm_25d_endpoints": 0.946,
+      "local_dist_mae": 0.61,
+      "time_25d_ms": 61.3
+    },
+    {
+      "id": "1ldmA01",
+      "name": "EC 1: Laktátdehydrogenáza (Rossmannova doména)",
+      "n_sse": 15,
+      "n_res": 228,
+      "rmsd_2d_center": 7.28,
+      "tm_2d_center": 0.475,
+      "rmsd_25d_center": 6.81,
+      "tm_25d_center": 0.584,
+      "rmsd_25d_endpoints": 7.55,
+      "tm_25d_endpoints": 0.565,
+      "local_dist_mae": 0.98,
+      "time_25d_ms": 23.9
+    },
+    {
+      "id": "1atpE01",
+      "name": "EC 2: Proteinkináza A – N-terminální lalok (doména)",
+      "n_sse": 18,
+      "n_res": 258,
+      "rmsd_2d_center": 10.05,
+      "tm_2d_center": 0.4,
+      "rmsd_25d_center": 2.28,
+      "tm_25d_center": 0.859,
+      "rmsd_25d_endpoints": 2.6,
+      "tm_25d_endpoints": 0.836,
+      "local_dist_mae": 1.14,
+      "time_25d_ms": 24.4
+    },
+    {
+      "id": "1atpE02",
+      "name": "EC 2: Proteinkináza A – C-terminální lalok (doména)",
+      "n_sse": 9,
+      "n_res": 175,
+      "rmsd_2d_center": 5.47,
+      "tm_2d_center": 0.486,
+      "rmsd_25d_center": 0.24,
+      "tm_25d_center": 0.997,
+      "rmsd_25d_endpoints": 0.39,
+      "tm_25d_endpoints": 0.992,
+      "local_dist_mae": 0.21,
+      "time_25d_ms": 17.3
+    },
+    {
+      "id": "1lz1A00",
+      "name": "EC 3: Lidský lysozym (doména)",
+      "n_sse": 16,
+      "n_res": 174,
+      "rmsd_2d_center": 6.55,
+      "tm_2d_center": 0.422,
+      "rmsd_25d_center": 0.35,
+      "tm_25d_center": 0.993,
+      "rmsd_25d_endpoints": 0.44,
+      "tm_25d_endpoints": 0.99,
+      "local_dist_mae": 0.2,
+      "time_25d_ms": 18.2
+    },
+    {
+      "id": "2ca2A00",
+      "name": "EC 4: Karbonanhydráza II (doména)",
+      "n_sse": 27,
+      "n_res": 370,
+      "rmsd_2d_center": 10.16,
+      "tm_2d_center": 0.416,
+      "rmsd_25d_center": 2.68,
+      "tm_25d_center": 0.862,
+      "rmsd_25d_endpoints": 2.88,
+      "tm_25d_endpoints": 0.845,
+      "local_dist_mae": 1.33,
+      "time_25d_ms": 42.7
+    },
+    {
+      "id": "1timA00",
+      "name": "EC 5: Triózafosfátizomeráza – Monomer (doména)",
+      "n_sse": 21,
+      "n_res": 358,
+      "rmsd_2d_center": 7.1,
+      "tm_2d_center": 0.617,
+      "rmsd_25d_center": 1.33,
+      "tm_25d_center": 0.967,
+      "rmsd_25d_endpoints": 1.5,
+      "tm_25d_endpoints": 0.958,
+      "local_dist_mae": 0.59,
+      "time_25d_ms": 52.7
+    },
+    {
+      "id": "1aszA01",
+      "name": "EC 6: Aspartyl-tRNA syntetáza – Antikodonová doména",
+      "n_sse": 8,
+      "n_res": 177,
+      "rmsd_2d_center": 4.71,
+      "tm_2d_center": 0.504,
+      "rmsd_25d_center": 1.29,
+      "tm_25d_center": 0.931,
+      "rmsd_25d_endpoints": 1.66,
+      "tm_25d_endpoints": 0.907,
+      "local_dist_mae": 1.06,
+      "time_25d_ms": 10.8
+    },
+    {
+      "id": "1aszA02",
+      "name": "EC 6: Aspartyl-tRNA syntetáza – Katalytická doména",
+      "n_sse": 29,
+      "n_res": 489,
+      "rmsd_2d_center": 10.48,
+      "tm_2d_center": 0.412,
+      "rmsd_25d_center": 2.11,
+      "tm_25d_center": 0.93,
+      "rmsd_25d_endpoints": 2.51,
+      "tm_25d_endpoints": 0.913,
+      "local_dist_mae": 0.83,
+      "time_25d_ms": 61.6
+    },
+    {
+      "id": "1f88A00",
+      "name": "GPCR: Bovinní rodopsin – 7TM monomer (doména)",
+      "n_sse": 13,
+      "n_res": 402,
+      "rmsd_2d_center": 13.09,
+      "tm_2d_center": 0.367,
+      "rmsd_25d_center": 1.91,
+      "tm_25d_center": 0.934,
+      "rmsd_25d_endpoints": 3.08,
+      "tm_25d_endpoints": 0.871,
+      "local_dist_mae": 1.28,
+      "time_25d_ms": 23.8
+    },
+    {
+      "id": "2rh1A02",
+      "name": "GPCR: β2-adrenergní receptor – 7TM doména",
+      "n_sse": 14,
+      "n_res": 224,
+      "rmsd_2d_center": 6.5,
+      "tm_2d_center": 0.477,
+      "rmsd_25d_center": 1.13,
+      "tm_25d_center": 0.957,
+      "rmsd_25d_endpoints": 1.62,
+      "tm_25d_endpoints": 0.928,
+      "local_dist_mae": 0.71,
+      "time_25d_ms": 13.5
+    },
+    {
+      "id": "1okcA00",
+      "name": "SLC: Mitochondriální ADP/ATP přenašeč (SLC25A4)",
+      "n_sse": 16,
+      "n_res": 371,
+      "rmsd_2d_center": 11.61,
+      "tm_2d_center": 0.359,
+      "rmsd_25d_center": 1.46,
+      "tm_25d_center": 0.957,
+      "rmsd_25d_endpoints": 1.88,
+      "tm_25d_endpoints": 0.936,
+      "local_dist_mae": 0.68,
+      "time_25d_ms": 32.9
+    },
+    {
+      "id": "1pv6A01",
+      "name": "SLC / MFS: Laktózová permeáza LacY – N-doména (6TM)",
+      "n_sse": 8,
+      "n_res": 264,
+      "rmsd_2d_center": 8.57,
+      "tm_2d_center": 0.42,
+      "rmsd_25d_center": 2.11,
+      "tm_25d_center": 0.901,
+      "rmsd_25d_endpoints": 2.6,
+      "tm_25d_endpoints": 0.871,
+      "local_dist_mae": 1.68,
+      "time_25d_ms": 16.9
+    },
+    {
+      "id": "1pv6A02",
+      "name": "SLC / MFS: Laktózová permeáza LacY – C-doména (6TM)",
+      "n_sse": 9,
+      "n_res": 284,
+      "rmsd_2d_center": 11.01,
+      "tm_2d_center": 0.287,
+      "rmsd_25d_center": 2.69,
+      "tm_25d_center": 0.846,
+      "rmsd_25d_endpoints": 3.54,
+      "tm_25d_endpoints": 0.795,
+      "local_dist_mae": 1.74,
+      "time_25d_ms": 11.3
+    },
+    {
+      "id": "2hydA01",
+      "name": "ABC (EC 7): Transportér Sav1866 – Transmembránová TMD doména",
+      "n_sse": 9,
+      "n_res": 458,
+      "rmsd_2d_center": 18.0,
+      "tm_2d_center": 0.243,
+      "rmsd_25d_center": 9.08,
+      "tm_25d_center": 0.556,
+      "rmsd_25d_endpoints": 11.72,
+      "tm_25d_endpoints": 0.413,
+      "local_dist_mae": 3.35,
+      "time_25d_ms": 16.0
+    },
+    {
+      "id": "2hydA02",
+      "name": "ABC (EC 7): Transportér Sav1866 – Nukleotid-vázající NBD doména",
+      "n_sse": 22,
+      "n_res": 359,
+      "rmsd_2d_center": 6.11,
+      "tm_2d_center": 0.584,
+      "rmsd_25d_center": 2.62,
+      "tm_25d_center": 0.893,
+      "rmsd_25d_endpoints": 3.27,
+      "tm_25d_endpoints": 0.868,
+      "local_dist_mae": 0.83,
+      "time_25d_ms": 43.1
+    },
+    {
+      "id": "1bxwA00",
+      "name": "Beta-barel (TM): OmpA (8-vláknový transmembránový barel)",
+      "n_sse": 8,
+      "n_res": 294,
+      "rmsd_2d_center": 2.56,
+      "tm_2d_center": 0.866,
+      "rmsd_25d_center": 1.08,
+      "tm_25d_center": 0.971,
+      "rmsd_25d_endpoints": 1.67,
+      "tm_25d_endpoints": 0.938,
+      "local_dist_mae": 1.16,
+      "time_25d_ms": 10.3
+    },
+    {
+      "id": "1emaA00",
+      "name": "Beta-barel (solubilní): GFP (11-vláknový solubilní barel)",
+      "n_sse": 19,
+      "n_res": 436,
+      "rmsd_2d_center": 9.72,
+      "tm_2d_center": 0.51,
+      "rmsd_25d_center": 1.71,
+      "tm_25d_center": 0.952,
+      "rmsd_25d_endpoints": 2.42,
+      "tm_25d_endpoints": 0.927,
+      "local_dist_mae": 1.13,
+      "time_25d_ms": 44.3
+    },
+    {
+      "id": "1rbpA00",
+      "name": "Beta-barel (solubilní lipokalin): Retinol-vázající protein RBP4 s retinolem (RTL)",
+      "n_sse": 11,
+      "n_res": 277,
+      "rmsd_2d_center": 6.63,
+      "tm_2d_center": 0.622,
+      "rmsd_25d_center": 2.38,
+      "tm_25d_center": 0.878,
+      "rmsd_25d_endpoints": 2.72,
+      "tm_25d_endpoints": 0.85,
+      "local_dist_mae": 1.68,
+      "time_25d_ms": 18.7
+    },
+    {
+      "id": "1cbsA00",
+      "name": "Beta-barel (solubilní iLBP): Protein vázající kyselinu retinovou CRABP-II (s REA)",
+      "n_sse": 12,
+      "n_res": 277,
+      "rmsd_2d_center": 6.51,
+      "tm_2d_center": 0.513,
+      "rmsd_25d_center": 0.65,
+      "tm_25d_center": 0.988,
+      "rmsd_25d_endpoints": 0.94,
+      "tm_25d_endpoints": 0.978,
+      "local_dist_mae": 0.41,
+      "time_25d_ms": 30.4
+    },
+    {
+      "id": "1stpA00",
+      "name": "Beta-barel (solubilní): Streptavidin – Monomer s biotinem (BTN)",
+      "n_sse": 11,
+      "n_res": 228,
+      "rmsd_2d_center": 5.76,
+      "tm_2d_center": 0.557,
+      "rmsd_25d_center": 0.62,
+      "tm_25d_center": 0.987,
+      "rmsd_25d_endpoints": 0.87,
+      "tm_25d_endpoints": 0.977,
+      "local_dist_mae": 0.32,
+      "time_25d_ms": 18.9
+    },
+    {
+      "id": "2omfA00",
+      "name": "Beta-barel (TM): Porin OmpF – Monomer (16-vláknový barel)",
+      "n_sse": 27,
+      "n_res": 690,
+      "rmsd_2d_center": 15.08,
+      "tm_2d_center": 0.368,
+      "rmsd_25d_center": 1.47,
+      "tm_25d_center": 0.973,
+      "rmsd_25d_endpoints": 1.71,
+      "tm_25d_endpoints": 0.964,
+      "local_dist_mae": 0.82,
+      "time_25d_ms": 107.6
+    },
+    {
+      "id": "1qjbA00",
+      "name": "14-3-3ζ protein – Monomer (doména)",
+      "n_sse": 10,
+      "n_res": 309,
+      "rmsd_2d_center": 6.56,
+      "tm_2d_center": 0.559,
+      "rmsd_25d_center": 2.51,
+      "tm_25d_center": 0.871,
+      "rmsd_25d_endpoints": 3.51,
+      "tm_25d_endpoints": 0.795,
+      "local_dist_mae": 1.63,
+      "time_25d_ms": 25.4
+    },
+    {
+      "id": "2hhbA00",
+      "name": "Hemoglobin – α-podjednotka (doména)",
+      "n_sse": 10,
+      "n_res": 191,
+      "rmsd_2d_center": 7.3,
+      "tm_2d_center": 0.387,
+      "rmsd_25d_center": 0.85,
+      "tm_25d_center": 0.971,
+      "rmsd_25d_endpoints": 1.45,
+      "tm_25d_endpoints": 0.93,
+      "local_dist_mae": 0.62,
+      "time_25d_ms": 13.0
+    },
+    {
+      "id": "2hhbB00",
+      "name": "Hemoglobin – β-podjednotka (doména)",
+      "n_sse": 12,
+      "n_res": 215,
+      "rmsd_2d_center": 10.22,
+      "tm_2d_center": 0.36,
+      "rmsd_25d_center": 0.79,
+      "tm_25d_center": 0.978,
+      "rmsd_25d_endpoints": 1.1,
+      "tm_25d_endpoints": 0.962,
+      "local_dist_mae": 0.42,
+      "time_25d_ms": 17.5
+    },
+    {
+      "id": "1bl8A00",
+      "name": "Draslíkový kanál KcsA – Jedna podjednotka (doména)",
+      "n_sse": 3,
+      "n_res": 120,
+      "rmsd_2d_center": 3.43,
+      "tm_2d_center": 0.634,
+      "rmsd_25d_center": 1.7,
+      "tm_25d_center": 0.851,
+      "rmsd_25d_endpoints": 5.12,
+      "tm_25d_endpoints": 0.438,
+      "local_dist_mae": 4.71,
+      "time_25d_ms": 4.0
+    },
+    {
+      "id": "1j4nA00",
+      "name": "Akvaporin AQP1 – Monomer (doména)",
+      "n_sse": 10,
+      "n_res": 285,
+      "rmsd_2d_center": 9.64,
+      "tm_2d_center": 0.447,
+      "rmsd_25d_center": 3.3,
+      "tm_25d_center": 0.796,
+      "rmsd_25d_endpoints": 4.01,
+      "tm_25d_endpoints": 0.749,
+      "local_dist_mae": 3.23,
+      "time_25d_ms": 15.6
+    },
+    {
+      "id": "1bmfA02",
+      "name": "Extra velký systém (EC 7): F1-ATPáza – Katalytická α/β doména",
+      "n_sse": 29,
+      "n_res": 423,
+      "rmsd_2d_center": 8.94,
+      "tm_2d_center": 0.487,
+      "rmsd_25d_center": 1.03,
+      "tm_25d_center": 0.978,
+      "rmsd_25d_endpoints": 1.26,
+      "tm_25d_endpoints": 0.969,
+      "local_dist_mae": 0.44,
+      "time_25d_ms": 64.5
+    },
+    {
+      "id": "1aonA01",
+      "name": "Extra velký systém: Chaperonin GroEL – Ekvatoriální ATPázová doména",
+      "n_sse": 17,
+      "n_res": 363,
+      "rmsd_2d_center": 10.03,
+      "tm_2d_center": 0.406,
+      "rmsd_25d_center": 1.71,
+      "tm_25d_center": 0.938,
+      "rmsd_25d_endpoints": 1.98,
+      "tm_25d_endpoints": 0.923,
+      "local_dist_mae": 0.75,
+      "time_25d_ms": 23.8
+    },
+    {
+      "id": "2zxeA02",
+      "name": "Na+/K+-ATPáza (EC 7): 10TM transmembránová doména α-podjednotky (s K+ a CLR)",
+      "n_sse": 20,
+      "n_res": 570,
+      "rmsd_2d_center": 17.84,
+      "tm_2d_center": 0.359,
+      "rmsd_25d_center": 3.08,
+      "tm_25d_center": 0.882,
+      "rmsd_25d_endpoints": 3.8,
+      "tm_25d_endpoints": 0.839,
+      "local_dist_mae": 1.88,
+      "time_25d_ms": 41.8
+    },
+    {
+      "id": "1c3wA00",
+      "name": "Protonová pumpa: Bakteriorhodopsin – kompletní 7TM pumpa s retinalem (RET)",
+      "n_sse": 10,
+      "n_res": 310,
+      "rmsd_2d_center": 9.3,
+      "tm_2d_center": 0.491,
+      "rmsd_25d_center": 1.73,
+      "tm_25d_center": 0.933,
+      "rmsd_25d_endpoints": 2.56,
+      "tm_25d_endpoints": 0.876,
+      "local_dist_mae": 1.14,
+      "time_25d_ms": 22.4
+    },
+    {
+      "id": "1occA00",
+      "name": "Dýchací řetězec – Komplex IV: Cytochrom c oxidáza – podjednotka I (12TM jádro, 2×HEA, CuB, Mg)",
+      "n_sse": 24,
+      "n_res": 653,
+      "rmsd_2d_center": 15.85,
+      "tm_2d_center": 0.457,
+      "rmsd_25d_center": 3.28,
+      "tm_25d_center": 0.892,
+      "rmsd_25d_endpoints": 3.75,
+      "tm_25d_endpoints": 0.865,
+      "local_dist_mae": 1.26,
+      "time_25d_ms": 66.5
+    }
+  ],
+  "denovo_25d_designs": [
+    {
+      "id": "denovo_25d_gfp_barrel_10B1H",
+      "title": "2.5DProts De novo 10-Stranded Beta-Barrel + Coaxial Central Alpha-Helix (GFP-like Fold)",
+      "description": "10 tilted antiparallel beta-strands (E1..E10, EL=±68°, R=8.4 Å) surrounding a coaxial central alpha-helix (H1, Z=0, EL=+88°).",
+      "dsl_25d": "<BOS_25DP> CLUST:E1:E2:E3:E4:E5:E6:E7:E8:E9:E10 SSE25D:E1:L11:X+008.4:Y+000.0:Z+000.0:A090:EL+68 SSE25D:E2:L11:X+006.8:Y+004.9:Z+000.8:A126:EL-68 SSE25D:E3:L11:X+002.6:Y+008.0:Z+000.5:A162:EL+68 SSE25D:E4:L11:X-002.6:Y+008.0:Z-000.5:A198:EL-68 SSE25D:E5:L11:X-006.8:Y+004.9:Z-000.8:A234:EL+68 SSE25D:E6:L11:X-008.4:Y+000.0:Z-000.0:A270:EL-68 SSE25D:E7:L11:X-006.8:Y-004.9:Z+000.8:A306:EL+68 SSE25D:E8:L11:X-002.6:Y-008.0:Z+000.5:A342:EL-68 SSE25D:E9:L11:X+002.6:Y-008.0:Z-000.5:A018:EL+68 SSE25D:E10:L11:X+006.8:Y-004.9:Z-000.8:A054:EL-68 SSE25D:H1:L17:X+000.0:Y+000.0:Z+000.0:A000:EL+88 <EOS_25DP>",
+      "n_sse": 11,
+      "n_res": 167,
+      "gen_ms": 7.01,
+      "cif_file": "denovo_25d_gfp_barrel_10B1H.cif",
+      "sse_res_spans": {
+        "E1": [
+          1,
+          11
+        ],
+        "E2": [
+          16,
+          26
+        ],
+        "E3": [
+          31,
+          41
+        ],
+        "E4": [
+          46,
+          56
+        ],
+        "E5": [
+          61,
+          71
+        ],
+        "E6": [
+          76,
+          86
+        ],
+        "E7": [
+          91,
+          101
+        ],
+        "E8": [
+          106,
+          116
+        ],
+        "E9": [
+          121,
+          131
+        ],
+        "E10": [
+          136,
+          146
+        ],
+        "H1": [
+          151,
+          167
+        ]
+      }
+    },
+    {
+      "id": "denovo_25d_rossmann_3layer_4E4H",
+      "title": "2.5DProts De novo 3-Layer α/β/α Rossmann Sandwich (Z = -7.6 Å / 0.0 Å / +7.6 Å)",
+      "description": "Central 4-stranded beta-sheet at Z=0 Å flanked by two alpha-helices in the front layer (Z=+7.6 Å) and two in the back layer (Z=-7.6 Å).",
+      "dsl_25d": "<BOS_25DP> CLUST:E2:E1:E3:E4 SSE25D:E1:L8:X-002.3:Y+000.0:Z+000.0:A005:EL+82 SSE25D:H1:L13:X-004.5:Y+002.5:Z+007.6:A185:EL-78 SSE25D:E2:L8:X-006.9:Y+000.0:Z-000.4:A005:EL+82 SSE25D:H2:L13:X-002.0:Y-002.5:Z-007.6:A185:EL-78 SSE25D:E3:L8:X+002.3:Y+000.0:Z+000.0:A005:EL+82 SSE25D:H3:L13:X+004.2:Y+002.5:Z+007.6:A185:EL-78 SSE25D:E4:L8:X+006.9:Y+000.0:Z-000.4:A005:EL+82 SSE25D:H4:L14:X+005.0:Y-002.5:Z-007.6:A185:EL-78 <EOS_25DP>",
+      "n_sse": 8,
+      "n_res": 113,
+      "gen_ms": 5.29,
+      "cif_file": "denovo_25d_rossmann_3layer_4E4H.cif",
+      "sse_res_spans": {
+        "E1": [
+          1,
+          8
+        ],
+        "H1": [
+          13,
+          25
+        ],
+        "E2": [
+          30,
+          37
+        ],
+        "H2": [
+          42,
+          54
+        ],
+        "E3": [
+          59,
+          66
+        ],
+        "H3": [
+          71,
+          83
+        ],
+        "E4": [
+          88,
+          95
+        ],
+        "H4": [
+          100,
+          113
+        ]
+      }
+    },
+    {
+      "id": "modified_25d_1bxw_helix_plug",
+      "title": "2.5DProts Engineered OmpA Beta-Barrel (1bxwA00) + Coaxial Alpha-Helix Pore Plug (H99)",
+      "description": "Reconstructed 2.5DProts 1bxwA00 barrel augmented with coaxial transmembrane alpha-helix H99 along the 3D barrel pore axis.",
+      "dsl_25d": "<BOS_25DP> CLUST:E3:E8:E34:E10:E27:E16:E24:E19 SSE25D:E3:L30:X-002.1:Y-005.4:Z-001.3:A096:EL-55:C-001.4,-004.9,-001.3:U001,-55:S31.1 SSE25D:E8:L34:X+001.7:Y-004.2:Z+000.9:A276:EL+78:C+001.2,-003.4,+000.9:U218,+78:S34.9 SSE25D:E10:L35:X+004.4:Y-001.4:Z-000.2:A096:EL-78:C+004.5,-000.9,-000.2:U079,-78:S35.8 SSE25D:E16:L40:X+004.0:Y+002.6:Z+000.7:A276:EL+54:C+002.9,+002.1,+000.7:U272,+54:S40.3 SSE25D:E19:L41:X+002.6:Y+004.6:Z-000.1:A096:EL-44:C+003.5,+004.1,-000.1:U079,-44:S42.1 SSE25D:E24:L43:X+000.7:Y+004.6:Z-001.0:A276:EL+33:C+003.1,+004.7,-001.0:U249,+33:S43.0 SSE25D:E27:L29:X-004.3:Y+002.0:Z+000.6:A096:EL-27:C-007.2,+002.8,+000.6:U035,-27:S29.5 SSE25D:E34:L28:X-005.1:Y-002.6:Z+000.4:A276:EL+37:C-004.8,-004.3,+000.4:U189,+37:S28.8 SSE25D:H99:L16:X+000.2:Y+000.0:Z-000.0:A229:EL+56:C+000.2,+000.0,-000.0:U229,+56:S23.0 <EOS_25DP>",
+      "n_sse": 9,
+      "n_res": 328,
+      "gen_ms": 5.21,
+      "cif_file": "modified_25d_1bxw_helix_plug.cif",
+      "sse_res_spans": {
+        "E3": [
+          1,
+          30
+        ],
+        "E8": [
+          35,
+          68
+        ],
+        "E10": [
+          73,
+          107
+        ],
+        "E16": [
+          112,
+          151
+        ],
+        "E19": [
+          156,
+          196
+        ],
+        "E24": [
+          201,
+          243
+        ],
+        "E27": [
+          248,
+          276
+        ],
+        "E34": [
+          281,
+          308
+        ],
+        "H99": [
+          313,
+          328
+        ]
+      }
+    }
+  ]
+}

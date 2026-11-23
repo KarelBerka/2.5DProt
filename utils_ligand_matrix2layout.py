@@ -8,6 +8,7 @@ import math
 import tempfile
 import time
 from collections import OrderedDict
+import os
 import subprocess
 import json
 
@@ -23,6 +24,10 @@ def count_error(for_ligand, ligands, all_s, prime_s,
                        sses_sizes, sses_layout, sses_chain_id, l_s_distances)
 
 
+# Scale factor converting 3D Angstrom distances to 2D canvas coordinate units
+ANGSTROM_TO_2D_SCALE = 0.38
+
+
 def count_ligand_error(for_ligand, ligands, all_s, prime_s,
                        sses_sizes, sses_layout, sses_chain_id, l_s_distances):
     err = 0
@@ -34,8 +39,9 @@ def count_ligand_error(for_ligand, ligands, all_s, prime_s,
 
         for sse in all_s:
            l_dist = math.dist(l_layout[l1], sses_layout[sse])
-           td_dist = l_s_distances[l1][sse]
-           mindist = min(l_dist, td_dist)
+           raw_td_dist = l_s_distances[l1][sse]
+           td_dist = raw_td_dist * ANGSTROM_TO_2D_SCALE
+           mindist = min(l_dist / ANGSTROM_TO_2D_SCALE, raw_td_dist)
            lt_diff = abs(l_dist - td_dist)
            if mindist < 15:
                dif = lt_diff * 5
@@ -57,8 +63,9 @@ def count_ligand_error(for_ligand, ligands, all_s, prime_s,
         lerr = 0
         for l2 in ligands.names:
            l_dist = math.dist(l_layout[l1], l_layout[l2])
-           td_dist = l_s_distances[l1][l2]
-           mindist = abs(min(l_dist, td_dist))
+           raw_td_dist = l_s_distances[l1][l2]
+           td_dist = raw_td_dist * ANGSTROM_TO_2D_SCALE
+           mindist = abs(min(l_dist / ANGSTROM_TO_2D_SCALE, raw_td_dist))
            lt_diff = abs(l_dist - td_dist)
            if mindist < 10:
                dif = lt_diff * 3
@@ -82,8 +89,9 @@ def count_channel_error(for_ligand, ligands, all_s, prime_s,
 
         for sse in all_s:
            l_dist = math.dist(l_layout[l1], sses_layout[sse])
-           td_dist = l_s_distances[l1][sse]
-           mindist = min(l_dist, td_dist)
+           raw_td_dist = l_s_distances[l1][sse]
+           td_dist = raw_td_dist * ANGSTROM_TO_2D_SCALE
+           mindist = min(l_dist / ANGSTROM_TO_2D_SCALE, raw_td_dist)
            lt_diff = (abs(l_dist - td_dist) + 3*max(0, l_dist-td_dist))/4
            if mindist < 15:
                dif = lt_diff * (9-mindist/4)* (9-mindist/4)
@@ -105,8 +113,9 @@ def count_channel_error(for_ligand, ligands, all_s, prime_s,
         lerr = 0
         for l2 in ligands.names:
            l_dist = math.dist(l_layout[l1], l_layout[l2])
-           td_dist = l_s_distances[l1][l2]
-           mindist = abs(min(l_dist, td_dist))
+           raw_td_dist = l_s_distances[l1][l2]
+           td_dist = raw_td_dist * ANGSTROM_TO_2D_SCALE
+           mindist = abs(min(l_dist / ANGSTROM_TO_2D_SCALE, raw_td_dist))
            lt_diff = max(0, l_dist - td_dist)
            if mindist < 10:
                dif = lt_diff * 3
@@ -357,7 +366,7 @@ def modify_ligand_layout_via_evolution(ligands, all_s, prime_s, sses_sizes,
         CHECK_EVERY = 100000
         max_generations = 500000
 
-    if flag == "channels": 
+    if flag == "channels" and os.path.isfile("../gcc/ligands_main_loop"): 
         # do main loop in language C -
         # prepare language c input:
         aux_sses_sizes = {}

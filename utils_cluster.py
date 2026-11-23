@@ -5,7 +5,9 @@ import math
 import random
 import logging
 from collections import OrderedDict
+import numpy as np
 import utils
+import utils_dimred
 COEF = 0.2  # TODO:
 
 
@@ -204,13 +206,24 @@ def find_pair_layout(distance_matrix, relevant_clusters):
     return cluster_layout
 
 def modify_cluster_layout_via_evolution(cluster_layout, \
-        distances, sizes, nearby, relevant_clusters, no_start, chain, domain):
+        distances, sizes, nearby, relevant_clusters, no_start, chain, domain, \
+        method=None, sses_positions=None):
     """
     Try random move of random SSE in the 2D cluster layout and only keep these if it
     lead to a lower total error the layout. Repeat untill there is significant
     improvement in last 10k attempts.
     """
     relevant_clusters = list(relevant_clusters)
+    active_method = utils_dimred.get_active_method(None, method)
+    if active_method != "evolution":
+        D, weights, X3d = utils_dimred._build_cluster_distance_matrix(
+            relevant_clusters, distances, sizes, sses_positions=sses_positions
+        )
+        X2d = utils_dimred.embed_distance_matrix(D, weights=weights, X3d=X3d, method=active_method)
+        X2d = X2d - np.mean(X2d, axis=0, keepdims=True)
+        for idx, s in enumerate(relevant_clusters):
+            cluster_layout[s] = (float(X2d[idx, 0]), float(X2d[idx, 1]))
+        return cluster_layout
 
     logging.debug(f"relevant_clusters {relevant_clusters}")
     # Tune first level sec structures
@@ -415,7 +428,7 @@ def cluster_is_circle(clusters_sses, bcc_near, chain, domain):
 
 def compute_clusters_layout(clusters, distance_matrix, sizes, bcc_near, \
        relevant_sses, bcc_orientation, start_layout, start_angles, prime_sses, \
-       chain, domain):
+       chain, domain, method=None, sses_positions=None):
     """
     Compute clusters layout - in clusters with >1 sses (sheets),
     there have to be generated layout. The distances between sheets have to be <2 and >4
@@ -423,6 +436,7 @@ def compute_clusters_layout(clusters, distance_matrix, sizes, bcc_near, \
     """
     all_clusters_layout = OrderedDict()
     all_clusters_angles_layout = OrderedDict()
+    active_method = utils_dimred.get_active_method(None, method)
 
     for cluster in clusters:
         # add the first sse of the given layout
@@ -449,7 +463,9 @@ def compute_clusters_layout(clusters, distance_matrix, sizes, bcc_near, \
                                                                  clusters_sses,
                                                                  no_start,
                                                                  chain,
-                                                                 domain)
+                                                                 domain,
+                                                                 method=active_method,
+                                                                 sses_positions=sses_positions)
 
         if len(clusters_sses) > 1:
             if cluster_is_circle(clusters_sses, bcc_near, chain, domain) is True:
@@ -469,7 +485,8 @@ def compute_clusters_layout(clusters, distance_matrix, sizes, bcc_near, \
                 start, end = utils.find_most_distant_pair(cluster_layout, relevant_clusters_sses)
             if start != end:
                 cluster_layout = rotate_cluster_layout(cluster_layout, start, end)
-                cluster_layout = tune_cluster_layout_to_2_3_near_distances(cluster_layout, bcc_near, chain, domain)
+                if active_method == "evolution" or "+evolution" in active_method:
+                    cluster_layout = tune_cluster_layout_to_2_3_near_distances(cluster_layout, bcc_near, chain, domain)
 
         all_clusters_layout[cluster] = center_cluster_layout(cluster_layout)
         start_sse = clusters_sses[0]
@@ -510,4 +527,3 @@ def compute_clusters_layout(clusters, distance_matrix, sizes, bcc_near, \
     logging.debug(f"all_clusters_layout {all_clusters_layout}")
     logging.debug(f"all_clustars_angles_layout {all_clusters_angles_layout}")
     return all_clusters_layout, all_clusters_angles_layout
-

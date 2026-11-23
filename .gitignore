@@ -31,3 +31,9 @@ pins/pdb
 # Dependencies
 overprot/
 Mole2_cmd/
+
+# Python & benchmark caches
+__pycache__/
+*.py[cod]
+benchmark_dimred_results/cache/
+benchmark_dimred_aa_results/cache/
