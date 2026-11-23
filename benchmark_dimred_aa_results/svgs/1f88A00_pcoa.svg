@@ -1,0 +1,671 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-54.74 -43.50 86.38 76.81" width="100%" height="100%">
+<rect x="-54.74" y="-43.50" width="86.38" height="76.81" fill="#ffffff"/>
+<line x1="18.12" y1="14.05" x2="12.35" y2="13.38" stroke="#94a3b8" stroke-width="0.22" stroke-dasharray="0.5,0.5" opacity="0.65"/>
+<line x1="17.88" y1="11.36" x2="13.35" y2="10.47" stroke="#94a3b8" stroke-width="0.22" stroke-dasharray="0.5,0.5" opacity="0.65"/>
+<line x1="4.77" y1="5.42" x2="2.59" y2="4.30" stroke="#94a3b8" stroke-width="0.22" stroke-dasharray="0.5,0.5" opacity="0.65"/>
+<line x1="4.77" y1="5.42" x2="5.02" y2="1.31" stroke="#94a3b8" stroke-width="0.22" stroke-dasharray="0.5,0.5" opacity="0.65"/>
+<line x1="6.47" y1="7.67" x2="1.45" y2="8.10" stroke="#94a3b8" stroke-width="0.22" stroke-dasharray="0.5,0.5" opacity="0.65"/>
+<line x1="6.47" y1="7.67" x2="2.59" y2="4.30" stroke="#94a3b8" stroke-width="0.22" stroke-dasharray="0.5,0.5" opacity="0.65"/>
+<line x1="5.30" y1="10.21" x2="-0.42" y2="10.66" stroke="#94a3b8" stroke-width="0.22" stroke-dasharray="0.5,0.5" opacity="0.65"/>
+<line x1="5.30" y1="10.21" x2="1.45" y2="8.10" stroke="#94a3b8" stroke-width="0.22" stroke-dasharray="0.5,0.5" opacity="0.65"/>
+<line x1="5.13" y1="9.56" x2="-0.42" y2="10.66" stroke="#94a3b8" stroke-width="0.22" stroke-dasharray="0.5,0.5" opacity="0.65"/>
+<line x1="5.13" y1="9.56" x2="1.45" y2="8.10" stroke="#94a3b8" stroke-width="0.22" stroke-dasharray="0.5,0.5" opacity="0.65"/>
+<line x1="18.12" y1="14.05" x2="17.96" y2="12.26" stroke="#4664da" stroke-width="1.3" stroke-linecap="butt" opacity="0.38"/>
+<polygon points="17.83,10.77 18.91,12.18 17.01,12.34" fill="#4664da" opacity="0.55"/>
+<line x1="13.35" y1="10.47" x2="12.64" y2="12.53" stroke="#4669e0" stroke-width="1.3" stroke-linecap="butt" opacity="0.38"/>
+<polygon points="12.15,13.95 11.74,12.22 13.54,12.84" fill="#4669e0" opacity="0.55"/>
+<line x1="6.45" y1="24.42" x2="9.24" y2="20.02" stroke="#4771e9" stroke-width="2.2" stroke-linecap="round" opacity="0.28"/>
+<line x1="-0.16" y1="25.32" x2="-36.26" y2="-3.94" stroke="#4391fe" stroke-width="2.2" stroke-linecap="round" opacity="0.28"/>
+<line x1="-25.85" y1="-13.96" x2="-1.72" y2="24.46" stroke="#1bd0d5" stroke-width="2.2" stroke-linecap="round" opacity="0.28"/>
+<line x1="2.74" y1="14.17" x2="-22.15" y2="-28.72" stroke="#92ff47" stroke-width="2.2" stroke-linecap="round" opacity="0.28"/>
+<line x1="-26.09" y1="-17.81" x2="5.18" y2="-0.02" stroke="#d2e935" stroke-width="2.2" stroke-linecap="round" opacity="0.28"/>
+<line x1="4.77" y1="5.42" x2="5.05" y2="8.66" stroke="#eecf3a" stroke-width="1.3" stroke-linecap="butt" opacity="0.38"/>
+<polygon points="5.18,10.16 4.11,8.75 6.00,8.58" fill="#eecf3a" opacity="0.55"/>
+<line x1="-0.42" y1="10.66" x2="4.57" y2="2.08" stroke="#f7c13a" stroke-width="1.3" stroke-linecap="butt" opacity="0.38"/>
+<polygon points="5.33,0.79 5.39,2.56 3.75,1.61" fill="#f7c13a" opacity="0.55"/>
+<line x1="13.40" y1="-3.89" x2="-21.00" y2="-26.72" stroke="#fe9b2d" stroke-width="2.2" stroke-linecap="round" opacity="0.28"/>
+<line x1="-35.71" y1="-21.44" x2="15.03" y2="0.96" stroke="#ef5811" stroke-width="2.2" stroke-linecap="round" opacity="0.28"/>
+<line x1="7.50" y1="12.04" x2="-30.95" y2="-6.66" stroke="#c82803" stroke-width="2.2" stroke-linecap="round" opacity="0.28"/>
+<line x1="-33.81" y1="-8.42" x2="-40.96" y2="6.52" stroke="#a11201" stroke-width="2.2" stroke-linecap="round" opacity="0.28"/>
+<line x1="23.64" y1="11.34" x2="20.09" y2="11.24" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="20.09" y1="11.24" x2="17.92" y2="11.88" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="17.92" y1="11.88" x2="18.12" y2="14.05" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="18.12" y1="14.05" x2="17.88" y2="11.36" stroke="#4664da" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="17.88" y1="11.36" x2="16.73" y2="12.99" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="16.73" y1="12.99" x2="16.42" y2="11.21" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="16.42" y1="11.21" x2="12.32" y2="11.02" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="12.32" y1="11.02" x2="11.96" y2="11.01" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="11.96" y1="11.01" x2="13.35" y2="10.47" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="13.35" y1="10.47" x2="12.35" y2="13.38" stroke="#4669e0" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="12.35" y1="13.38" x2="12.75" y2="11.73" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="12.75" y1="11.73" x2="14.75" y2="15.29" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="14.75" y1="15.29" x2="18.76" y2="16.41" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="18.76" y1="16.41" x2="20.18" y2="19.20" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="20.18" y1="19.20" x2="23.52" y2="20.17" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="23.52" y1="20.17" x2="21.41" y2="23.72" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="21.41" y1="23.72" x2="20.51" y2="24.00" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="20.51" y1="24.00" x2="16.61" y2="24.54" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="16.61" y1="24.54" x2="15.23" y2="21.12" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="15.23" y1="21.12" x2="13.36" y2="21.72" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="13.36" y1="21.72" x2="11.76" y2="19.17" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="11.76" y1="19.17" x2="7.84" y2="17.99" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="7.84" y1="17.99" x2="7.00" y2="19.01" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="7.00" y1="19.01" x2="8.43" y2="22.94" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="8.43" y1="22.94" x2="7.58" y2="24.49" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="7.58" y1="24.49" x2="5.24" y2="24.00" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="5.24" y1="24.00" x2="6.76" y2="21.46" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="6.76" y1="21.46" x2="6.45" y2="24.42" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="6.45" y1="24.42" x2="8.70" y2="22.84" stroke="#4771e9" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="8.70" y1="22.84" x2="9.24" y2="20.02" stroke="#4771e9" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="9.24" y1="20.02" x2="5.81" y2="20.87" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="5.81" y1="20.87" x2="3.19" y2="24.05" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="3.19" y1="24.05" x2="-0.16" y2="25.32" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-0.16" y1="25.32" x2="-2.08" y2="24.38" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-2.08" y1="24.38" x2="-2.50" y2="22.35" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-2.50" y1="22.35" x2="-3.31" y2="21.81" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-3.31" y1="21.81" x2="-5.30" y2="21.89" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-5.30" y1="21.89" x2="-6.57" y2="20.15" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-6.57" y1="20.15" x2="-6.97" y2="18.62" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-6.97" y1="18.62" x2="-8.39" y2="18.88" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-8.39" y1="18.88" x2="-10.29" y2="18.32" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-10.29" y1="18.32" x2="-10.97" y2="16.29" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-10.97" y1="16.29" x2="-11.64" y2="15.37" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-11.64" y1="15.37" x2="-13.46" y2="15.68" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-13.46" y1="15.68" x2="-15.03" y2="14.37" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-15.03" y1="14.37" x2="-15.41" y2="12.48" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-15.41" y1="12.48" x2="-16.49" y2="12.35" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-16.49" y1="12.35" x2="-18.47" y2="12.22" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-18.47" y1="12.22" x2="-19.51" y2="10.33" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-19.51" y1="10.33" x2="-19.66" y2="8.80" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-19.66" y1="8.80" x2="-21.10" y2="8.80" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-21.10" y1="8.80" x2="-23.25" y2="8.10" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-23.25" y1="8.10" x2="-23.85" y2="6.32" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-23.85" y1="6.32" x2="-23.94" y2="5.08" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-23.94" y1="5.08" x2="-25.53" y2="5.07" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-25.53" y1="5.07" x2="-27.53" y2="4.16" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-27.53" y1="4.16" x2="-27.80" y2="2.23" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-27.80" y1="2.23" x2="-28.28" y2="1.59" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-28.28" y1="1.59" x2="-30.28" y2="1.60" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-30.28" y1="1.60" x2="-31.80" y2="0.11" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-31.80" y1="0.11" x2="-31.99" y2="-1.75" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-31.99" y1="-1.75" x2="-32.98" y2="-1.99" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-32.98" y1="-1.99" x2="-35.11" y2="-2.16" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-35.11" y1="-2.16" x2="-36.26" y2="-3.94" stroke="#4391fe" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-36.26" y1="-3.94" x2="-36.47" y2="-7.29" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-36.47" y1="-7.29" x2="-36.40" y2="-10.61" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-36.40" y1="-10.61" x2="-33.17" y2="-9.36" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-33.17" y1="-9.36" x2="-30.56" y2="-11.80" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-30.56" y1="-11.80" x2="-28.72" y2="-14.56" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-28.72" y1="-14.56" x2="-25.85" y2="-13.96" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-25.85" y1="-13.96" x2="-25.31" y2="-12.31" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-25.31" y1="-12.31" x2="-25.63" y2="-10.48" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-25.63" y1="-10.48" x2="-24.17" y2="-9.63" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-24.17" y1="-9.63" x2="-22.33" y2="-8.73" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-22.33" y1="-8.73" x2="-22.29" y2="-6.76" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-22.29" y1="-6.76" x2="-22.10" y2="-5.12" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-22.10" y1="-5.12" x2="-20.17" y2="-4.46" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-20.17" y1="-4.46" x2="-19.17" y2="-2.98" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-19.17" y1="-2.98" x2="-19.48" y2="-0.99" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-19.48" y1="-0.99" x2="-18.33" y2="0.12" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-18.33" y1="0.12" x2="-16.42" y2="0.73" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-16.42" y1="0.73" x2="-16.16" y2="2.46" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-16.16" y1="2.46" x2="-16.19" y2="4.30" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-16.19" y1="4.30" x2="-14.45" y2="5.01" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-14.45" y1="5.01" x2="-13.13" y2="6.10" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-13.13" y1="6.10" x2="-13.41" y2="8.07" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-13.41" y1="8.07" x2="-12.65" y2="9.50" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-12.65" y1="9.50" x2="-10.92" y2="9.75" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-10.92" y1="9.75" x2="-9.53" y2="10.69" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-9.53" y1="10.69" x2="-9.65" y2="12.29" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-9.65" y1="12.29" x2="-9.30" y2="14.32" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-9.30" y1="14.32" x2="-7.31" y2="15.24" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-7.31" y1="15.24" x2="-6.46" y2="15.83" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-6.46" y1="15.83" x2="-6.72" y2="17.78" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-6.72" y1="17.78" x2="-5.61" y2="19.57" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-5.61" y1="19.57" x2="-3.74" y2="19.98" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-3.74" y1="19.98" x2="-3.43" y2="21.03" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-3.43" y1="21.03" x2="-3.48" y2="23.18" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-3.48" y1="23.18" x2="-1.72" y2="24.46" stroke="#1bd0d5" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-1.72" y1="24.46" x2="1.24" y2="22.39" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="1.24" y1="22.39" x2="2.80" y2="19.96" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="2.80" y1="19.96" x2="1.91" y2="18.04" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="1.91" y1="18.04" x2="1.08" y2="21.29" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="1.08" y1="21.29" x2="-0.07" y2="18.90" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-0.07" y1="18.90" x2="3.55" y2="17.06" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="3.55" y1="17.06" x2="2.74" y2="14.17" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="2.74" y1="14.17" x2="0.98" y2="13.00" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="0.98" y1="13.00" x2="-0.16" y2="12.77" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-0.16" y1="12.77" x2="0.13" y2="10.99" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="0.13" y1="10.99" x2="-0.71" y2="9.06" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-0.71" y1="9.06" x2="-2.62" y2="8.46" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-2.62" y1="8.46" x2="-3.07" y2="7.76" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-3.07" y1="7.76" x2="-2.79" y2="5.71" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-2.79" y1="5.71" x2="-3.86" y2="4.08" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-3.86" y1="4.08" x2="-5.72" y2="3.37" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-5.72" y1="3.37" x2="-5.91" y2="2.28" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-5.91" y1="2.28" x2="-5.72" y2="0.21" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-5.72" y1="0.21" x2="-7.17" y2="-1.02" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-7.17" y1="-1.02" x2="-8.71" y2="-1.65" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-8.71" y1="-1.65" x2="-8.49" y2="-3.17" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-8.49" y1="-3.17" x2="-8.72" y2="-5.15" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-8.72" y1="-5.15" x2="-10.52" y2="-6.00" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-10.52" y1="-6.00" x2="-11.35" y2="-7.02" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-11.35" y1="-7.02" x2="-10.87" y2="-8.89" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-10.87" y1="-8.89" x2="-11.62" y2="-10.58" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-11.62" y1="-10.58" x2="-13.53" y2="-11.28" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-13.53" y1="-11.28" x2="-13.84" y2="-12.67" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-13.84" y1="-12.67" x2="-13.77" y2="-14.69" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-13.77" y1="-14.69" x2="-15.32" y2="-15.70" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-15.32" y1="-15.70" x2="-16.68" y2="-16.42" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-16.68" y1="-16.42" x2="-16.39" y2="-18.11" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-16.39" y1="-18.11" x2="-17.04" y2="-19.95" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-17.04" y1="-19.95" x2="-18.92" y2="-20.51" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-18.92" y1="-20.51" x2="-19.60" y2="-21.62" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-19.60" y1="-21.62" x2="-19.46" y2="-23.79" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-19.46" y1="-23.79" x2="-20.70" y2="-25.14" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-20.70" y1="-25.14" x2="-22.41" y2="-25.71" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-22.41" y1="-25.71" x2="-22.63" y2="-26.81" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-22.63" y1="-26.81" x2="-22.15" y2="-28.72" stroke="#92ff47" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-22.15" y1="-28.72" x2="-22.91" y2="-31.84" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-22.91" y1="-31.84" x2="-20.84" y2="-31.54" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-20.84" y1="-31.54" x2="-21.42" y2="-32.86" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-21.42" y1="-32.86" x2="-24.67" y2="-35.50" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-24.67" y1="-35.50" x2="-27.99" y2="-33.35" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-27.99" y1="-33.35" x2="-26.40" y2="-29.68" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-26.40" y1="-29.68" x2="-27.79" y2="-25.80" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-27.79" y1="-25.80" x2="-26.15" y2="-22.20" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-26.15" y1="-22.20" x2="-27.73" y2="-20.10" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-27.73" y1="-20.10" x2="-26.09" y2="-17.81" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-26.09" y1="-17.81" x2="-24.23" y2="-17.78" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-24.23" y1="-17.78" x2="-22.50" y2="-17.73" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-22.50" y1="-17.73" x2="-21.76" y2="-15.93" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-21.76" y1="-15.93" x2="-20.38" y2="-14.68" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-20.38" y1="-14.68" x2="-18.37" y2="-15.02" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-18.37" y1="-15.02" x2="-17.15" y2="-14.21" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-17.15" y1="-14.21" x2="-16.44" y2="-12.28" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-16.44" y1="-12.28" x2="-14.82" y2="-11.84" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-14.82" y1="-11.84" x2="-12.97" y2="-12.07" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-12.97" y1="-12.07" x2="-11.99" y2="-10.59" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-11.99" y1="-10.59" x2="-10.89" y2="-9.04" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-10.89" y1="-9.04" x2="-8.98" y2="-9.24" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-8.98" y1="-9.24" x2="-7.53" y2="-9.03" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-7.53" y1="-9.03" x2="-6.75" y2="-7.14" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-6.75" y1="-7.14" x2="-5.38" y2="-6.11" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-5.38" y1="-6.11" x2="-3.48" y2="-6.60" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-3.48" y1="-6.60" x2="-2.19" y2="-5.42" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-2.19" y1="-5.42" x2="-1.59" y2="-3.53" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-1.59" y1="-3.53" x2="-0.38" y2="-2.89" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-0.38" y1="-2.89" x2="1.91" y2="-2.74" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="1.91" y1="-2.74" x2="3.24" y2="-1.02" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="3.24" y1="-1.02" x2="3.58" y2="0.27" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="3.58" y1="0.27" x2="5.18" y2="-0.02" stroke="#d2e935" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="5.18" y1="-0.02" x2="8.84" y2="0.00" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="8.84" y1="0.00" x2="8.63" y2="-2.91" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="8.63" y1="-2.91" x2="9.06" y2="-0.87" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="9.06" y1="-0.87" x2="7.16" y2="2.80" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="7.16" y1="2.80" x2="4.77" y2="5.42" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="4.77" y1="5.42" x2="6.47" y2="7.67" stroke="#eecf3a" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="6.47" y1="7.67" x2="5.30" y2="10.21" stroke="#eecf3a" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="5.30" y1="10.21" x2="5.13" y2="9.56" stroke="#eecf3a" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="5.13" y1="9.56" x2="5.03" y2="10.99" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="5.03" y1="10.99" x2="4.17" y2="15.03" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="4.17" y1="15.03" x2="4.44" y2="14.43" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="4.44" y1="14.43" x2="0.37" y2="14.66" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="0.37" y1="14.66" x2="-0.42" y2="10.66" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-0.42" y1="10.66" x2="1.45" y2="8.10" stroke="#f7c13a" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="1.45" y1="8.10" x2="2.59" y2="4.30" stroke="#f7c13a" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="2.59" y1="4.30" x2="5.02" y2="1.31" stroke="#f7c13a" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="5.02" y1="1.31" x2="9.09" y2="2.11" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="9.09" y1="2.11" x2="10.58" y2="0.16" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="10.58" y1="0.16" x2="13.15" y2="3.27" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="13.15" y1="3.27" x2="16.10" y2="3.07" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="16.10" y1="3.07" x2="18.07" y2="-0.13" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="18.07" y1="-0.13" x2="17.80" y2="1.67" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="17.80" y1="1.67" x2="19.27" y2="-1.81" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="19.27" y1="-1.81" x2="18.11" y2="-0.48" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="18.11" y1="-0.48" x2="13.90" y2="-0.57" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="13.90" y1="-0.57" x2="14.15" y2="-4.12" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="14.15" y1="-4.12" x2="13.40" y2="-3.89" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="13.40" y1="-3.89" x2="13.28" y2="-5.38" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="13.28" y1="-5.38" x2="11.85" y2="-6.81" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="11.85" y1="-6.81" x2="9.72" y2="-6.86" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="9.72" y1="-6.86" x2="8.79" y2="-7.18" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="8.79" y1="-7.18" x2="8.35" y2="-9.09" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="8.35" y1="-9.09" x2="6.71" y2="-9.94" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="6.71" y1="-9.94" x2="4.89" y2="-9.60" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="4.89" y1="-9.60" x2="4.26" y2="-10.54" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="4.26" y1="-10.54" x2="3.58" y2="-12.43" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="3.58" y1="-12.43" x2="1.88" y2="-12.97" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="1.88" y1="-12.97" x2="0.33" y2="-12.37" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="0.33" y1="-12.37" x2="-0.50" y2="-13.02" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-0.50" y1="-13.02" x2="-0.74" y2="-14.73" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-0.74" y1="-14.73" x2="-2.04" y2="-16.13" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-2.04" y1="-16.13" x2="-4.12" y2="-16.11" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-4.12" y1="-16.11" x2="-4.77" y2="-16.53" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-4.77" y1="-16.53" x2="-5.06" y2="-18.41" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-5.06" y1="-18.41" x2="-6.91" y2="-19.34" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-6.91" y1="-19.34" x2="-8.59" y2="-19.00" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-8.59" y1="-19.00" x2="-8.82" y2="-20.02" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-8.82" y1="-20.02" x2="-9.55" y2="-21.92" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-9.55" y1="-21.92" x2="-11.62" y2="-22.34" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-11.62" y1="-22.34" x2="-12.77" y2="-22.24" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-12.77" y1="-22.24" x2="-12.85" y2="-23.87" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-12.85" y1="-23.87" x2="-14.42" y2="-25.29" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-14.42" y1="-25.29" x2="-16.37" y2="-25.06" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-16.37" y1="-25.06" x2="-16.93" y2="-25.95" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-16.93" y1="-25.95" x2="-18.18" y2="-27.80" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-18.18" y1="-27.80" x2="-20.22" y2="-27.66" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-20.22" y1="-27.66" x2="-21.00" y2="-26.72" stroke="#fe9b2d" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-21.00" y1="-26.72" x2="-19.78" y2="-23.85" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-19.78" y1="-23.85" x2="-20.03" y2="-19.82" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-20.03" y1="-19.82" x2="-24.09" y2="-19.40" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-24.09" y1="-19.40" x2="-27.27" y2="-17.91" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-27.27" y1="-17.91" x2="-30.05" y2="-16.43" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-30.05" y1="-16.43" x2="-35.08" y2="-13.85" stroke="#cbd5e1" stroke-width="0.22" stroke-dasharray="0.6,0.6" opacity="0.55"/>
+<line x1="-35.08" y1="-13.85" x2="-36.21" y2="-16.66" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-36.21" y1="-16.66" x2="-39.03" y2="-17.97" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-39.03" y1="-17.97" x2="-37.85" y2="-21.69" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-37.85" y1="-21.69" x2="-35.71" y2="-21.44" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-35.71" y1="-21.44" x2="-34.08" y2="-19.88" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-34.08" y1="-19.88" x2="-33.11" y2="-18.62" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-33.11" y1="-18.62" x2="-30.82" y2="-18.70" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-30.82" y1="-18.70" x2="-29.35" y2="-18.16" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-29.35" y1="-18.16" x2="-28.65" y2="-16.31" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-28.65" y1="-16.31" x2="-26.92" y2="-15.78" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-26.92" y1="-15.78" x2="-24.86" y2="-16.14" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-24.86" y1="-16.14" x2="-23.80" y2="-14.99" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-23.80" y1="-14.99" x2="-22.79" y2="-13.39" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-22.79" y1="-13.39" x2="-20.82" y2="-13.42" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-20.82" y1="-13.42" x2="-19.09" y2="-13.34" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-19.09" y1="-13.34" x2="-18.18" y2="-11.53" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-18.18" y1="-11.53" x2="-16.80" y2="-10.52" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-16.80" y1="-10.52" x2="-14.61" y2="-10.83" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-14.61" y1="-10.83" x2="-13.47" y2="-9.85" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-13.47" y1="-9.85" x2="-12.75" y2="-8.09" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-12.75" y1="-8.09" x2="-10.86" y2="-7.89" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-10.86" y1="-7.89" x2="-8.88" y2="-7.82" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-8.88" y1="-7.82" x2="-8.12" y2="-6.28" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-8.12" y1="-6.28" x2="-7.10" y2="-5.02" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-7.10" y1="-5.02" x2="-5.02" y2="-5.14" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-5.02" y1="-5.14" x2="-3.27" y2="-5.37" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-3.27" y1="-5.37" x2="-1.82" y2="-3.71" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-1.82" y1="-3.71" x2="-0.49" y2="-2.84" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-0.49" y1="-2.84" x2="0.99" y2="-3.69" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="0.99" y1="-3.69" x2="2.65" y2="-3.39" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="2.65" y1="-3.39" x2="4.28" y2="-1.69" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="4.28" y1="-1.69" x2="5.50" y2="-1.43" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="5.50" y1="-1.43" x2="7.15" y2="-2.26" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="7.15" y1="-2.26" x2="8.92" y2="-1.25" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="8.92" y1="-1.25" x2="10.42" y2="0.15" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="10.42" y1="0.15" x2="11.68" y2="-0.37" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="11.68" y1="-0.37" x2="13.50" y2="-0.61" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="13.50" y1="-0.61" x2="15.03" y2="0.96" stroke="#ef5811" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="15.03" y1="0.96" x2="16.72" y2="1.16" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="16.72" y1="1.16" x2="18.98" y2="4.63" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="18.98" y1="4.63" x2="17.98" y2="4.36" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="17.98" y1="4.36" x2="16.68" y2="7.60" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="16.68" y1="7.60" x2="12.58" y2="8.00" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="12.58" y1="8.00" x2="10.13" y2="11.28" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="10.13" y1="11.28" x2="7.50" y2="12.04" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="7.50" y1="12.04" x2="5.44" y2="11.29" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="5.44" y1="11.29" x2="4.84" y2="9.44" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="4.84" y1="9.44" x2="3.15" y2="8.59" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="3.15" y1="8.59" x2="1.17" y2="9.20" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="1.17" y1="9.20" x2="-0.69" y2="8.14" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-0.69" y1="8.14" x2="-1.84" y2="6.30" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-1.84" y1="6.30" x2="-2.87" y2="6.31" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-2.87" y1="6.31" x2="-4.94" y2="6.80" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-4.94" y1="6.80" x2="-6.69" y2="5.54" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-6.69" y1="5.54" x2="-7.63" y2="4.05" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-7.63" y1="4.05" x2="-9.33" y2="4.53" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-9.33" y1="4.53" x2="-11.53" y2="3.81" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-11.53" y1="3.81" x2="-12.49" y2="2.19" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-12.49" y1="2.19" x2="-14.26" y2="2.49" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-14.26" y1="2.49" x2="-16.31" y2="2.13" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-16.31" y1="2.13" x2="-17.51" y2="0.59" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-17.51" y1="0.59" x2="-18.95" y2="-0.95" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-18.95" y1="-0.95" x2="-21.25" y2="-0.87" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-21.25" y1="-0.87" x2="-22.39" y2="-0.92" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-22.39" y1="-0.92" x2="-23.35" y2="-2.75" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-23.35" y1="-2.75" x2="-25.23" y2="-3.60" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-25.23" y1="-3.60" x2="-27.32" y2="-3.13" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-27.32" y1="-3.13" x2="-28.17" y2="-3.98" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-28.17" y1="-3.98" x2="-29.15" y2="-5.87" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-29.15" y1="-5.87" x2="-30.95" y2="-6.66" stroke="#c82803" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-30.95" y1="-6.66" x2="-33.81" y2="-8.42" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-33.81" y1="-8.42" x2="-34.55" y2="-7.68" stroke="#a11201" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-34.55" y1="-7.68" x2="-34.10" y2="-5.74" stroke="#a11201" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-34.10" y1="-5.74" x2="-34.81" y2="-3.92" stroke="#a11201" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-34.81" y1="-3.92" x2="-36.65" y2="-3.03" stroke="#a11201" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-36.65" y1="-3.03" x2="-36.72" y2="-2.03" stroke="#a11201" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-36.72" y1="-2.03" x2="-36.43" y2="0.14" stroke="#a11201" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-36.43" y1="0.14" x2="-37.90" y2="1.44" stroke="#a11201" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-37.90" y1="1.44" x2="-39.22" y2="1.98" stroke="#a11201" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-39.22" y1="1.98" x2="-38.84" y2="3.61" stroke="#a11201" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-38.84" y1="3.61" x2="-39.12" y2="5.67" stroke="#a11201" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-39.12" y1="5.67" x2="-40.96" y2="6.52" stroke="#a11201" stroke-width="0.52" stroke-linecap="round" opacity="0.90"/>
+<line x1="-40.96" y1="6.52" x2="-43.22" y2="6.55" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-43.22" y1="6.55" x2="-44.53" y2="2.61" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<line x1="-44.53" y1="2.61" x2="-46.74" y2="2.06" stroke="#94a3b8" stroke-width="0.32" stroke-linecap="round" opacity="0.65"/>
+<circle cx="23.64" cy="11.34" r="0.30" fill="#94a3b8" opacity="0.72"><title>MET 1 (Chain A, Loop)</title></circle>
+<circle cx="20.09" cy="11.24" r="0.30" fill="#94a3b8" opacity="0.72"><title>ASN 2 (Chain A, Loop)</title></circle>
+<circle cx="17.92" cy="11.88" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLY 3 (Chain A, Loop)</title></circle>
+<circle cx="18.12" cy="14.05" r="0.52" fill="#4664da" stroke="#0f172a" stroke-width="0.10" opacity="0.95"><title>THR 4 (E0, E)</title></circle>
+<circle cx="17.88" cy="11.36" r="0.52" fill="#4664da" stroke="#0f172a" stroke-width="0.10" opacity="0.95"><title>GLU 5 (E0, E)</title></circle>
+<circle cx="16.73" cy="12.99" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLY 6 (Chain A, Loop)</title></circle>
+<circle cx="16.42" cy="11.21" r="0.30" fill="#94a3b8" opacity="0.72"><title>PRO 7 (Chain A, Loop)</title></circle>
+<circle cx="12.32" cy="11.02" r="0.30" fill="#94a3b8" opacity="0.72"><title>ASN 8 (Chain A, Loop)</title></circle>
+<circle cx="11.96" cy="11.01" r="0.30" fill="#94a3b8" opacity="0.72"><title>PHE 9 (Chain A, Loop)</title></circle>
+<circle cx="13.35" cy="10.47" r="0.52" fill="#4669e0" stroke="#0f172a" stroke-width="0.10" opacity="0.95"><title>TYR 10 (E2, E)</title></circle>
+<circle cx="12.35" cy="13.38" r="0.52" fill="#4669e0" stroke="#0f172a" stroke-width="0.10" opacity="0.95"><title>VAL 11 (E2, E)</title></circle>
+<circle cx="12.75" cy="11.73" r="0.30" fill="#94a3b8" opacity="0.72"><title>PRO 12 (Chain A, Loop)</title></circle>
+<circle cx="14.75" cy="15.29" r="0.30" fill="#94a3b8" opacity="0.72"><title>PHE 13 (Chain A, Loop)</title></circle>
+<circle cx="18.76" cy="16.41" r="0.30" fill="#94a3b8" opacity="0.72"><title>SER 14 (Chain A, Loop)</title></circle>
+<circle cx="20.18" cy="19.20" r="0.30" fill="#94a3b8" opacity="0.72"><title>ASN 15 (Chain A, Loop)</title></circle>
+<circle cx="23.52" cy="20.17" r="0.30" fill="#94a3b8" opacity="0.72"><title>LYS 16 (Chain A, Loop)</title></circle>
+<circle cx="21.41" cy="23.72" r="0.30" fill="#94a3b8" opacity="0.72"><title>THR 17 (Chain A, Loop)</title></circle>
+<circle cx="20.51" cy="24.00" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLY 18 (Chain A, Loop)</title></circle>
+<circle cx="16.61" cy="24.54" r="0.30" fill="#94a3b8" opacity="0.72"><title>VAL 19 (Chain A, Loop)</title></circle>
+<circle cx="15.23" cy="21.12" r="0.30" fill="#94a3b8" opacity="0.72"><title>VAL 20 (Chain A, Loop)</title></circle>
+<circle cx="13.36" cy="21.72" r="0.30" fill="#94a3b8" opacity="0.72"><title>ARG 21 (Chain A, Loop)</title></circle>
+<circle cx="11.76" cy="19.17" r="0.30" fill="#94a3b8" opacity="0.72"><title>SER 22 (Chain A, Loop)</title></circle>
+<circle cx="7.84" cy="17.99" r="0.30" fill="#94a3b8" opacity="0.72"><title>PRO 23 (Chain A, Loop)</title></circle>
+<circle cx="7.00" cy="19.01" r="0.30" fill="#94a3b8" opacity="0.72"><title>PHE 24 (Chain A, Loop)</title></circle>
+<circle cx="8.43" cy="22.94" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLU 25 (Chain A, Loop)</title></circle>
+<circle cx="7.58" cy="24.49" r="0.30" fill="#94a3b8" opacity="0.72"><title>ALA 26 (Chain A, Loop)</title></circle>
+<circle cx="5.24" cy="24.00" r="0.30" fill="#94a3b8" opacity="0.72"><title>PRO 27 (Chain A, Loop)</title></circle>
+<circle cx="6.76" cy="21.46" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLN 28 (Chain A, Loop)</title></circle>
+<circle cx="6.45" cy="24.42" r="0.52" fill="#4771e9" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 29 (H3, H)</title></circle>
+<circle cx="8.70" cy="22.84" r="0.52" fill="#4771e9" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 30 (H3, H)</title></circle>
+<circle cx="9.24" cy="20.02" r="0.52" fill="#4771e9" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 31 (H3, H)</title></circle>
+<circle cx="5.81" cy="20.87" r="0.30" fill="#94a3b8" opacity="0.72"><title>ALA 32 (Chain A, Loop)</title></circle>
+<circle cx="3.19" cy="24.05" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLU 33 (Chain A, Loop)</title></circle>
+<circle cx="-0.16" cy="25.32" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PRO 34 (H5, H)</title></circle>
+<circle cx="-2.08" cy="24.38" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TRP 35 (H5, H)</title></circle>
+<circle cx="-2.50" cy="22.35" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLN 36 (H5, H)</title></circle>
+<circle cx="-3.31" cy="21.81" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 37 (H5, H)</title></circle>
+<circle cx="-5.30" cy="21.89" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>SER 38 (H5, H)</title></circle>
+<circle cx="-6.57" cy="20.15" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 39 (H5, H)</title></circle>
+<circle cx="-6.97" cy="18.62" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 40 (H5, H)</title></circle>
+<circle cx="-8.39" cy="18.88" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 41 (H5, H)</title></circle>
+<circle cx="-10.29" cy="18.32" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 42 (H5, H)</title></circle>
+<circle cx="-10.97" cy="16.29" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 43 (H5, H)</title></circle>
+<circle cx="-11.64" cy="15.37" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 44 (H5, H)</title></circle>
+<circle cx="-13.46" cy="15.68" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 45 (H5, H)</title></circle>
+<circle cx="-15.03" cy="14.37" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 46 (H5, H)</title></circle>
+<circle cx="-15.41" cy="12.48" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 47 (H5, H)</title></circle>
+<circle cx="-16.49" cy="12.35" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 48 (H5, H)</title></circle>
+<circle cx="-18.47" cy="12.22" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 49 (H5, H)</title></circle>
+<circle cx="-19.51" cy="10.33" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 50 (H5, H)</title></circle>
+<circle cx="-19.66" cy="8.80" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLY 51 (H5, H)</title></circle>
+<circle cx="-21.10" cy="8.80" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 52 (H5, H)</title></circle>
+<circle cx="-23.25" cy="8.10" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PRO 53 (H5, H)</title></circle>
+<circle cx="-23.85" cy="6.32" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 54 (H5, H)</title></circle>
+<circle cx="-23.94" cy="5.08" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ASN 55 (H5, H)</title></circle>
+<circle cx="-25.53" cy="5.07" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 56 (H5, H)</title></circle>
+<circle cx="-27.53" cy="4.16" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 57 (H5, H)</title></circle>
+<circle cx="-27.80" cy="2.23" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 58 (H5, H)</title></circle>
+<circle cx="-28.28" cy="1.59" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 59 (H5, H)</title></circle>
+<circle cx="-30.28" cy="1.60" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 60 (H5, H)</title></circle>
+<circle cx="-31.80" cy="0.11" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 61 (H5, H)</title></circle>
+<circle cx="-31.99" cy="-1.75" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 62 (H5, H)</title></circle>
+<circle cx="-32.98" cy="-1.99" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 63 (H5, H)</title></circle>
+<circle cx="-35.11" cy="-2.16" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLN 64 (H5, H)</title></circle>
+<circle cx="-36.26" cy="-3.94" r="0.52" fill="#4391fe" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>HIS 65 (H5, H)</title></circle>
+<circle cx="-36.47" cy="-7.29" r="0.30" fill="#94a3b8" opacity="0.72"><title>LYS 66 (Chain A, Loop)</title></circle>
+<circle cx="-36.40" cy="-10.61" r="0.30" fill="#94a3b8" opacity="0.72"><title>LYS 67 (Chain A, Loop)</title></circle>
+<circle cx="-33.17" cy="-9.36" r="0.30" fill="#94a3b8" opacity="0.72"><title>LEU 68 (Chain A, Loop)</title></circle>
+<circle cx="-30.56" cy="-11.80" r="0.30" fill="#94a3b8" opacity="0.72"><title>ARG 69 (Chain A, Loop)</title></circle>
+<circle cx="-28.72" cy="-14.56" r="0.30" fill="#94a3b8" opacity="0.72"><title>THR 70 (Chain A, Loop)</title></circle>
+<circle cx="-25.85" cy="-13.96" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PRO 71 (H7, H)</title></circle>
+<circle cx="-25.31" cy="-12.31" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 72 (H7, H)</title></circle>
+<circle cx="-25.63" cy="-10.48" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ASN 73 (H7, H)</title></circle>
+<circle cx="-24.17" cy="-9.63" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 74 (H7, H)</title></circle>
+<circle cx="-22.33" cy="-8.73" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 75 (H7, H)</title></circle>
+<circle cx="-22.29" cy="-6.76" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 76 (H7, H)</title></circle>
+<circle cx="-22.10" cy="-5.12" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 77 (H7, H)</title></circle>
+<circle cx="-20.17" cy="-4.46" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ASN 78 (H7, H)</title></circle>
+<circle cx="-19.17" cy="-2.98" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 79 (H7, H)</title></circle>
+<circle cx="-19.48" cy="-0.99" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 80 (H7, H)</title></circle>
+<circle cx="-18.33" cy="0.12" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 81 (H7, H)</title></circle>
+<circle cx="-16.42" cy="0.73" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 82 (H7, H)</title></circle>
+<circle cx="-16.16" cy="2.46" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ASP 83 (H7, H)</title></circle>
+<circle cx="-16.19" cy="4.30" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 84 (H7, H)</title></circle>
+<circle cx="-14.45" cy="5.01" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 85 (H7, H)</title></circle>
+<circle cx="-13.13" cy="6.10" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 86 (H7, H)</title></circle>
+<circle cx="-13.41" cy="8.07" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 87 (H7, H)</title></circle>
+<circle cx="-12.65" cy="9.50" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 88 (H7, H)</title></circle>
+<circle cx="-10.92" cy="9.75" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLY 89 (H7, H)</title></circle>
+<circle cx="-9.53" cy="10.69" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLY 90 (H7, H)</title></circle>
+<circle cx="-9.65" cy="12.29" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 91 (H7, H)</title></circle>
+<circle cx="-9.30" cy="14.32" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 92 (H7, H)</title></circle>
+<circle cx="-7.31" cy="15.24" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 93 (H7, H)</title></circle>
+<circle cx="-6.46" cy="15.83" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 94 (H7, H)</title></circle>
+<circle cx="-6.72" cy="17.78" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 95 (H7, H)</title></circle>
+<circle cx="-5.61" cy="19.57" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 96 (H7, H)</title></circle>
+<circle cx="-3.74" cy="19.98" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 97 (H7, H)</title></circle>
+<circle cx="-3.43" cy="21.03" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>SER 98 (H7, H)</title></circle>
+<circle cx="-3.48" cy="23.18" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 99 (H7, H)</title></circle>
+<circle cx="-1.72" cy="24.46" r="0.52" fill="#1bd0d5" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>HIS 100 (H7, H)</title></circle>
+<circle cx="1.24" cy="22.39" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLY 101 (Chain A, Loop)</title></circle>
+<circle cx="2.80" cy="19.96" r="0.30" fill="#94a3b8" opacity="0.72"><title>TYR 102 (Chain A, Loop)</title></circle>
+<circle cx="1.91" cy="18.04" r="0.30" fill="#94a3b8" opacity="0.72"><title>PHE 103 (Chain A, Loop)</title></circle>
+<circle cx="1.08" cy="21.29" r="0.30" fill="#94a3b8" opacity="0.72"><title>VAL 104 (Chain A, Loop)</title></circle>
+<circle cx="-0.07" cy="18.90" r="0.30" fill="#94a3b8" opacity="0.72"><title>PHE 105 (Chain A, Loop)</title></circle>
+<circle cx="3.55" cy="17.06" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLY 106 (Chain A, Loop)</title></circle>
+<circle cx="2.74" cy="14.17" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PRO 107 (H19, H)</title></circle>
+<circle cx="0.98" cy="13.00" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 108 (H19, H)</title></circle>
+<circle cx="-0.16" cy="12.77" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLY 109 (H19, H)</title></circle>
+<circle cx="0.13" cy="10.99" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>CYS 110 (H19, H)</title></circle>
+<circle cx="-0.71" cy="9.06" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ASN 111 (H19, H)</title></circle>
+<circle cx="-2.62" cy="8.46" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 112 (H19, H)</title></circle>
+<circle cx="-3.07" cy="7.76" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLU 113 (H19, H)</title></circle>
+<circle cx="-2.79" cy="5.71" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLY 114 (H19, H)</title></circle>
+<circle cx="-3.86" cy="4.08" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 115 (H19, H)</title></circle>
+<circle cx="-5.72" cy="3.37" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 116 (H19, H)</title></circle>
+<circle cx="-5.91" cy="2.28" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 117 (H19, H)</title></circle>
+<circle cx="-5.72" cy="0.21" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 118 (H19, H)</title></circle>
+<circle cx="-7.17" cy="-1.02" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 119 (H19, H)</title></circle>
+<circle cx="-8.71" cy="-1.65" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLY 120 (H19, H)</title></circle>
+<circle cx="-8.49" cy="-3.17" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLY 121 (H19, H)</title></circle>
+<circle cx="-8.72" cy="-5.15" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLU 122 (H19, H)</title></circle>
+<circle cx="-10.52" cy="-6.00" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 123 (H19, H)</title></circle>
+<circle cx="-11.35" cy="-7.02" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 124 (H19, H)</title></circle>
+<circle cx="-10.87" cy="-8.89" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 125 (H19, H)</title></circle>
+<circle cx="-11.62" cy="-10.58" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TRP 126 (H19, H)</title></circle>
+<circle cx="-13.53" cy="-11.28" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>SER 127 (H19, H)</title></circle>
+<circle cx="-13.84" cy="-12.67" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 128 (H19, H)</title></circle>
+<circle cx="-13.77" cy="-14.69" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 129 (H19, H)</title></circle>
+<circle cx="-15.32" cy="-15.70" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 130 (H19, H)</title></circle>
+<circle cx="-16.68" cy="-16.42" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 131 (H19, H)</title></circle>
+<circle cx="-16.39" cy="-18.11" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 132 (H19, H)</title></circle>
+<circle cx="-17.04" cy="-19.95" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 133 (H19, H)</title></circle>
+<circle cx="-18.92" cy="-20.51" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLU 134 (H19, H)</title></circle>
+<circle cx="-19.60" cy="-21.62" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ARG 135 (H19, H)</title></circle>
+<circle cx="-19.46" cy="-23.79" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 136 (H19, H)</title></circle>
+<circle cx="-20.70" cy="-25.14" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 137 (H19, H)</title></circle>
+<circle cx="-22.41" cy="-25.71" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 138 (H19, H)</title></circle>
+<circle cx="-22.63" cy="-26.81" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 139 (H19, H)</title></circle>
+<circle cx="-22.15" cy="-28.72" r="0.52" fill="#92ff47" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>CYS 140 (H19, H)</title></circle>
+<circle cx="-22.91" cy="-31.84" r="0.30" fill="#94a3b8" opacity="0.72"><title>LYS 141 (Chain A, Loop)</title></circle>
+<circle cx="-20.84" cy="-31.54" r="0.30" fill="#94a3b8" opacity="0.72"><title>PRO 142 (Chain A, Loop)</title></circle>
+<circle cx="-21.42" cy="-32.86" r="0.30" fill="#94a3b8" opacity="0.72"><title>MET 143 (Chain A, Loop)</title></circle>
+<circle cx="-24.67" cy="-35.50" r="0.30" fill="#94a3b8" opacity="0.72"><title>SER 144 (Chain A, Loop)</title></circle>
+<circle cx="-27.99" cy="-33.35" r="0.30" fill="#94a3b8" opacity="0.72"><title>ASN 145 (Chain A, Loop)</title></circle>
+<circle cx="-26.40" cy="-29.68" r="0.30" fill="#94a3b8" opacity="0.72"><title>PHE 146 (Chain A, Loop)</title></circle>
+<circle cx="-27.79" cy="-25.80" r="0.30" fill="#94a3b8" opacity="0.72"><title>ARG 147 (Chain A, Loop)</title></circle>
+<circle cx="-26.15" cy="-22.20" r="0.30" fill="#94a3b8" opacity="0.72"><title>PHE 148 (Chain A, Loop)</title></circle>
+<circle cx="-27.73" cy="-20.10" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLY 149 (Chain A, Loop)</title></circle>
+<circle cx="-26.09" cy="-17.81" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLU 150 (H23, H)</title></circle>
+<circle cx="-24.23" cy="-17.78" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ASN 151 (H23, H)</title></circle>
+<circle cx="-22.50" cy="-17.73" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>HIS 152 (H23, H)</title></circle>
+<circle cx="-21.76" cy="-15.93" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 153 (H23, H)</title></circle>
+<circle cx="-20.38" cy="-14.68" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 154 (H23, H)</title></circle>
+<circle cx="-18.37" cy="-15.02" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 155 (H23, H)</title></circle>
+<circle cx="-17.15" cy="-14.21" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLY 156 (H23, H)</title></circle>
+<circle cx="-16.44" cy="-12.28" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 157 (H23, H)</title></circle>
+<circle cx="-14.82" cy="-11.84" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 158 (H23, H)</title></circle>
+<circle cx="-12.97" cy="-12.07" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 159 (H23, H)</title></circle>
+<circle cx="-11.99" cy="-10.59" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 160 (H23, H)</title></circle>
+<circle cx="-10.89" cy="-9.04" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TRP 161 (H23, H)</title></circle>
+<circle cx="-8.98" cy="-9.24" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 162 (H23, H)</title></circle>
+<circle cx="-7.53" cy="-9.03" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 163 (H23, H)</title></circle>
+<circle cx="-6.75" cy="-7.14" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 164 (H23, H)</title></circle>
+<circle cx="-5.38" cy="-6.11" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 165 (H23, H)</title></circle>
+<circle cx="-3.48" cy="-6.60" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 166 (H23, H)</title></circle>
+<circle cx="-2.19" cy="-5.42" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>CYS 167 (H23, H)</title></circle>
+<circle cx="-1.59" cy="-3.53" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 168 (H23, H)</title></circle>
+<circle cx="-0.38" cy="-2.89" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 169 (H23, H)</title></circle>
+<circle cx="1.91" cy="-2.74" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PRO 170 (H23, H)</title></circle>
+<circle cx="3.24" cy="-1.02" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PRO 171 (H23, H)</title></circle>
+<circle cx="3.58" cy="0.27" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 172 (H23, H)</title></circle>
+<circle cx="5.18" cy="-0.02" r="0.52" fill="#d2e935" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 173 (H23, H)</title></circle>
+<circle cx="8.84" cy="0.00" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLY 174 (Chain A, Loop)</title></circle>
+<circle cx="8.63" cy="-2.91" r="0.30" fill="#94a3b8" opacity="0.72"><title>TRP 175 (Chain A, Loop)</title></circle>
+<circle cx="9.06" cy="-0.87" r="0.30" fill="#94a3b8" opacity="0.72"><title>SER 176 (Chain A, Loop)</title></circle>
+<circle cx="7.16" cy="2.80" r="0.30" fill="#94a3b8" opacity="0.72"><title>ARG 177 (Chain A, Loop)</title></circle>
+<circle cx="4.77" cy="5.42" r="0.52" fill="#eecf3a" stroke="#0f172a" stroke-width="0.10" opacity="0.95"><title>TYR 178 (E27, E)</title></circle>
+<circle cx="6.47" cy="7.67" r="0.52" fill="#eecf3a" stroke="#0f172a" stroke-width="0.10" opacity="0.95"><title>ILE 179 (E27, E)</title></circle>
+<circle cx="5.30" cy="10.21" r="0.52" fill="#eecf3a" stroke="#0f172a" stroke-width="0.10" opacity="0.95"><title>PRO 180 (E27, E)</title></circle>
+<circle cx="5.13" cy="9.56" r="0.52" fill="#eecf3a" stroke="#0f172a" stroke-width="0.10" opacity="0.95"><title>GLU 181 (E27, E)</title></circle>
+<circle cx="5.03" cy="10.99" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLY 182 (Chain A, Loop)</title></circle>
+<circle cx="4.17" cy="15.03" r="0.30" fill="#94a3b8" opacity="0.72"><title>MET 183 (Chain A, Loop)</title></circle>
+<circle cx="4.44" cy="14.43" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLN 184 (Chain A, Loop)</title></circle>
+<circle cx="0.37" cy="14.66" r="0.30" fill="#94a3b8" opacity="0.72"><title>CYS 185 (Chain A, Loop)</title></circle>
+<circle cx="-0.42" cy="10.66" r="0.52" fill="#f7c13a" stroke="#0f172a" stroke-width="0.10" opacity="0.95"><title>SER 186 (E30, E)</title></circle>
+<circle cx="1.45" cy="8.10" r="0.52" fill="#f7c13a" stroke="#0f172a" stroke-width="0.10" opacity="0.95"><title>CYS 187 (E30, E)</title></circle>
+<circle cx="2.59" cy="4.30" r="0.52" fill="#f7c13a" stroke="#0f172a" stroke-width="0.10" opacity="0.95"><title>GLY 188 (E30, E)</title></circle>
+<circle cx="5.02" cy="1.31" r="0.52" fill="#f7c13a" stroke="#0f172a" stroke-width="0.10" opacity="0.95"><title>ILE 189 (E30, E)</title></circle>
+<circle cx="9.09" cy="2.11" r="0.30" fill="#94a3b8" opacity="0.72"><title>ASP 190 (Chain A, Loop)</title></circle>
+<circle cx="10.58" cy="0.16" r="0.30" fill="#94a3b8" opacity="0.72"><title>TYR 191 (Chain A, Loop)</title></circle>
+<circle cx="13.15" cy="3.27" r="0.30" fill="#94a3b8" opacity="0.72"><title>TYR 192 (Chain A, Loop)</title></circle>
+<circle cx="16.10" cy="3.07" r="0.30" fill="#94a3b8" opacity="0.72"><title>THR 193 (Chain A, Loop)</title></circle>
+<circle cx="18.07" cy="-0.13" r="0.30" fill="#94a3b8" opacity="0.72"><title>PRO 194 (Chain A, Loop)</title></circle>
+<circle cx="17.80" cy="1.67" r="0.30" fill="#94a3b8" opacity="0.72"><title>HIS 195 (Chain A, Loop)</title></circle>
+<circle cx="19.27" cy="-1.81" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLU 196 (Chain A, Loop)</title></circle>
+<circle cx="18.11" cy="-0.48" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLU 197 (Chain A, Loop)</title></circle>
+<circle cx="13.90" cy="-0.57" r="0.30" fill="#94a3b8" opacity="0.72"><title>THR 198 (Chain A, Loop)</title></circle>
+<circle cx="14.15" cy="-4.12" r="0.30" fill="#94a3b8" opacity="0.72"><title>ASN 199 (Chain A, Loop)</title></circle>
+<circle cx="13.40" cy="-3.89" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ASN 200 (H34, H)</title></circle>
+<circle cx="13.28" cy="-5.38" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLU 201 (H34, H)</title></circle>
+<circle cx="11.85" cy="-6.81" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>SER 202 (H34, H)</title></circle>
+<circle cx="9.72" cy="-6.86" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 203 (H34, H)</title></circle>
+<circle cx="8.79" cy="-7.18" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 204 (H34, H)</title></circle>
+<circle cx="8.35" cy="-9.09" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 205 (H34, H)</title></circle>
+<circle cx="6.71" cy="-9.94" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 206 (H34, H)</title></circle>
+<circle cx="4.89" cy="-9.60" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 207 (H34, H)</title></circle>
+<circle cx="4.26" cy="-10.54" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 208 (H34, H)</title></circle>
+<circle cx="3.58" cy="-12.43" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 209 (H34, H)</title></circle>
+<circle cx="1.88" cy="-12.97" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 210 (H34, H)</title></circle>
+<circle cx="0.33" cy="-12.37" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>HIS 211 (H34, H)</title></circle>
+<circle cx="-0.50" cy="-13.02" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 212 (H34, H)</title></circle>
+<circle cx="-0.74" cy="-14.73" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 213 (H34, H)</title></circle>
+<circle cx="-2.04" cy="-16.13" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 214 (H34, H)</title></circle>
+<circle cx="-4.12" cy="-16.11" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PRO 215 (H34, H)</title></circle>
+<circle cx="-4.77" cy="-16.53" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 216 (H34, H)</title></circle>
+<circle cx="-5.06" cy="-18.41" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 217 (H34, H)</title></circle>
+<circle cx="-6.91" cy="-19.34" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 218 (H34, H)</title></circle>
+<circle cx="-8.59" cy="-19.00" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 219 (H34, H)</title></circle>
+<circle cx="-8.82" cy="-20.02" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 220 (H34, H)</title></circle>
+<circle cx="-9.55" cy="-21.92" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 221 (H34, H)</title></circle>
+<circle cx="-11.62" cy="-22.34" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>CYS 222 (H34, H)</title></circle>
+<circle cx="-12.77" cy="-22.24" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 223 (H34, H)</title></circle>
+<circle cx="-12.85" cy="-23.87" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLY 224 (H34, H)</title></circle>
+<circle cx="-14.42" cy="-25.29" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLN 225 (H34, H)</title></circle>
+<circle cx="-16.37" cy="-25.06" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 226 (H34, H)</title></circle>
+<circle cx="-16.93" cy="-25.95" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 227 (H34, H)</title></circle>
+<circle cx="-18.18" cy="-27.80" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 228 (H34, H)</title></circle>
+<circle cx="-20.22" cy="-27.66" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 229 (H34, H)</title></circle>
+<circle cx="-21.00" cy="-26.72" r="0.52" fill="#fe9b2d" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 230 (H34, H)</title></circle>
+<circle cx="-19.78" cy="-23.85" r="0.30" fill="#94a3b8" opacity="0.72"><title>LYS 231 (Chain A, Loop)</title></circle>
+<circle cx="-20.03" cy="-19.82" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLU 232 (Chain A, Loop)</title></circle>
+<circle cx="-24.09" cy="-19.40" r="0.30" fill="#94a3b8" opacity="0.72"><title>ALA 233 (Chain A, Loop)</title></circle>
+<circle cx="-27.27" cy="-17.91" r="0.30" fill="#94a3b8" opacity="0.72"><title>ALA 234 (Chain A, Loop)</title></circle>
+<circle cx="-30.05" cy="-16.43" r="0.30" fill="#94a3b8" opacity="0.72"><title>ALA 235 (Chain A, Loop)</title></circle>
+<circle cx="-35.08" cy="-13.85" r="0.30" fill="#94a3b8" opacity="0.72"><title>SER 240 (Chain A, Loop)</title></circle>
+<circle cx="-36.21" cy="-16.66" r="0.30" fill="#94a3b8" opacity="0.72"><title>ALA 241 (Chain A, Loop)</title></circle>
+<circle cx="-39.03" cy="-17.97" r="0.30" fill="#94a3b8" opacity="0.72"><title>THR 242 (Chain A, Loop)</title></circle>
+<circle cx="-37.85" cy="-21.69" r="0.30" fill="#94a3b8" opacity="0.72"><title>THR 243 (Chain A, Loop)</title></circle>
+<circle cx="-35.71" cy="-21.44" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLN 244 (H44, H)</title></circle>
+<circle cx="-34.08" cy="-19.88" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LYS 245 (H44, H)</title></circle>
+<circle cx="-33.11" cy="-18.62" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 246 (H44, H)</title></circle>
+<circle cx="-30.82" cy="-18.70" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLU 247 (H44, H)</title></circle>
+<circle cx="-29.35" cy="-18.16" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LYS 248 (H44, H)</title></circle>
+<circle cx="-28.65" cy="-16.31" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLU 249 (H44, H)</title></circle>
+<circle cx="-26.92" cy="-15.78" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 250 (H44, H)</title></circle>
+<circle cx="-24.86" cy="-16.14" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 251 (H44, H)</title></circle>
+<circle cx="-23.80" cy="-14.99" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ARG 252 (H44, H)</title></circle>
+<circle cx="-22.79" cy="-13.39" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 253 (H44, H)</title></circle>
+<circle cx="-20.82" cy="-13.42" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 254 (H44, H)</title></circle>
+<circle cx="-19.09" cy="-13.34" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 255 (H44, H)</title></circle>
+<circle cx="-18.18" cy="-11.53" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 256 (H44, H)</title></circle>
+<circle cx="-16.80" cy="-10.52" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 257 (H44, H)</title></circle>
+<circle cx="-14.61" cy="-10.83" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 258 (H44, H)</title></circle>
+<circle cx="-13.47" cy="-9.85" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 259 (H44, H)</title></circle>
+<circle cx="-12.75" cy="-8.09" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 260 (H44, H)</title></circle>
+<circle cx="-10.86" cy="-7.89" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 261 (H44, H)</title></circle>
+<circle cx="-8.88" cy="-7.82" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 262 (H44, H)</title></circle>
+<circle cx="-8.12" cy="-6.28" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 263 (H44, H)</title></circle>
+<circle cx="-7.10" cy="-5.02" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>CYS 264 (H44, H)</title></circle>
+<circle cx="-5.02" cy="-5.14" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TRP 265 (H44, H)</title></circle>
+<circle cx="-3.27" cy="-5.37" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 266 (H44, H)</title></circle>
+<circle cx="-1.82" cy="-3.71" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PRO 267 (H44, H)</title></circle>
+<circle cx="-0.49" cy="-2.84" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 268 (H44, H)</title></circle>
+<circle cx="0.99" cy="-3.69" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 269 (H44, H)</title></circle>
+<circle cx="2.65" cy="-3.39" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLY 270 (H44, H)</title></circle>
+<circle cx="4.28" cy="-1.69" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 271 (H44, H)</title></circle>
+<circle cx="5.50" cy="-1.43" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 272 (H44, H)</title></circle>
+<circle cx="7.15" cy="-2.26" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 273 (H44, H)</title></circle>
+<circle cx="8.92" cy="-1.25" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 274 (H44, H)</title></circle>
+<circle cx="10.42" cy="0.15" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 275 (H44, H)</title></circle>
+<circle cx="11.68" cy="-0.37" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 276 (H44, H)</title></circle>
+<circle cx="13.50" cy="-0.61" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 277 (H44, H)</title></circle>
+<circle cx="15.03" cy="0.96" r="0.52" fill="#ef5811" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>HIS 278 (H44, H)</title></circle>
+<circle cx="16.72" cy="1.16" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLN 279 (Chain A, Loop)</title></circle>
+<circle cx="18.98" cy="4.63" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLY 280 (Chain A, Loop)</title></circle>
+<circle cx="17.98" cy="4.36" r="0.30" fill="#94a3b8" opacity="0.72"><title>SER 281 (Chain A, Loop)</title></circle>
+<circle cx="16.68" cy="7.60" r="0.30" fill="#94a3b8" opacity="0.72"><title>ASP 282 (Chain A, Loop)</title></circle>
+<circle cx="12.58" cy="8.00" r="0.30" fill="#94a3b8" opacity="0.72"><title>PHE 283 (Chain A, Loop)</title></circle>
+<circle cx="10.13" cy="11.28" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLY 284 (Chain A, Loop)</title></circle>
+<circle cx="7.50" cy="12.04" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PRO 285 (H48, H)</title></circle>
+<circle cx="5.44" cy="11.29" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 286 (H48, H)</title></circle>
+<circle cx="4.84" cy="9.44" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 287 (H48, H)</title></circle>
+<circle cx="3.15" cy="8.59" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 288 (H48, H)</title></circle>
+<circle cx="1.17" cy="9.20" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 289 (H48, H)</title></circle>
+<circle cx="-0.69" cy="8.14" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 290 (H48, H)</title></circle>
+<circle cx="-1.84" cy="6.30" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PRO 291 (H48, H)</title></circle>
+<circle cx="-2.87" cy="6.31" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 292 (H48, H)</title></circle>
+<circle cx="-4.94" cy="6.80" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 293 (H48, H)</title></circle>
+<circle cx="-6.69" cy="5.54" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 294 (H48, H)</title></circle>
+<circle cx="-7.63" cy="4.05" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 295 (H48, H)</title></circle>
+<circle cx="-9.33" cy="4.53" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LYS 296 (H48, H)</title></circle>
+<circle cx="-11.53" cy="3.81" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 297 (H48, H)</title></circle>
+<circle cx="-12.49" cy="2.19" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>SER 298 (H48, H)</title></circle>
+<circle cx="-14.26" cy="2.49" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ALA 299 (H48, H)</title></circle>
+<circle cx="-16.31" cy="2.13" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 300 (H48, H)</title></circle>
+<circle cx="-17.51" cy="0.59" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 301 (H48, H)</title></circle>
+<circle cx="-18.95" cy="-0.95" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ASN 302 (H48, H)</title></circle>
+<circle cx="-21.25" cy="-0.87" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PRO 303 (H48, H)</title></circle>
+<circle cx="-22.39" cy="-0.92" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 304 (H48, H)</title></circle>
+<circle cx="-23.35" cy="-2.75" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 305 (H48, H)</title></circle>
+<circle cx="-25.23" cy="-3.60" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>TYR 306 (H48, H)</title></circle>
+<circle cx="-27.32" cy="-3.13" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ILE 307 (H48, H)</title></circle>
+<circle cx="-28.17" cy="-3.98" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 308 (H48, H)</title></circle>
+<circle cx="-29.15" cy="-5.87" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 309 (H48, H)</title></circle>
+<circle cx="-30.95" cy="-6.66" r="0.52" fill="#c82803" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ASN 310 (H48, H)</title></circle>
+<circle cx="-33.81" cy="-8.42" r="0.52" fill="#a11201" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LYS 311 (H50, H)</title></circle>
+<circle cx="-34.55" cy="-7.68" r="0.52" fill="#a11201" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>GLN 312 (H50, H)</title></circle>
+<circle cx="-34.10" cy="-5.74" r="0.52" fill="#a11201" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>PHE 313 (H50, H)</title></circle>
+<circle cx="-34.81" cy="-3.92" r="0.52" fill="#a11201" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ARG 314 (H50, H)</title></circle>
+<circle cx="-36.65" cy="-3.03" r="0.52" fill="#a11201" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>ASN 315 (H50, H)</title></circle>
+<circle cx="-36.72" cy="-2.03" r="0.52" fill="#a11201" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>CYS 316 (H50, H)</title></circle>
+<circle cx="-36.43" cy="0.14" r="0.52" fill="#a11201" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>MET 317 (H50, H)</title></circle>
+<circle cx="-37.90" cy="1.44" r="0.52" fill="#a11201" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>VAL 318 (H50, H)</title></circle>
+<circle cx="-39.22" cy="1.98" r="0.52" fill="#a11201" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 319 (H50, H)</title></circle>
+<circle cx="-38.84" cy="3.61" r="0.52" fill="#a11201" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>THR 320 (H50, H)</title></circle>
+<circle cx="-39.12" cy="5.67" r="0.52" fill="#a11201" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>LEU 321 (H50, H)</title></circle>
+<circle cx="-40.96" cy="6.52" r="0.52" fill="#a11201" stroke="#1e293b" stroke-width="0.10" opacity="0.95"><title>CYS 322 (H50, H)</title></circle>
+<circle cx="-43.22" cy="6.55" r="0.30" fill="#94a3b8" opacity="0.72"><title>CYS 323 (Chain A, Loop)</title></circle>
+<circle cx="-44.53" cy="2.61" r="0.30" fill="#94a3b8" opacity="0.72"><title>GLY 324 (Chain A, Loop)</title></circle>
+<circle cx="-46.74" cy="2.06" r="0.30" fill="#94a3b8" opacity="0.72"><title>LYS 325 (Chain A, Loop)</title></circle>
+</svg>
